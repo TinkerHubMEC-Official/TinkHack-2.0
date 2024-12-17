@@ -15,9 +15,8 @@ const MainContent = () => {
 <section id="hero" className="h-screen bg-custom-dark relative flex items-center justify-center">
   <div className="absolute inset-0 bg-center bg-cover" style={{ backgroundImage: 'url("/frames/Frame-1.svg")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
   <div className="absolute inset-0 bg-custom-dark opacity-50"></div> {/* Overlay for readability */}
-  {/* <h1 className="text-6xl text-white font-bold relative z-10">Tink<span className="text-pink-500">HACK</span> 2.0</h1> */}
-    <div className='relative flex'>
-      <img className="brightness-125 absolute w-auto z-20" src="/images/TinkHackLogoI.svg" alt="Logo i" style={{left: '20.4rem'}}/>
+    <div className='container relative flex'>
+      <img className="brightness-125 absolute w-auto z-20 top-0" src="/images/TinkHackLogoI.svg" alt="Logo i" style={{left: '19.2rem'}}/>
       <img className="brightness-125 w-auto h-610 relative flex z-10" src="/images/TinkHackLogoMain.svg" alt="Tink Hack Logo" />
     </div>
 </section>

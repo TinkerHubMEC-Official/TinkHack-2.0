@@ -13,6 +13,9 @@ module.exports = {
         foreground: "var(--foreground)",
         'custom-dark': '#171519',
       },
+      fontFamily: {
+        satoshi: ["var(--font-satoshi)"],
+      },
     },
   },
   plugins: [],
