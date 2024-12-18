@@ -1,5 +1,7 @@
 "use client";
 import { useEffect } from 'react';
+import Image from 'next/image';
+
 import Navbar from './navbar.jsx';
 
 const MainContent = () => {
