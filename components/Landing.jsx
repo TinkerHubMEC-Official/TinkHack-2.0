@@ -19,7 +19,7 @@ const Landing = () => {
         />
         {/* New Image for the Upper-Right Corner */}
         <img
-          className="brightness-125 absolute top-0 right-0 z-10 w-[450px] h-[380px]"
+          className="brightness-125 absolute top-0 max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
           src="/images/landing_page_2.svg"
           alt="Landing Page Corner Image"
         />

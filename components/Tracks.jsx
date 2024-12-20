@@ -13,13 +13,12 @@ const Tracks = () => {
       ></div>
       <div className="absolute inset-0 bg-custom-dark opacity-50"></div>{" "}
       {/* Overlay for readability */}
-      <div className="container relative flex">
-        <img
-          className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[-405px] ml-[-70px] mt-[-30px] bottom-[-300px]"
-          src="/images/Broken_glass_1.svg"
-          alt="Broken Glass Image"
-        />
-      </div>
+      <img
+        className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[-405px] ml-[-70px] mt-[-30px] bottom-[-300px]"
+        src="/images/Broken_glass_1.svg"
+        alt="Broken Glass Image"
+      />
+      <div className="container relative flex"></div>
     </section>
   );
 };

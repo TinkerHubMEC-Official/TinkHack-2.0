@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,7 +15,7 @@ module.exports = {
         'custom-dark': '#171519',
       },
       fontFamily: {
-        satoshi: ["var(--font-satoshi)"],
+        satoshi: ['var(--font-satoshi)', ...fontFamily.sans],
       },
     },
   },

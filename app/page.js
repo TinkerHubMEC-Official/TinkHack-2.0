@@ -8,7 +8,7 @@ import {
   Prizes,
   Timeline,
   Tracks,
-} from "./components";
+} from "../components";
 
 export default function Home() {
   return (

@@ -18,14 +18,14 @@ const About = () => {
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
 
+      <img
+        className="brightness-125 z-10 w-[800px] h-[850px] -left-[180px] absolute top-[140px]"
+        src="/images/Bubble.svg"
+        alt="Bubble Image"
+      />
       {/* Image and About Text Container */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         {/* Image for the Upper-Left Corner */}
-        <img
-          className="brightness-125 z-10 w-[800px] h-[850px] ml-[-810px] absolute top-[140px]"
-          src="/images/Bubble.svg"
-          alt="Bubble Image"
-        />
 
         {/* About Text */}
         <div className="text-center px-4 relative z-10 max-w-4xl">
