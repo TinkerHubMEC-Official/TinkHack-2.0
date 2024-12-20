@@ -13,14 +13,13 @@ const Faq = () => {
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#ff7eb9] to-[#ffdf7f] bg-clip-text text-transparent">
         FAQs
       </h2>
-      <div className="container relative flex">
-        <img
-          className="brightness-125 absolute z-10 top-[12px] left-[40px]"
-          src="/images/Broken_glass_3.svg"
-          alt="Broken Glass Image"
-          style={{ width: "200px", height: "400px" }}
-        />
-      </div>
+      <img
+        className="brightness-125 absolute z-10 top-[12px] left-[40px]"
+        src="/images/Broken_glass_3.svg"
+        alt="Broken Glass Image"
+        style={{ width: "200px", height: "400px" }}
+      />
+      <div className="container relative flex"></div>
     </section>
   );
 };
