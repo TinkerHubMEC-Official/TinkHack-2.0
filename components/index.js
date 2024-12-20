@@ -7,6 +7,7 @@ import Sponsors from "./Sponsors";
 import Prizes from "./Prizes";
 import Timeline from "./Timeline";
 import Tracks from "./Tracks";
+import Footer from "./Footer";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Prizes,
   Timeline,
   Tracks,
+  Footer
 };

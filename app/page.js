@@ -8,6 +8,7 @@ import {
   Prizes,
   Timeline,
   Tracks,
+  Footer
 } from "../components";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Sponsors />
       <Faq />
       <Contact />
+      <Footer />
     </div>
   );
 }
