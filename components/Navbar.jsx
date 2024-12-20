@@ -36,7 +36,7 @@ const Navbar = () => {
         scrolled ? "bg-custom-dark/[.5] backdrop-blur" : "bg-transparent"
       }`}
     >
-      <a href="https://www.excelmec.org" className="mr-10 mt-2">
+      <a href="https://www.mec.tinkerhub.org" className="mr-10 mt-2">
         <Image src={TinkerHubLogo} width={142.5} height={75} alt="logo" />
       </a>
 
