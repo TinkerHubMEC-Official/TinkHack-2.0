@@ -62,7 +62,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={item.link}
-            className="font-satoshi text-base hover:bg-gradient-to-r hover:from-[#ff7eb9] hover:to-[#ffdf7f] hover:bg-clip-text hover:text-transparent group transition-all duration-300 ease-in-out lg:ml-8"
+            className="font-satoshi text-base hover:bg-gradient-to-r hover:from-[#E283BD] hover:to-[#E2CF6C] hover:bg-clip-text hover:text-transparent group transition-all duration-300 ease-in-out lg:ml-8"
             onClick={() => mobilenav && setmobilenav(!mobilenav)}
           >
             {item.title}
