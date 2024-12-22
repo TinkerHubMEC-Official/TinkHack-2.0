@@ -29,14 +29,14 @@ const Landing = () => {
       <div className="container flex w-full">
         {/* New Image for the Upper-Left Corner */}
         <Image
-          className="brightness-125 absolute top-12 left-0 z-10 w-[400px] h-[150px]"
+          className="brightness-125 absolute top-0 left-0 z-10 w-[400px] h-[150px]"
           src={LandingPageImage1}
           alt="Landing Page Corner Image"
           layout="intrinsic"
         />
         {/* New Image for the Upper-Right Corner */}
         <Image
-          className="brightness-125 absolute top-[3rem] max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
+          className="brightness-125 absolute top-0 max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
           src={LandingPageImage2}
           alt="Landing Page Corner Image"
           layout="intrinsic"

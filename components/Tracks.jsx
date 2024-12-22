@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import FrameImage from '@/assets/Frame-1.svg';
+import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
+
 const Tracks = () => {
   const tracks = [
     {
@@ -53,27 +55,26 @@ const Tracks = () => {
           className="rotate-180 scale-x-[-1]"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div> 
+      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
       {/* Overlay for readability */}
-      <img
-        className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] ml-[-70px] mt-[-30px] bottom-[-300px]"
-        src="/images/Broken_glass_1.svg"
+      <Image
+        className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-300px]"
+        src={BrokenGlassImage}
         alt="Broken Glass Image"
+        width={300}
+        height={600}
       />
-
       <div className="relative z-10 flex flex-col gap-8 p-4">
         <div className="flex justify-end gap-10 pl-24">
           {tracks.slice(0, 3).map((track, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-[#272528] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 p-2"
+              className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
             >
-              <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent ">
+              <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
                 {track.title}
               </h3>
-              <p className="text-xs text-gray-300">
-                {track.description}
-              </p>
+              <p className="text-xs text-gray-300">{track.description}</p>
             </div>
           ))}
         </div>
@@ -81,14 +82,12 @@ const Tracks = () => {
           {tracks.slice(3, 6).map((track, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-[#272528] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 p-2"
+              className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
             >
               <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
                 {track.title}
               </h3>
-              <p className="text-xs text-gray-300">
-                {track.description}
-              </p>
+              <p className="text-xs text-gray-300">{track.description}</p>
             </div>
           ))}
         </div>
