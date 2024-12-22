@@ -26,6 +26,7 @@ const Faq = () => {
       question: 'Can I work on a project that I\'ve already started?',
       answer: 'Yes, you can continue working on an existing project, provided you declare it during registration.',
     },
+    
   ];
 
   const toggleFAQ = (index) => {

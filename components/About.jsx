@@ -37,24 +37,14 @@ const About = () => {
         />
       </div>
 
-      <div className="relative z-10 flex items-center justify-center w-full h-full px-4">
+      <div className="relative z-10 flex items-end justify-end w-full h-full px-4">
         {/* About Text */}
-        <div className="text-center relative z-10 max-w-4xl">
-          <h1 className="text-md mt-8 leading-relaxed ">
-            Aith about Tinkith about tinkerhubmec. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Hack. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+        <div className="text-start relative z-10 max-w-4xl">
+          <h1 className="text-xl  mt-8 leading-relaxed ">
+           TinkerHub MEC's overnight Hackathon, Kerala's inaugural Al-based event, promotes student expertise and explores Generative Al. This innovative platform unites technology and innovation, fostering diverse solutions in various fields.
+          </h1>       
+          <h1 className="text-xl  mt-8 leading-relaxed ">
+            TinkerHub MEC Chapter is a branch of a non-profit organization that has the aim to learn, interact, and innovate. We provide students with opportunities to enhance their skills through hands-on- experience and community learning culture.
           </h1>
         </div>
       </div>
