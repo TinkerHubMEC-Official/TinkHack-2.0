@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,10 +18,21 @@ module.exports = {
       fontFamily: {
         satoshi: ['var(--font-satoshi)', ...fontFamily.sans],
         khuja: ['KHUJA', 'sans-serif'], // Add KHUJA font here
-
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite', // Define the animation
+      },
+      keyframes: {
+        marquee: {
+          '0%': {
+            transform: 'translateX(0)', // Initial position
+          },
+          '100%': {
+            transform: 'translateX(-50%)', // Final position (scrolls horizontally)
+          },
+        },
       },
     },
   },
   plugins: [],
 };
-

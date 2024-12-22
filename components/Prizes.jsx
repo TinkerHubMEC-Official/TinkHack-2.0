@@ -1,18 +1,109 @@
+"use client"
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import FrameImage from '@/assets/Frame-1.svg';
+import SIB from '@/assets/sib.svg';
+
 const Prizes = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 816);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section
       id="prizes"
-      className="h-screen bg-custom-dark text-white flex items-center justify-center relative"
+      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-54"
     >
-      <div
-        className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: 'url("/frames/Frame-1.svg")' }}
-      ></div>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={FrameImage}
+          alt="Background Image"
+          layout="fill"
+          objectFit="cover"
+          className="rotate-180 scale-x-[-1]"
+        />
+      </div>
       <div className="absolute inset-0 bg-custom-dark opacity-50"></div>{" "}
       {/* Overlay for readability */}
-      <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#ff7eb9] to-[#ffdf7f] bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] via-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8">
         Prizes
       </h2>
+
+      {isMobile ? (
+        // Mobile View
+        <div className="relative z-10 flex flex-col items-center gap-8">
+          {/* First Row */}
+          <div className="flex justify-center gap-8">
+            <div className="p-6 rounded-xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <h3 className="text-lg font-semibold mb-2 text-center">1st Prize</h3>
+              <p className="text-4xl font-bold text-center">₹50,000</p>
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <h3 className="text-lg font-semibold mb-2 text-center">2nd Prize</h3>
+              <p className="text-4xl font-bold text-center">₹20,000</p>
+            </div>
+            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <h3 className="text-lg font-semibold mb-2 text-center">3rd Prize</h3>
+              <p className="text-4xl font-bold text-center">₹10,000</p>
+            </div>
+          </div>
+
+          {/* Third Row */}
+          <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
+            <p className="text-4xl font-bold text-center">₹20,000</p>
+            <Image src={SIB} width={500} alt="logo" />
+          </div>
+        </div>
+      ) : (
+        // Desktop View
+        <div className="relative z-10 flex flex-col items-center gap-8">
+          {/* First Row */}
+          <div className="flex flex-wrap justify-center gap-10">
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 className="text-lg font-semibold mb-2 text-center">2nd Prize</h3>
+                <p className="text-4xl font-bold text-center">₹20,000</p>
+              </div>
+            </div>
+
+            <div className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <h3 className="text-lg font-semibold mb-2 text-center" style={{ fontSize: '150%' }}>
+                1st Prize
+              </h3>
+              <p className="text-4xl font-bold text-center p-2" style={{ fontSize: '250%' }}>
+                ₹50,000
+              </p>
+            </div>
+
+            <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <h3 className="text-lg font-semibold mb-2 text-center">3rd Prize</h3>
+              <p className="text-4xl font-bold text-center">₹10,000</p>
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
+            <p className="text-4xl font-bold text-center">₹20,000</p>
+            <Image src={SIB} width={500} alt="logo" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
