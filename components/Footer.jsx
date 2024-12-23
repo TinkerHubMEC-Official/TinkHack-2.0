@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg'; 
+import BackgroundImage from '@/assets/background.svg';
 const Footer = () => {
   return (
     <section
@@ -10,18 +10,14 @@ const Footer = () => {
       style={{ height: '40vh', padding: 'auto' }}
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
-          alt="Footer Background Image"
+          src={BackgroundImage}  
+          alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="z-0"
         />
       </div>
-
-      {/* Overlay for Readability */}
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
 
       <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-center px-8 mb-4 text-gray-400">
         {/* Footer Text */}

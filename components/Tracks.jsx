@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg';
+import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
 const Tracks = () => {
@@ -61,17 +61,14 @@ const Tracks = () => {
         Tracks
       </h2>
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="rotate-180 scale-x-[-1]"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
-      {/* Overlay for readability */}
       <Image
         className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px]"
         src={BrokenGlassImage}

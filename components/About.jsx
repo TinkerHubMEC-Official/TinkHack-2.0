@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import BubbleImage from '@/assets/Bubble.svg';
-import FrameImage from '@/assets/Frame-1.svg';
+import BackgroundImage from '@/assets/background.svg';
 
 const About = () => {
   return (
@@ -14,17 +14,14 @@ const About = () => {
       </h2>
 
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
       </div>
-
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-custom-dark opacity-50 z-1"></div>
 
       {/* Bubble Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full px-4">

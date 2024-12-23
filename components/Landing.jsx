@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg'; 
+import BackgroundImage from '@/assets/background.svg';
 import LandingPageImage1 from '@/assets/landing_page_1.svg'; 
 import LandingPageImage2 from '@/assets/landing_page_2.svg'; 
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
@@ -15,17 +15,14 @@ const Landing = () => {
       className="h-screen bg-custom-dark relative flex items-center justify-center"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="rotate-180 scale-x-[-1]"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>{" "}
-      {/* Overlay for readability */}
       <div className="container flex w-full">
         {/* New Image for the Upper-Left Corner */}
         <Image
