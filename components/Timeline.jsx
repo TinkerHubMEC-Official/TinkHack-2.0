@@ -1,13 +1,73 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import TimelineImage from '@/assets/timeline.svg'; 
 import Image from 'next/image';
 import FrameImage from '@/assets/Frame-1.svg';
 
 const Timeline = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  const events = [
+    {
+      date: '1pm, 3rd March',
+      title: 'Registration Starts',
+      description:
+        'TinkHack registration opens. Students can register via Devfolio by submitting their project proposals.',
+    },
+    {
+      date: '7am, 3rd March',
+      title: 'Project Submission',
+      description:
+        'Teams must finalize and submit their projects before the deadline.',
+    },
+    {
+      date: '9am, 3rd March',
+      title: 'Evaluation Starts',
+      description:
+        'Judges will begin evaluating submitted projects based on innovation, execution, and impact.',
+    },
+    {
+      date: '12pm, 3rd March',
+      title: 'Closing Ceremony',
+      description:
+        'Discover the champions of progress and the architects of tomorrow. The grand stage is where innovators revel in their triumphs.',
+    },
+    
+  ];
+
+  const getGradientColor = (index, total) => {
+    const startColor = [226, 131, 189]; 
+    const endColor = [226, 207, 108];  
+
+    const ratio = index / (total - 1);
+    const r = Math.round(startColor[0] + ratio * (endColor[0] - startColor[0]));
+    const g = Math.round(startColor[1] + ratio * (endColor[1] - startColor[1]));
+    const b = Math.round(startColor[2] + ratio * (endColor[2] - startColor[2]));
+
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      if (window.innerWidth > 1280) {
+        setIsLargeScreen(true);
+      } else {
+        setIsLargeScreen(false);
+      }
+    };
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   return (
     <section
       id="timeline"
-      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative"
+      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -18,20 +78,129 @@ const Timeline = () => {
           objectFit="cover"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div> 
-      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent">
         Timeline
       </h2>
       <Image
-      className="brightness-125 absolute z-10 w-[500px] h-[800px] top-0 right-0 mt-[-250px]"
-          src={TimelineImage}
-          alt="Bubble Image"
-          width={500} 
-          height={800} 
-          />
-   
-      <div className="container relative flex"></div>
+        className="brightness-125 absolute z-10 w-[500px] h-[800px] top-0 right-0 mt-[-250px]"
+        src={TimelineImage}
+        alt="Bubble Image"
+        width={500}
+        height={800}
+      />
+
+      {/* Conditional Rendering for Timeline Container */}
+      {isLargeScreen ? (
+        <div className="container relative flex flex-col items-center z-10 mt-10">
+          <div
+            className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
+            style={{ top: '50px', bottom: '50px', height: 'calc(100% - 122px)' }}
+          ></div>
+          {events.map((event, index) => {
+            const color = getGradientColor(index, events.length);
+
+            return (
+              <div
+                key={index}
+                className={`relative flex items-center w-full mb-6 ${
+                  index % 2 === 0 ? 'justify-start' : 'justify-end'
+                }`}
+              >
+                <p
+                  className={`text-sm absolute ${
+                    index % 2 === 0 ? 'right-[500px]' : 'left-[500px]'
+                  }`}
+                  style={{ color }}
+                >
+                  {event.date}
+                </p>
+
+                <div
+                  className={`relative w-[40%] p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-105 transition-all duration-300 text-white ${
+                    index % 2 === 0 ? 'ml-24' : 'mr-24'
+                  }`}
+                >
+                  <h3 className="font-semibold">{event.title}</h3>
+                  <p className="mt-2 text-sm">{event.description}</p>
+                </div>
+
+                {/* Circle */}
+                <div
+                  className="absolute w-2 h-2 rounded-full"
+                  style={{
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    backgroundColor: color,
+                  }}
+                ></div>
+                <div
+                  className="absolute w-4 h-4 rounded-full opacity-25"
+                  style={{
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    backgroundColor: color,
+                  }}
+                ></div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+<div className="container relative flex flex-col items-start z-10 mt-10 w-full max-w-4xl pr-4">
+  {/*  Line */}
+  <div
+    className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
+    style={{
+      left: '2rem', 
+      top: '68px',
+      bottom: '50px',
+      height: 'calc(90% - 100px)', 
+    }}
+  ></div>
+
+  {events.map((event, index) => {
+    const color = getGradientColor(index, events.length);
+
+    return (
+      <div key={index} className="relative flex items-center w-full mb-6">
+        {/* Circle on the Line */}
+        <div
+          className="absolute w-2 h-2 rounded-full"
+          style={{
+            left: '2rem', 
+            transform: 'translateX(-50%)',
+            backgroundColor: color,
+          }}
+        ></div>
+        <div
+          className="absolute w-4 h-4 rounded-full opacity-25"
+          style={{
+            left: '2rem', 
+            transform: 'translateX(-50%)',
+            backgroundColor: color,
+          }}
+        ></div>
+
+        {/* Box with Gradient, Shadow, and Hover Effect */}
+        <div
+          className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
+          style={{
+            marginLeft: 'calc(2rem + 1rem)', 
+          }}
+          
+        >
+          <h3 className="font-semibold text-lg">{event.title}</h3>
+          <p className=" text-xs text-gray-400">{event.date}</p>
+          <p className="mt-2 text-sm">{event.description}</p>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+
+      )}
     </section>
   );
 };
