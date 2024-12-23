@@ -21,7 +21,7 @@ const Prizes = () => {
   return (
     <section
       id="prizes"
-      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-54"
+      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-14"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -33,8 +33,7 @@ const Prizes = () => {
           className="rotate-180 scale-x-[-1]"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>{" "}
-      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-custom-dark opacity-50"></div> {/* Overlay for readability */}
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] via-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8">
         Prizes
       </h2>
@@ -66,7 +65,7 @@ const Prizes = () => {
           <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
             <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center">₹20,000</p>
-            <Image src={SIB} width={500} alt="logo" />
+            <Image src={SIB} width={500} alt="SIB" />
           </div>
         </div>
       ) : (
@@ -100,7 +99,7 @@ const Prizes = () => {
           <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
             <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center">₹20,000</p>
-            <Image src={SIB} width={500} alt="logo" />
+            <Image src={SIB} width={500} alt="SIB" />
           </div>
         </div>
       )}
