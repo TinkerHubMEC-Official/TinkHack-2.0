@@ -1,18 +1,21 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import BackgroundImage from '@/assets/background.svg';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import BackgroundImage from "@/assets/background.svg";
 const Footer = () => {
   return (
     <section
       id="footer"
-      className="bg-custom-dark text-white relative flex flex-col justify-between items-center"
-      style={{ height: '40vh', padding: 'auto' }}
+      className="bg-custom-dark text-white relative flex flex-col justify-between items-center px-4 overflow-hidden"
+      style={{
+        paddingTop: "clamp(1rem, 10vw, 5rem)",
+        maxHeight: "clamp(120px, 45vh, 365px)",
+      }}
     >
       {/* Background Image */}
-      <div >
+      <div>
         <Image
-          src={BackgroundImage}  
+          src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
@@ -58,21 +61,11 @@ const Footer = () => {
 
       {/* TINKHACK */}
       <h2
-        className="relative z-10 font-bold w-full text-center opacity-75"
+        className="relative z-10 font-khuja font-bold w-full text-center opacity-75 text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C]"
         style={{
-          position: 'relative',
-          padding: '0.1rem 0',
-          marginBottom: '-1rem',
-          transform: 'translateY(10%)',
-          WebkitTextStrokeWidth: '7px',
-          WebkitTextStrokeColor: 'transparent',
-          backgroundImage: 'linear-gradient(to bottom, #E283BD, #E2CF6C)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: '#1c1c21',
-          backgroundClip: 'text',
-          backgroundOrigin: 'border-box',
-          fontSize: 'clamp(3rem, 18vw, 15rem)',
-          lineHeight: '1',
+          WebkitTextStrokeWidth: "7px",
+          WebkitTextFillColor: "#1c1c21",
+          fontSize: "clamp(2rem, 15vw, 280px)",
         }}
       >
         TINKHACK

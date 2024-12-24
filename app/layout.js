@@ -4,16 +4,27 @@ import './globals.css';
 const satoshi = localFont({
   src: [
     {
-      path: "../public/fonts/Satoshi-Variable.ttf",
-      weight: "500",
+      path: "./fonts/Satoshi-Variable.ttf",
+      style: 'normal',
+    },
+  ],
+  src: [
+    {
+      path: "./fonts/Satoshi-VariableItalic.ttf",
+      style: 'italic',
     },
   ],
   variable: "--font-satoshi",
 });
 
+const khuja = localFont({
+  src: "./fonts/KhujaUppercase-Uppercase.ttf",
+  variable: "--font-khuja"
+})
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${satoshi.variable} ${khuja.variable}`}>
       <body>{children}</body>
     </html>
   );
