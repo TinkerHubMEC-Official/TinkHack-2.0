@@ -180,7 +180,7 @@ const Contact = () => {
 <section 
   id="contact" 
   className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative 
-  p-24 md:p-16 sm:p-8 xs:p-4 [@media(max-width:400px)]:p-0"
+  p-24 md:p-16 sm:p-8 xs:p-4 [@media(max-width:400px)]:p-0 font-satoshi"
 >
 
 

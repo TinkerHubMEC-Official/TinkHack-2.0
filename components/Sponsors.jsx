@@ -7,7 +7,7 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className="bg-custom-dark text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 xl:px-16 py-16"
+      className="bg-custom-dark text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 xl:px-16 py-16 font-satoshi"
     >
       {/* Background Image */}
       <div >

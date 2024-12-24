@@ -21,7 +21,7 @@ const Prizes = () => {
   return (
     <section
       id="prizes"
-      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-14"
+      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-14 font-satoshi"
     >
       {/* Background Image */}
       <div >
@@ -33,7 +33,7 @@ const Prizes = () => {
         />
       </div>
       <h2 className="text-5xl font-bold relative z-10 text-center 
-  bg-gradient-to-r from-[#E283BD] via-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
+  bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
   mb-8 sm:text-center md:text-center lg:text-left lg:mr-[65%]
   after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white 
   after:left-1/2 after:transform after:-translate-x-1/2 after:bottom-[-10px]
