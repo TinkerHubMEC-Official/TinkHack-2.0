@@ -40,7 +40,7 @@ const Faq = () => {
   return (
     <section
       id="faq"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4"
+      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi"
     >
       {/* Background Image */}
       <div >

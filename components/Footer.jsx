@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="bg-custom-dark text-white relative flex flex-col justify-between items-center px-4 overflow-hidden"
+      className="bg-custom-dark text-white relative flex flex-col justify-between items-center px-4 overflow-hidden font-satoshi"
       style={{
         paddingTop: "clamp(1rem, 10vw, 5rem)",
         maxHeight: "clamp(120px, 45vh, 365px)",

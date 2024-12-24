@@ -67,7 +67,7 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="min-h-screen  text-white flex flex-col items-center justify-center relative"
+      className="min-h-screen  text-white flex flex-col items-center justify-center relative font-satoshi"
     >
       {/* Background Image */}
       <div >
