@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg';
+import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_3.svg';
 import ArrowDown1 from '@/assets/arrow_down_1.svg';
 import ArrowDown2 from '@/assets/arrow_down_2.svg';
@@ -43,18 +43,14 @@ const Faq = () => {
       className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="rotate-180 scale-x-[-1]"
         />
       </div>
-
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-custom-dark opacity-50 z-1"></div>
 
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent">
         FAQ

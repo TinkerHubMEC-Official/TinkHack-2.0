@@ -1,5 +1,5 @@
 import React from 'react';
-import FrameImage from '@/assets/Frame-1.svg';  
+import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
 import Replit from '@/assets/replit.svg';  
 
@@ -7,22 +7,20 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 xl:px-16"
+      className="bg-custom-dark text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 xl:px-16 py-16"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50 z-1"></div> 
-      {/* Overlay for readability */}
       
       <div className="relative z-10 w-full flex flex-col items-center">
-        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8">
           Sponsors
         </h2>
 

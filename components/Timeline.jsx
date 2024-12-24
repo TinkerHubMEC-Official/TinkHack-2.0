@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import TimelineImage from '@/assets/timeline.svg'; 
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg';
+import BackgroundImage from '@/assets/background.svg';
 
 const Timeline = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -49,7 +49,7 @@ const Timeline = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      if (window.innerWidth > 1280) {
+      if (window.innerWidth > 1260) {
         setIsLargeScreen(true);
       } else {
         setIsLargeScreen(false);
@@ -67,18 +67,18 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative"
+      className="min-h-screen  text-white flex flex-col items-center justify-center relative"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div>
+
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent">
         Timeline
       </h2>
@@ -109,7 +109,7 @@ const Timeline = () => {
               >
                 <p
                   className={`text-sm absolute ${
-                    index % 2 === 0 ? 'right-[500px]' : 'left-[500px]'
+                    index % 2 === 0 ? 'right-[520px]' : 'left-[520px]'
                   }`}
                   style={{ color }}
                 >
@@ -147,59 +147,57 @@ const Timeline = () => {
           })}
         </div>
       ) : (
-<div className="container relative flex flex-col items-start z-10 mt-10 w-full max-w-4xl pr-4">
-  {/*  Line */}
-  <div
-    className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
-    style={{
-      left: '2rem', 
-      top: '68px',
-      bottom: '50px',
-      height: 'calc(90% - 100px)', 
-    }}
-  ></div>
-
-  {events.map((event, index) => {
-    const color = getGradientColor(index, events.length);
-
-    return (
-      <div key={index} className="relative flex items-center w-full mb-6">
-        {/* Circle on the Line */}
-        <div
-          className="absolute w-2 h-2 rounded-full"
-          style={{
+        <div className="container relative flex flex-col items-start z-10 mt-10 w-full max-w-4xl pr-4">
+          {/*  Line */}
+          <div
+            className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
+            style={{
             left: '2rem', 
-            transform: 'translateX(-50%)',
-            backgroundColor: color,
-          }}
-        ></div>
-        <div
-          className="absolute w-4 h-4 rounded-full opacity-25"
-          style={{
-            left: '2rem', 
-            transform: 'translateX(-50%)',
-            backgroundColor: color,
-          }}
-        ></div>
+            top: '68px',
+            bottom: '50px',
+            height: 'calc(90% - 100px)', 
+            }}
+          ></div>
 
-        {/* Box with Gradient, Shadow, and Hover Effect */}
-        <div
-          className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
-          style={{
-            marginLeft: 'calc(2rem + 1rem)', 
-          }}
-          
-        >
-          <h3 className="font-semibold text-lg">{event.title}</h3>
-          <p className=" text-xs text-gray-400">{event.date}</p>
-          <p className="mt-2 text-sm">{event.description}</p>
+          {events.map((event, index) => {
+            const color = getGradientColor(index, events.length);
+
+            return (
+              <div key={index} className="relative flex items-center w-full mb-6">
+                {/* Circle on the Line */}
+                <div
+                  className="absolute w-2 h-2 rounded-full"
+                  style={{
+                    left: '2rem', 
+                    transform: 'translateX(-50%)',
+                    backgroundColor: color,
+                  }}
+                ></div>
+                <div
+                  className="absolute w-4 h-4 rounded-full opacity-25"
+                  style={{
+                    left: '2rem', 
+                    transform: 'translateX(-50%)',
+                    backgroundColor: color,
+                  }}
+                ></div>
+
+                {/* Box with Gradient, Shadow, and Hover Effect */}
+                <div
+                  className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
+                  style={{
+                    marginLeft: 'calc(2rem + 1rem)', 
+                  }} 
+                >
+                  <h3 className="font-semibold text-lg">{event.title}</h3>
+                  <p className=" text-xs text-gray-400">{event.date}</p>
+                  <p className="mt-2 text-sm">{event.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
-  })}
-</div>
-
-
+        
       )}
     </section>
   );

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import FrameImage from '@/assets/Frame-1.svg';
+import BackgroundImage from '@/assets/background.svg';
 import SIB from '@/assets/sib.svg';
 
 const Prizes = () => {
@@ -24,16 +24,14 @@ const Prizes = () => {
       className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-14"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div >
         <Image
-          src={FrameImage}
+          src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className="rotate-180 scale-x-[-1]"
         />
       </div>
-      <div className="absolute inset-0 bg-custom-dark opacity-50"></div> {/* Overlay for readability */}
       <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] via-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8">
         Prizes
       </h2>
