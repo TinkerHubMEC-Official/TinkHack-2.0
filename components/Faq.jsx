@@ -52,9 +52,13 @@ const Faq = () => {
         />
       </div>
 
-      <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent">
-        FAQ
-      </h2>
+      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8 
+  after:content-[''] after:absolute after:h-[5px] after:bg-white 
+  after:left-0 after:right-0 after:bottom-[-10px]"
+>
+  FAQ
+</h2>
+
       
       {/* Broken Glass Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">

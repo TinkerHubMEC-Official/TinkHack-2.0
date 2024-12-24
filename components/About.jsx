@@ -9,7 +9,7 @@ const About = () => {
       className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-2"
     >
       {/* Centered Heading */}
-      <h2 className="text-4xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-16">
+      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-16">
         About
       </h2>
 
