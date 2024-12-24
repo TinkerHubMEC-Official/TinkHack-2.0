@@ -64,7 +64,7 @@ const Footer = () => {
         className="relative z-10 font-khuja font-bold w-full text-center opacity-75 text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C]"
         style={{
           WebkitTextStrokeWidth: "7px",
-          WebkitTextFillColor: "#1c1c21",
+          WebkitTextFillColor: "#241F23",
           fontSize: "clamp(2rem, 15vw, 280px)",
         }}
       >
