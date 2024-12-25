@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_3.svg';
@@ -7,6 +7,13 @@ import ArrowDown1 from '@/assets/arrow_down_1.svg';
 import ArrowDown2 from '@/assets/arrow_down_2.svg';
 
 const Faq = () => {
+
+      const [isLoaded, setIsLoaded] = useState(false);
+        useEffect(() => {
+          setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+        }, []);
+
+
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const faqs = [
@@ -26,7 +33,6 @@ const Faq = () => {
       question: 'Can I work on a project that I\'ve already started?',
       answer: 'Yes, you can continue working on an existing project, provided you declare it during registration.',
     },
-    
   ];
 
   const toggleFAQ = (index) => {
@@ -43,9 +49,9 @@ const Faq = () => {
       className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi"
     >
       {/* Background Image */}
-      <div >
+      <div>
         <Image
-          src={BackgroundImage}  
+          src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
@@ -53,17 +59,16 @@ const Faq = () => {
       </div>
 
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8 
-  after:content-[''] after:absolute after:h-[5px] after:bg-white 
-  after:left-0 after:right-0 after:bottom-[-10px]"
->
-  FAQ
-</h2>
+        after:content-[''] after:absolute after:h-[5px] after:bg-white 
+        after:left-0 after:right-0 after:bottom-[-10px]"
+      >
+        FAQ
+      </h2>
 
-      
       {/* Broken Glass Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         <Image
-          className="brightness-125 absolute z-0 scale-[0.9] top-[150px] left-[50px] md:top-[180px] md:left-[70px] lg:top-[200px] lg:left-[90px] mobile-glass-image transition-all duration-300"
+          className={`brightness-125 absolute z-0 scale-[0.9] top-[150px] left-[50px] md:top-[180px] md:left-[70px] lg:top-[200px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
           src={BrokenGlassImage}
           alt="Broken Glass Image"
           width={270}
@@ -85,15 +90,25 @@ const Faq = () => {
               <Image
                 src={openIndexes.includes(index) ? ArrowDown2 : ArrowDown1}
                 alt="dropdown"
-                className="transition-transform duration-300"
+                className="transition-transform duration-900"
                 width={24}
                 height={24}
-                style={{ transform: openIndexes.includes(index) ? 'rotate(0deg)' : 'rotate(0deg)' }}
+                style={{
+                  transform: openIndexes.includes(index) ? 'rotate(0deg)' : 'rotate(0deg)',
+                }}
               />
             </div>
-            {openIndexes.includes(index) && (
-              <p className="mt-2 text-sm text-gray-300">{faq.answer}</p>
-            )}
+
+            {/* Smooth Transition for Answer Section */}
+            <div
+              className={`overflow-hidden transition-all duration-700 ease-in-out ${
+                openIndexes.includes(index) ? 'max-h-[500px]' : 'max-h-0'
+              }`}
+            >
+              {openIndexes.includes(index) && (
+                <p className="mt-2 text-sm text-gray-300">{faq.answer}</p>
+              )}
+            </div>
           </div>
         ))}
       </div>
