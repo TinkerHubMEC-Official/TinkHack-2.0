@@ -5,6 +5,11 @@ import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
 const Tracks = () => {
+      const [isLoaded, setIsLoaded] = useState(false);
+        useEffect(() => {
+          setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+        }, []);
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -77,7 +82,7 @@ const Tracks = () => {
         />
       </div>
       <Image
-        className="brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px]"
+        className={`brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px] transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
         src={BrokenGlassImage}
         alt="Broken Glass Image"
         width={300}

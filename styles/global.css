@@ -7,3 +7,11 @@ body {
   @apply bg-gray-900 text-white;
   scroll-behavior: smooth;
 }
+
+/* Add this in your global CSS or Tailwind config */
+.button-gradient-border {
+  background-image: linear-gradient(to right, #E283BD, #E2CF6C);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  border: 2px solid transparent;
+}

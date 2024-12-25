@@ -52,7 +52,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`text-[#FAFAFA]/[.32] transition-all duration-300 ease-in-out font-satoshi font-bold lg:static lg:w-max lg:h-max lg:pt-0 lg:bg-transparent lg:block  fixed top-0 w-screen h-screen z-[-1] text-center items-center ${
+        className={`text-[#FAFAFA]/[.62] transition-all duration-300 ease-in-out font-satoshi font-bold lg:static lg:w-max lg:h-max lg:pt-0 lg:bg-transparent lg:block  fixed top-0 w-screen h-screen z-[-1] text-center items-center ${
           mobilenav
             ? "right-0 flex flex-col gap-[50px] bg-custom-dark/[.8] backdrop-blur pt-24"
             : "right-full flex flex-col gap-8 text-opacity-0"

@@ -5,6 +5,11 @@ import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 
 const Timeline = () => {
+      const [isLoaded, setIsLoaded] = useState(false);
+        useEffect(() => {
+          setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+        }, []);
+
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const events = [
@@ -88,7 +93,7 @@ const Timeline = () => {
 </h2>
 
       <Image
-        className="brightness-125 absolute z-10 w-[500px] h-[800px] top-0 right-0 mt-[-250px]"
+        className={`brightness-125 absolute z-10 w-[500px] h-[800px] top-0 right-0 mt-[-250px] transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : 'translate-x-[100%]'}`}
         src={TimelineImage}
         alt="Bubble Image"
         width={500}
