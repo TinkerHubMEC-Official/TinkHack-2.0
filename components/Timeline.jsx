@@ -129,7 +129,7 @@ const Timeline = () => {
 
           {/* Event Box */}
           <div
-          className={`relative max-w-[400px] p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-105 transition-all duration-300 text-white ${
+          className={`relative max-w-[400px] p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-[1.02] transition-all duration-300 text-white ${
             index % 2 === 0
               ? 'ml-[calc(50%+80px)] lg:ml-[calc(50%-460px)] md:ml-[calc(50%+40px)] sm:ml-[calc(50%+20px)]'
               : 'mr-[calc(50%+80px)] lg:mr-[calc(50%-460px)] md:mr-[calc(50%+40px)] sm:mr-[calc(50%+20px)]'
@@ -198,7 +198,7 @@ const Timeline = () => {
 
                 {/* Box with Gradient, Shadow, and Hover Effect */}
                 <div
-                  className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
+                  className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-[1.02] transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
                   style={{
                     marginLeft: 'calc(2rem + 1rem)', 
                   }} 

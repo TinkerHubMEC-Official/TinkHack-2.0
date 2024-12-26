@@ -6,8 +6,13 @@ import Slider from 'react-slick';
 import phoneIcon from '@/assets/phone.svg';
 import linkedinIcon from '@/assets/linkedin.svg';
 import emailIcon from '@/assets/email.svg';
-import profileImage from '@/assets/aroon.jpg';
-import aaron from '@/assets/aaroon.jpg';
+import aaron from '@/assets/aaron.png';
+import annrose from '@/assets/annrose.png';
+import anjali from '@/assets/anjali.png';
+import eshaan from '@/assets/eshaan.png';
+import theertha from '@/assets/theertha.png';
+import pranav from '@/assets/pranav.jpg';
+
 import BackgroundImage from '@/assets/background.svg';
 
 import 'slick-carousel/slick/slick.css'; 
@@ -20,9 +25,9 @@ const Contact = () => {
     { 
       name: 'Ann Rose', 
       role: 'Campus Lead', 
-      photo: profileImage, 
+      photo: annrose, 
       linkedin: 'https://www.linkedin.com/in/ann-rose-256808259/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:annrosebiju.mec@gmail.com', 
       phone: 'tel:+918547498719' 
     },
     { 
@@ -30,81 +35,44 @@ const Contact = () => {
       role: 'Co-Lead', 
       photo: aaron, 
       linkedin: 'https://www.linkedin.com/in/aarongeorgeabraham/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:aaroongeorge2005@gmail.com', 
       phone: 'tel:+919539753798' 
+    },
+    { 
+      name: 'Anjali', 
+      role: 'Co-Lead', 
+      photo: anjali, 
+      linkedin: 'https://www.linkedin.com/in/anjali-krishna-3a7488330/', 
+      email: 'mailto:aaronkurianabraham@gmail.com', 
+      phone: 'tel:+917306961522' 
     },
     { 
       name: 'Eshaan', 
       role: 'Outreach Lead', 
-      photo: profileImage, 
+      photo: eshaan, 
       linkedin: 'https://linkedin.com/in/eshaan-abdulkalam/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:eshaanmanath@gmail.com', 
       phone: 'tel:+918590691991' 
     },
     { 
       name: 'Theertha', 
       role: 'WIT Lead', 
-      photo: aaron, 
+      photo: theertha, 
       linkedin: 'https://www.linkedin.com/in/theertha-avinash/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:theerthaavnsh@gmail.com', 
       phone: 'tel:+919400882017' 
     },
     { 
       name: 'Pranav', 
       role: 'Tech Lead', 
-      photo: profileImage, 
+      photo: pranav, 
       linkedin: 'https://www.linkedin.com/in/pranav072/', 
       email: 'mailto:aaronkurianabraham@gmail.com', 
       phone: 'tel:+919567858032' 
     },
-    { 
-      name: 'Midhun', 
-      role: 'TinkTank Lead', 
-      photo: aaron, 
-      linkedin: 'https://www.linkedin.com/in/midhun-unni/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+918848253367' 
-    },
-    { 
-      name: 'Arjun', 
-      role: 'Design Lead', 
-      photo: profileImage, 
-      linkedin: 'https://www.linkedin.com/in/arjun-shankar-ps-215b6026a/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+919746388124' 
-    },
-    { 
-      name: 'Drishya', 
-      role: 'Speaker&Workshop Head', 
-      photo: aaron, 
-      linkedin: 'https://www.linkedin.com/in/drishyaajith/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+918848388271' 
-    },
-    { 
-      name: 'Jahfar', 
-      role: 'Media & Publicity Lead', 
-      photo: profileImage, 
-      linkedin: 'https://www.linkedin.com/in/jahfar-jamal-960942300/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+919746694031' 
-    },
-    { 
-      name: 'Sruthi', 
-      role: 'Documentation Head', 
-      photo: aaron, 
-      linkedin: 'https://www.linkedin.com/in/sruthi-m-b-a78875280/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+918593036337' 
-    },
-    { 
-      name: 'Martin', 
-      role: 'Program Facilitator', 
-      photo: profileImage, 
-      linkedin: 'https://www.linkedin.com/in/martin-joseph-46789a25a/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+919496686241' 
-    }
+    
+
+ 
   ];
 
   const settings = {
@@ -121,12 +89,14 @@ const Contact = () => {
       { breakpoint: 640, settings: { slidesToShow: 2.5 } },
       { breakpoint: 595, settings: { slidesToShow: 2 } }, 
       { breakpoint: 446, settings: { slidesToShow: 1.75 } }, 
-      { breakpoint: 360, settings: { slidesToShow: 1.5 } }
+      { breakpoint: 370, settings: { slidesToShow: 1.5 } },
+      { breakpoint: 319, settings: { slidesToShow: 1 } }
+
     ]
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 font-satoshi">
+    <section id="contact" className="max-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 font-satoshi">
       <h2 className="text-5xl font-bold relative z-10 text-center 
       bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
       mb-20 sm:text-center md:text-center lg:text-left lg:mr-[65%]
@@ -153,7 +123,7 @@ const Contact = () => {
           {contacts.map((contact, index) => (
             <div key={index} className="bg-gradient-to-b from-[#2f2f33] to-[#272529] shadow-lg hover:scale-105 transition-all duration-300 p-4 rounded-3xl text-center min-w-[180px] max-w-[190px] py-7 mx-2">
               <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
-                <Image src={contact.photo} alt="Profile" width={96} height={96} />
+                <Image src={contact.photo} alt="Profile" width={96} height={96}  />
               </div>
               <h3 className="text-lg font-semibold">{contact.name}</h3>
               <p className="text-sm text-gray-400">{contact.role}</p>

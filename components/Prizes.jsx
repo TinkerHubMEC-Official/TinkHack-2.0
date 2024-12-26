@@ -43,7 +43,7 @@ const Prizes = () => {
         <div className="relative z-10 flex flex-col items-center gap-8">
           {/* First Row */}
           <div className="flex justify-center gap-8">
-            <div className="p-6 rounded-xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <div className="p-6 rounded-xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
               <h3 className="text-lg font-semibold mb-2 text-center">1st Prize</h3>
               <p className="text-4xl font-bold text-center">₹50,000</p>
             </div>
@@ -51,18 +51,18 @@ const Prizes = () => {
 
           {/* Second Row */}
           <div className="flex flex-wrap justify-center gap-8">
-            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
               <h3 className="text-lg font-semibold mb-2 text-center">2nd Prize</h3>
               <p className="text-4xl font-bold text-center">₹20,000</p>
             </div>
-            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
               <h3 className="text-lg font-semibold mb-2 text-center">3rd Prize</h3>
               <p className="text-4xl font-bold text-center">₹10,000</p>
             </div>
           </div>
 
           {/* Third Row */}
-          <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <div className="p-6 rounded-xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
             <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center">₹20,000</p>
             <Image src={SIB} width={500} alt="SIB" />
@@ -74,13 +74,13 @@ const Prizes = () => {
           {/* First Row */}
           <div className="flex flex-wrap justify-center gap-10">
             <div className="flex flex-wrap justify-center gap-8">
-              <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
                 <h3 className="text-lg font-semibold mb-2 text-center">2nd Prize</h3>
                 <p className="text-4xl font-bold text-center">₹20,000</p>
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <div className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
               <h3 className="text-lg font-semibold mb-2 text-center" style={{ fontSize: '150%' }}>
                 1st Prize
               </h3>
@@ -89,14 +89,14 @@ const Prizes = () => {
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
               <h3 className="text-lg font-semibold mb-2 text-center">3rd Prize</h3>
               <p className="text-4xl font-bold text-center">₹10,000</p>
             </div>
           </div>
 
           {/* Second Row */}
-          <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:scale-105">
+          <div className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]">
             <h3 className="text-lg font-semibold mb-2 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center">₹20,000</p>
             <Image src={SIB} width={500} alt="SIB" />
