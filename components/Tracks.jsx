@@ -92,7 +92,7 @@ const Tracks = () => {
             {tracks.map((track, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2 w-[90%] sm:w-[80%] lg:w-[60%]"
+                className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2 w-[90%] sm:w-[80%] lg:w-[60%]"
               >
                 <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
                   {track.title}
@@ -108,7 +108,7 @@ const Tracks = () => {
               {tracks.slice(0, 3).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transformhover:shadow-sm hover:scale-[1.02] p-2"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
                     {track.title}
@@ -121,7 +121,7 @@ const Tracks = () => {
               {tracks.slice(3, 6).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transformhover:shadow-sm hover:scale-[1.02] p-2"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
                     {track.title}

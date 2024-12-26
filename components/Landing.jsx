@@ -8,7 +8,7 @@ import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import BrokenGlassImage1 from '@/assets/Broken_glass_1.svg'; 
 import BrokenGlassImage2 from '@/assets/Broken_glass_2.svg'; 
 import TinkHackLogoMain from '@/assets/TinkHackLogoMain.svg';
-import Link from 'next/link'; // Importing Next.js Link component
+import Link from 'next/link'; 
 
 const Landing = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,7 +68,7 @@ const Landing = () => {
           layout="intrinsic"
         />
         <Image
-          className={`brightness-125 absolute bottom-0  z-50  transform transition-transform duration-1000 w-[190px] h-[250px] mb-[-20px] ml-[10px] ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'} 
+          className={`brightness-125 absolute bottom-0  z-50  transform transition-transform duration-1000 w-[80px] h-[250px] mb-[45px] ml-[80px] ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'} 
             sm:w-[80px] sm:h-[300px] sm:mb-[95px] sm:ml-[40px]
             md:w-[100px] md:h-[400px] md:mb-[40px]  md:ml-[90px]
             lg:w-[150px] lg:h-[150px] lg:mb-[-10px] lg:ml-[160px]`}
@@ -89,8 +89,8 @@ const Landing = () => {
         {/* Register Now Button */}
         <Link href="https://mec.tinkerhub.org" target="_blank" rel="noopener noreferrer">
         <button
-          className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 px-9 py-3 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 
-          z-10 mb-[210px] sm:mb-[40px] md:mb-[-10px] px-3.5 py-2.5
+          className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 py-1.5 text-xl pr-2 pl-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 
+          z-10 mb-[210px] sm:mb-[40px] md:mb-[-10px]
           sm:px-9 py-3
           md:px-11 py-3
           lg:px-12 py-3"
