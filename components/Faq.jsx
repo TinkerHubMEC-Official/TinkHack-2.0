@@ -8,11 +8,10 @@ import ArrowDown2 from '@/assets/arrow_down_2.svg';
 
 const Faq = () => {
 
-      const [isLoaded, setIsLoaded] = useState(false);
-        useEffect(() => {
-          setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
-        }, []);
-
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+  }, []);
 
   const [openIndexes, setOpenIndexes] = useState([]);
 
@@ -59,8 +58,7 @@ const Faq = () => {
       </div>
 
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8 
-        after:content-[''] after:absolute after:h-[5px] after:bg-white 
-        after:left-0 after:right-0 after:bottom-[-10px]"
+        after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-0 after:right-0 after:bottom-[-10px]"
       >
         FAQ
       </h2>
@@ -94,7 +92,7 @@ const Faq = () => {
                 width={24}
                 height={24}
                 style={{
-                  transform: openIndexes.includes(index) ? 'rotate(0deg)' : 'rotate(0deg)',
+                  transform: openIndexes.includes(index) ? 'rotate(0deg)' : 'rotate(0deg)', // Flip icon on open/close
                 }}
               />
             </div>
@@ -103,7 +101,10 @@ const Faq = () => {
             <div
               className={`overflow-hidden transition-all duration-700 ease-in-out ${
                 openIndexes.includes(index) ? 'max-h-[500px]' : 'max-h-0'
-              }`}
+              }`
+            }              style={{
+              transitionDelay: openIndexes.includes(index) ? '100ms' : '1000ms', // Add delay when closing
+            }}
             >
               {openIndexes.includes(index) && (
                 <p className="mt-2 text-sm text-gray-300">{faq.answer}</p>

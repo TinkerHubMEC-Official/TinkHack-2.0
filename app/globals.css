@@ -23,3 +23,18 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+/* Change the dot color to white */
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 8px;
+}
+
+/* Reduce space between dots */
+.slick-dots li {
+  margin: 0 0px;
+}
+
+

@@ -20,15 +20,11 @@ const Sponsors = () => {
       </div>
       
       <div className="relative z-10 w-full flex flex-col items-center">
-      <h2 className="text-5xl font-bold text-center 
-  bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-16 
-  relative after:content-[''] after:absolute after:h-[5px] after:bg-white 
-  after:left-2/3 after:ml-1.55 after:transform after:-translate-x-1/2 after:bottom-[-10px] 
-  after:w-[100px]"
->
-  Sponsors
-</h2>
-
+      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-16 relative 
+        after:content-['']  after:absolute after:h-[5px] after:bg-white after:left-2/3 after:ml-1.55 after:transform after:-translate-x-1/2 after:bottom-[-10px] after:w-[100px]"
+      >
+        Sponsors
+      </h2>
 
         {/* Sponsor Rows */}
         <div className="relative z-10 flex flex-col gap-10 items-center">

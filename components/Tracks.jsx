@@ -62,15 +62,12 @@ const Tracks = () => {
       id="tracks"
       className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 sm:p-8 lg:p-8 font-satoshi"
     >
-<h2
-  className="text-5xl font-bold relative z-10 text-center 
-  bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent pb-12
-  sm:text-center md:text-center lg:text-left lg:ml-[10%] after:content-[''] after:absolute 
-  after:h-[5px] after:w-[95px] after:bg-white
-  after:left-0 lg:after:left-0 after:bottom-[40px]"
->
-  Tracks
-</h2>
+    <h2
+      className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent pb-12 sm:text-center md:text-center lg:text-left lg:ml-[10%] 
+      after:content-[''] after:absolute after:h-[5px] after:w-[95px] after:bg-white after:left-0 lg:after:left-0 after:bottom-[40px]"
+    >
+      Tracks
+    </h2>
 
       {/* Background Image */}
       <div >
@@ -106,34 +103,34 @@ const Tracks = () => {
           </div>
         ) : (
           // Desktop View: Display boxes in two rows
-<>
-  <div className="flex justify-end gap-10 pl-24">
-    {tracks.slice(0, 3).map((track, index) => (
-      <div
-        key={index}
-        className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
-      >
-        <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
-          {track.title}
-        </h3>
-        <p className="text-xs text-gray-300">{track.description}</p>
-      </div>
-    ))}
-  </div>
-  <div className="flex justify-start gap-10 pr-24 pt-6">
-    {tracks.slice(3, 6).map((track, index) => (
-      <div
-        key={index}
-        className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
-      >
-        <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
-          {track.title}
-        </h3>
-        <p className="text-xs text-gray-300">{track.description}</p>
-      </div>
-    ))}
-  </div>
-</>
+          <>
+            <div className="flex justify-end gap-10 pl-24">
+              {tracks.slice(0, 3).map((track, index) => (
+                <div
+                  key={index}
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
+                >
+                  <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
+                    {track.title}
+                  </h3>
+                  <p className="text-xs text-gray-300">{track.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-start gap-10 pr-24 pt-6">
+              {tracks.slice(3, 6).map((track, index) => (
+                <div
+                  key={index}
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:scale-105 p-2"
+                >
+                  <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
+                    {track.title}
+                  </h3>
+                  <p className="text-xs text-gray-300">{track.description}</p>
+                </div>
+              ))}
+            </div>
+          </>
 
         )}
       </div>
