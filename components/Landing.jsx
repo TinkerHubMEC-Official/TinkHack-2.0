@@ -8,6 +8,9 @@ import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import BrokenGlassImage1 from '@/assets/Broken_glass_1.svg'; 
 import BrokenGlassImage2 from '@/assets/Broken_glass_2.svg'; 
 import TinkHackLogoMain from '@/assets/TinkHackLogoMain.svg';
+
+import img from '@/assets/2.0.svg';
+import i from '@/assets/th i 1.png';
 import Link from 'next/link'; 
 
 const Landing = () => {
@@ -76,8 +79,11 @@ const Landing = () => {
           alt="Broken Glass Image"
           layout="intrinsic"
         />
+
+
+
         {/* Main Logo Image */}
-        <Image
+        {/* <Image
           className={`brightness-125 w-auto h-[610px] relative flex z-10 mx-auto transition-all duration-700 mb-[170px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}
             sm:mb-[60px] 
             md:mb-[20px] 
@@ -85,15 +91,49 @@ const Landing = () => {
           src={TinkHackLogoMain}
           alt="Tink Hack Logo"
           layout="intrinsic"
+        /> */}
+
+
+
+<div className={`z-10 flex items-center justify-center h-screen w-full transition-all duration-100 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}`}>
+  <div className="flex flex-col items-center justify-center gap-0 w-full relative">
+    {/* Tink */}
+    <h1 className="text-[4rem] font-productsansbold font-bold text-center -mt-40 sm:text-[6rem] sm:pt-6 md:text-[8.5rem] lg:text-[9rem] lg:-mt-14 relative">
+      T<span className="relative inline-block">
+        i
+        {/* 'i' Dot */}
+        <Image
+          src={i}
+          alt="Dot Image"
+          className="absolute top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] lg:top-[2.65rem] lg:left-5rem] lg:w-[40px] lg:h-[45px] rounded-3xl"
         />
+      </span>
+      nk
+      {/* '2.0' Image */}
+      <Image
+        src={img}
+        alt="2.0 Image"
+        className="absolute top-[0.2rem] left-[40%] w-[3rem] h-[3rem] sm:top-[2.1rem] sm:left-[42%] sm:w-[4rem] sm:h-[4rem] md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
+      />
+    </h1>
+    {/* HACK */}
+    <h1
+      className="text-[2.7rem] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text"
+    >
+      HACK
+    </h1>
+  </div>
+</div>
+
+
         {/* Register Now Button */}
         <Link href="https://mec.tinkerhub.org" target="_blank" rel="noopener noreferrer">
         <button
           className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 py-1.5 text-xl pr-2 pl-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 
           z-10 mb-[210px] sm:mb-[40px] md:mb-[-10px]
-          sm:px-9 py-3
-          md:px-11 py-3
-          lg:px-12 py-3"
+          sm:px-9 
+          md:px-11
+          lg:px-12"
         >
           Register Now
         </button>

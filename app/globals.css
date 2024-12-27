@@ -29,12 +29,17 @@ body {
 /* Change the dot color to white */
 .slick-dots li button:before {
   color: white !important;
-  font-size: 8px;
+  font-size: 6px;
 }
 
 /* Reduce space between dots */
 .slick-dots li {
-  margin: 0 0px;
+  margin: 0 -4px;
+  position: relative;
+  top: 12px; /* Move the dots downwards */
 }
+.slick-dots {
+}
+
 
 

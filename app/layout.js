@@ -27,9 +27,19 @@ const khuja = localFont({
   variable: "--font-khuja"
 })
 
+const productsansregular = localFont({
+  src: "./fonts/Product-Sans-Regular.ttf",
+  variable: "--font-product-sans-regular"
+})
+
+const productsansbold = localFont({
+  src: "./fonts/Product-Sans-Bold.ttf",
+  variable: "--font-product-sans-bold"
+})
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${satoshi.variable} ${khuja.variable}`}>
+    <html lang="en" className={`${satoshi.variable} ${khuja.variable} ${productsansregular.variable} ${productsansbold.variable}`}>
       <body>{children}</body>
     </html>
   );

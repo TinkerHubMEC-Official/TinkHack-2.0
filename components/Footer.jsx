@@ -36,7 +36,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/tinkerhub-mec"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-transparent hover:text-blue-300  hover:bg-clip-text md:hidden"
+            className="hover:text-transparent hover:text-white  hover:bg-clip-text md:hidden"
           >
             <FaLinkedin size={20} />
           </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
             href="https://instagram.com/tinkerhubmec"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-transparent hover:text-pink-400  hover:bg-clip-text md:hidden"
+            className="hover:text-transparent hover:text-white  hover:bg-clip-text md:hidden"
           >
             <FaInstagram size={20} />
           </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
             href="https://www.youtube.com/@TinkerHubMEC"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-transparent hover:text-red-400  hover:bg-clip-text md:hidden"
+            className="hover:text-transparent hover:text-white  hover:bg-clip-text md:hidden"
           >
             <FaYoutube size={20} />
           </Link>
