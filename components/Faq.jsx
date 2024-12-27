@@ -45,7 +45,7 @@ const Faq = () => {
   return (
     <section
       id="faq"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi"
+      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi -mt-8 lg:pt-8"
     >
       {/* Background Image */}
       <div>
@@ -57,7 +57,7 @@ const Faq = () => {
         />
       </div>
 
-      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-8 
+      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent -mb-4
         after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-0 after:right-0 after:bottom-[-10px]"
       >
         FAQ

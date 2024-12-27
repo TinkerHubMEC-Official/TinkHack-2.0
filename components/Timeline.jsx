@@ -72,7 +72,7 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="min-h-screen  text-white flex flex-col items-center justify-center relative font-satoshi"
+      className="min-h-screen  text-white flex flex-col items-center justify-center relative font-satoshi pb-20"
     >
       {/* Background Image */}
       <div >
@@ -84,7 +84,7 @@ const Timeline = () => {
         />
       </div>
 
-      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
+      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-6
         after:content-[''] after:absolute after:h-[5px] after:w-[80px] after:bg-white after:left-2/3 after:ml-2 after:transform after:-translate-x-1/2 after:bottom-[-10px]"
       >
         Timeline

@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         satoshi: ["var(--font-satoshi)", "sans-serif"],
         khuja: ["var(--font-khuja)", "sans-serif"],
+        productsansregular: ["var(--font-product-sans-regular)", "sans-serif"],
+        productsansbold: ["var(--font-product-sans-bold)", "sans-serif"],
+
       },
       animation: {
         marquee: "marquee 20s linear infinite", // Define the animation

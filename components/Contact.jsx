@@ -10,6 +10,7 @@ import aaron from '@/assets/aaron.png';
 import annrose from '@/assets/annrose.png';
 import anjali from '@/assets/anjali.png';
 import eshaan from '@/assets/eshaan.png';
+import midhun from '@/assets/midhun.png';
 import theertha from '@/assets/theertha.png';
 import pranav from '@/assets/pranav.jpg';
 
@@ -39,14 +40,6 @@ const Contact = () => {
       phone: 'tel:+919539753798' 
     },
     { 
-      name: 'Anjali', 
-      role: 'Co-Lead', 
-      photo: anjali, 
-      linkedin: 'https://www.linkedin.com/in/anjali-krishna-3a7488330/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
-      phone: 'tel:+917306961522' 
-    },
-    { 
       name: 'Eshaan', 
       role: 'Outreach Lead', 
       photo: eshaan, 
@@ -54,9 +47,17 @@ const Contact = () => {
       email: 'mailto:eshaanmanath@gmail.com', 
       phone: 'tel:+918590691991' 
     },
+    {
+    name: 'Midhun', 
+    role: 'TinkTank Lead', 
+    photo: midhun, 
+    linkedin: 'https://www.linkedin.com/in/midhun-unni/', 
+    email: 'mailto:aaronkurianabraham@gmail.com', 
+    phone: 'tel:+918848253367' 
+    },
     { 
-      name: 'Theertha', 
-      role: 'WIT Lead', 
+    name: 'Theertha', 
+    role: 'WIT Lead', 
       photo: theertha, 
       linkedin: 'https://www.linkedin.com/in/theertha-avinash/', 
       email: 'mailto:theerthaavnsh@gmail.com', 
@@ -67,14 +68,19 @@ const Contact = () => {
       role: 'Tech Lead', 
       photo: pranav, 
       linkedin: 'https://www.linkedin.com/in/pranav072/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:pranavm265@gmail.com', 
       phone: 'tel:+919567858032' 
     },
-    
-
- 
+    { 
+      name: 'Anjali', 
+      role: 'Co-Lead', 
+      photo: anjali, 
+      linkedin: 'https://www.linkedin.com/in/anjali-krishna-3a7488330/', 
+      email: 'mailto:aaronkurianabraham@gmail.com', 
+      phone: 'tel:+917306961522' 
+    },
   ];
-
+  
   const settings = {
     dots: true,
     infinite: false,
@@ -96,10 +102,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="max-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 font-satoshi">
+    <section id="contact" className="max-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 font-satoshi -mt-14 lg:pt-16">
       <h2 className="text-5xl font-bold relative z-10 text-center 
       bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
-      mb-20 sm:text-center md:text-center lg:text-left lg:mr-[65%]
+      mb-14 sm:text-center md:text-center lg:text-left lg:mr-[65%]
       after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white 
       after:transform after:-translate-x-1/2 after:bottom-[-10px]
       after:left-0 after:translate-x-0 after:w-[85px]
@@ -118,7 +124,7 @@ const Contact = () => {
         />
       </div>
 
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-6xl ">
         <Slider {...settings} className="-mx-2">
           {contacts.map((contact, index) => (
             <div key={index} className="bg-gradient-to-b from-[#2f2f33] to-[#272529] shadow-lg hover:scale-105 transition-all duration-300 p-4 rounded-3xl text-center min-w-[180px] max-w-[190px] py-7 mx-2">
@@ -128,14 +134,32 @@ const Contact = () => {
               <h3 className="text-lg font-semibold">{contact.name}</h3>
               <p className="text-sm text-gray-400">{contact.role}</p>
               <div className="flex justify-center gap-4 mt-4">
-                <a href={contact.email}>
-                  <Image src={emailIcon} alt="Email" width={24} height={24} />
+                <a href={contact.email} target="_blank" rel="noopener noreferrer" className="group">
+                  <Image
+                    src={emailIcon}
+                    alt="Email"
+                    width={24}
+                    height={24}
+                    className="transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  />
                 </a>
-                <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Image src={linkedinIcon} alt="LinkedIn" width={24} height={24} />
+                <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="group">
+                  <Image
+                    src={linkedinIcon}
+                    alt="LinkedIn"
+                    width={24}
+                    height={24}
+                    className="transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  />
                 </a>
-                <a href={contact.phone}>
-                  <Image src={phoneIcon} alt="Phone" width={24} height={24} />
+                <a href={contact.phone} target="_blank" rel="noopener noreferrer" className="group">
+                  <Image
+                    src={phoneIcon}
+                    alt="Phone"
+                    width={24}
+                    height={24}
+                    className="transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  />
                 </a>
               </div>
             </div>
