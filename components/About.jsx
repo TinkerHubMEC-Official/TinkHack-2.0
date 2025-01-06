@@ -1,6 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import TinkerHubLogo from '@/assets/TinkerHubLogo.svg';
 import TinkHackLogo from '@/assets/TinkHackLogoMain.svg';
 import BubbleImage from '@/assets/Bubble.svg';
@@ -11,16 +13,33 @@ const About = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: 'ease-in-out',
+      once: false, // Ensures the animations can trigger multiple times
+    });
+
     setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 600);
     };
 
+    // Scroll event listener to refresh AOS on scroll
+    const handleScroll = () => {
+      AOS.refresh(); // Refresh AOS to trigger animations every time the section comes into view
+    };
+
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
- }, []);
+    window.addEventListener('scroll', handleScroll); // Add scroll event listener for both directions
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll); // Clean up the event listener
+    };
+  }, []);
 
   return (
     <section
@@ -51,16 +70,14 @@ const About = () => {
             bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
             after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white 
             after:left-1/2 after:transform after:-translate-x-1/2 after:bottom-[-10px]
-            after:right-0 after:translate-x-0 after:w-[67px]
-            sm:after:right-0 sm:after:translate-x-0 sm:after:w-[67px]
-            md:after:right-0 md:after:translate-x-0 md:after:w-[67px]
-            lg:after:right-0 lg:after:translate-x-0 lg:after:w-[67px]">
+            after:right-0 after:translate-x-0 after:w-[67px]"
+            data-aos="zoom-in-up">
             About
           </h2>
         </div>
 
         {/* Paragraph 1 */}
-        <div className={isMobile ? "w-full text-center" : "col-span-2"}>
+        <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
           <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-2xl">
             TinkerHub MEC's overnight Hackathon, Kerala's inaugural AI-based event, promotes student expertise and explores Generative AI. This innovative platform unites technology and innovation, fostering diverse solutions in various fields.
           </p>
@@ -68,7 +85,7 @@ const About = () => {
 
         {/* TinkHack Logo */}
         {!isMobile && (
-          <div className="col-span-1 flex items-center justify-center transform -rotate-6 ">
+          <div className="col-span-1 flex items-center justify-center transform -rotate-6 " data-aos="fade-up">
             <Image
               src={TinkHackLogo}
               alt="TinkHack Logo"
@@ -79,7 +96,7 @@ const About = () => {
         )}
 
         {/* Paragraph 2 */}
-        <div className={isMobile ? "w-full text-center" : "col-span-2"}>
+        <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
           <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-2xl">
             TinkerHub MEC Chapter is a branch of a non-profit organization that has the aim to learn, interact, and innovate. We provide students with opportunities to enhance their skills through hands-on experience and community learning culture.
           </p>
@@ -88,7 +105,7 @@ const About = () => {
 
       {/* Bubble Image */}
       {!isMobile && (
-        <div className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1 ">
+        <div className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1 " data-aos="fade-up">
           <Image
             className={`brightness-125 transition-transform duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-90  lg:h-[350px] ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`} 
             src={BubbleImage} 
@@ -99,7 +116,7 @@ const About = () => {
 
       {/* TinkerHub Logo */}
       {!isMobile && (
-        <div className="absolute -bottom-4 right-24 transform -rotate-6 hidden md:block">
+        <div className="absolute -bottom-4 right-24 transform -rotate-6 hidden sm:block" data-aos="zoom-in">
           <Image
             src={TinkerHubLogo}
             alt="TinkerHub Logo"

@@ -37,9 +37,31 @@ const productsansbold = localFont({
   variable: "--font-product-sans-bold"
 })
 
+const latohairline = localFont({
+  src: "./fonts/Lato-Hairline.ttf",
+  variable: "--font-lato-hairline"
+})
+
+const latolight = localFont({
+  src: "./fonts/Lato-Light.ttf",
+  variable: "--font-lato-light"
+})
+
+const latothin = localFont({
+  src: "./fonts/Lato-Thin.ttf",
+  variable: "--font-lato-thin"
+})
+
+const candycolouredclown = localFont({
+  src: "./fonts/CandyColouredClown.ttf",
+  variable: "--font-candycolouredclown"
+})
+
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${satoshi.variable} ${khuja.variable} ${productsansregular.variable} ${productsansbold.variable}`}>
+    <html lang="en" className={`${satoshi.variable} ${khuja.variable} ${productsansregular.variable} ${productsansbold.variable}
+    ${latohairline.variable} ${latolight.variable} ${latothin.variable} ${candycolouredclown.variable} `}>
       <body>{children}</body>
     </html>
   );

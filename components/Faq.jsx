@@ -1,16 +1,22 @@
 "use client"
-import React, { useEffect , useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_3.svg';
 import ArrowDown1 from '@/assets/arrow_down_1.svg';
 import ArrowDown2 from '@/assets/arrow_down_2.svg';
+import 'aos/dist/aos.css';  // AOS Styles
+import AOS from 'aos';  // AOS Library
 
 const Faq = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
   }, []);
 
   const [openIndexes, setOpenIndexes] = useState([]);
@@ -45,7 +51,7 @@ const Faq = () => {
   return (
     <section
       id="faq"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi -mt-8 lg:pt-8"
+      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi -mt-8 lg:pt-8 overflow-x-auto overflow-y-auto"
     >
       {/* Background Image */}
       <div>
@@ -66,7 +72,7 @@ const Faq = () => {
       {/* Broken Glass Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         <Image
-          className={`brightness-125 absolute z-0 scale-[0.9] top-[150px] left-[50px] md:top-[180px] md:left-[70px] lg:top-[200px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
+          className={`brightness-125 absolute z-0 scale-[0.9] top-[130px] left-[50px] md:top-[160px] md:left-[70px] lg:top-[180px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
           src={BrokenGlassImage}
           alt="Broken Glass Image"
           width={270}
@@ -78,6 +84,7 @@ const Faq = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
+            data-aos="fade-up" // Apply AOS animation
             className="mb-4 p-6 rounded-xl bg-gradient-to-b from-[#302e33] to-[#262429] text-white shadow-lg shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_2px_2px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out cursor-pointer w-full max-w-2xl mx-auto transform hover:scale-[1.02] hover:shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
             onClick={() => toggleFAQ(index)}
           >
@@ -100,11 +107,11 @@ const Faq = () => {
             {/* Smooth Transition for Answer Section */}
             <div
               className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                openIndexes.includes(index) ? 'max-h-[500px]' : 'max-h-0'
-              }`
-            }              style={{
-              transitionDelay: openIndexes.includes(index) ? '100ms' : '1000ms', // Add delay when closing
-            }}
+                openIndexes.includes(index) ? 'max-h-[500px] ease-in-out' : 'max-h-0 ease-in-out'
+              }`}
+              style={{
+                transitionDelay: openIndexes.includes(index) ? '100ms ease-in-out' : '1000ms ease-in-out', // Add delay when closing
+              }}
             >
               {openIndexes.includes(index) && (
                 <p className="mt-2 text-sm text-gray-300 ease-in-out">{faq.answer}</p>
