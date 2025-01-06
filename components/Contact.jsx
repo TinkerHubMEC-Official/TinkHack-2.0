@@ -1,8 +1,12 @@
 "use client";
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-// Import assets
+// Import AOS and styles
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import phoneIcon from '@/assets/phone.svg';
 import linkedinIcon from '@/assets/linkedin.svg';
 import emailIcon from '@/assets/email.svg';
@@ -18,7 +22,6 @@ import BackgroundImage from '@/assets/background.svg';
 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
-// Tailwind style overrides for the slider's dots
 import '../app/globals.css';
 
 const Contact = () => {
@@ -48,16 +51,16 @@ const Contact = () => {
       phone: 'tel:+918590691991' 
     },
     {
-    name: 'Midhun', 
-    role: 'TinkTank Lead', 
-    photo: midhun, 
-    linkedin: 'https://www.linkedin.com/in/midhun-unni/', 
-    email: 'mailto:aaronkurianabraham@gmail.com', 
-    phone: 'tel:+918848253367' 
+      name: 'Midhun', 
+      role: 'TinkTank Lead', 
+      photo: midhun, 
+      linkedin: 'https://www.linkedin.com/in/midhun-unni/', 
+      email: 'mailto:aaronkurianabraham@gmail.com', 
+      phone: 'tel:+918848253367' 
     },
     { 
-    name: 'Theertha', 
-    role: 'WIT Lead', 
+      name: 'Theertha', 
+      role: 'WIT Lead', 
       photo: theertha, 
       linkedin: 'https://www.linkedin.com/in/theertha-avinash/', 
       email: 'mailto:theerthaavnsh@gmail.com', 
@@ -76,11 +79,18 @@ const Contact = () => {
       role: 'Co-Lead', 
       photo: anjali, 
       linkedin: 'https://www.linkedin.com/in/anjali-krishna-3a7488330/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:anjalikrishna867@gmail.com', 
       phone: 'tel:+917306961522' 
     },
   ];
-  
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const settings = {
     dots: true,
     infinite: false,
@@ -97,7 +107,6 @@ const Contact = () => {
       { breakpoint: 446, settings: { slidesToShow: 1.75 } }, 
       { breakpoint: 370, settings: { slidesToShow: 1.5 } },
       { breakpoint: 319, settings: { slidesToShow: 1 } }
-
     ]
   };
 
@@ -127,9 +136,13 @@ const Contact = () => {
       <div className="w-full max-w-6xl ">
         <Slider {...settings} className="-mx-2">
           {contacts.map((contact, index) => (
-            <div key={index} className="bg-gradient-to-b from-[#2f2f33] to-[#272529] shadow-lg hover:scale-105 transition-all duration-300 p-4 rounded-3xl text-center min-w-[180px] max-w-[190px] py-7 mx-2">
+            <div
+              key={index}
+              className="bg-gradient-to-b from-[#2f2f33] to-[#272529] shadow-lg hover:scale-105 transition-all duration-300 p-4 rounded-3xl text-center min-w-[180px] max-w-[190px] py-7 mx-2"
+              data-aos="fade-up"
+            >
               <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
-                <Image src={contact.photo} alt="Profile" width={96} height={96}  />
+                <Image src={contact.photo} alt="Profile" width={96} height={96} />
               </div>
               <h3 className="text-lg font-semibold">{contact.name}</h3>
               <p className="text-sm text-gray-400">{contact.role}</p>

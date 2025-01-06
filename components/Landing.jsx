@@ -10,8 +10,11 @@ import BrokenGlassImage2 from '@/assets/Broken_glass_2.svg';
 import TinkHackLogoMain from '@/assets/TinkHackLogoMain.svg';
 
 import img from '@/assets/2.0.svg';
-import i from '@/assets/th i 1.png';
+// import i from '@/assets/th i 1.png';
+import i from '@/assets/i_kuthu.png';
+
 import Link from 'next/link'; 
+import { FaKorvue } from 'react-icons/fa';
 
 const Landing = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -98,30 +101,111 @@ const Landing = () => {
 <div className={`z-10 flex items-center justify-center h-screen w-full transition-all duration-100 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}`}>
   <div className="flex flex-col items-center justify-center gap-0 w-full relative">
     {/* Tink */}
-    <h1 className="text-[4rem] font-productsansbold font-bold text-center -mt-40 sm:text-[6rem] sm:pt-6 md:text-[8.5rem] lg:text-[9rem] lg:-mt-14 relative">
+    <h1 className="text-[4rem] filter blur-[1.02px] font-productsansbold font-bold text-center -mt-40 sm:text-[6rem] sm:pt-6 md:text-[8.5rem] lg:text-[9rem] lg:-mt-14 relative">
       T<span className="relative inline-block">
         i
         {/* 'i' Dot */}
         <Image
           src={i}
           alt="Dot Image"
-          className="absolute top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] lg:top-[2.65rem] lg:left-5rem] lg:w-[40px] lg:h-[45px] rounded-3xl"
+          className="absolute top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] lg:top-[2.65rem] lg:left-5rem] lg:w-[38px] lg:h-[40px] lg:pl-0.5 rounded-3xl"
         />
       </span>
       nk
+
+
       {/* '2.0' Image */}
       <Image
         src={img}
         alt="2.0 Image"
         className="absolute top-[0.2rem] left-[40%] w-[3rem] h-[3rem] sm:top-[2.1rem] sm:left-[42%] sm:w-[4rem] sm:h-[4rem] md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
       />
+
+
+
+
+{/* 
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#172ee7] lg:pl-[0.2rem] lg:pt-[0.8rem]
+                                                    font-semibold text-7xl font-candycolouredclown" 
+                                        
+                                        >
+                                          2
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#172ee7] lg:pl-[2.14rem] lg:-mt-[0.65rem]
+                                                    font-semibold text-8xl font-candycolouredclown" 
+                                        
+                                        >
+                                          .
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#172ee7] lg:pl-[3rem] lg:pt-3
+                                                    font-bold text-7xl font-candycolouredclown" 
+                                        
+                                        >
+                                          0
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#E2CF6C] lg:pl-2 lg:pt-7
+                                                    font-semibold text-5xl font-candycolouredclown" 
+
+                                        >
+                                          2
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#E2CF6C] lg:pl-[2.3rem] lg:pt-[1.9rem]
+                                                    font-semibold text-5xl font-candycolouredclown" 
+
+                                        >
+                                          .
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#E2CF6C] lg:pl-[3.3rem] lg:pt-7
+                                                    font-bold text-5xl font-candycolouredclown" 
+
+                                        >
+                                          0
+                                        </h1>
+                                        <h1
+                                          className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
+                                                    text-[#c964c6] lg:pl-1.5 lg:pt-5
+                                                    font-extrabold text-6xl font-candycolouredclown" 
+                                                                    // style={{
+                                                                    //   textShadow: `
+                                                                    //     0 0 10px #c964c6, 
+                                                                    //     0 0 15px #c964c6, 
+                                                                    //     0 0 20px #c964c6, 
+                                                                    //     0 0 30px #172ee7, 
+                                                                    //     0 0 35px #172ee7, 
+                                                                    //     0 0 40px #172ee7, 
+                                                                    //     0 0 45px #172ee7`
+                                                                    // }}
+                                        >
+                                          2.0
+                                        </h1>
+
+ */}
+
+
     </h1>
     {/* HACK */}
-    <h1
-      className="text-[2.7rem] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text"
-    >
-      HACK
-    </h1>
+    <div className="relative">
+  <h1
+    className="relative text-[2.7rem] filter blur-[0.6px] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text
+      before:content-['HACK'] before:absolute before:top-0 before:left-0 before:-z-10 before:bg-gradient-to-br before:from-[#f3f302] before:via-[#e23be6] before:to-[#0000ff] before:bg-clip-text before:text-transparent before:blur-md
+      before:text-[2.5rem] before:-mt-1 before:pl-3 before:scale-y-[1] before:scale-x-[1.1] before:sm:text-[4rem] before:sm:-mt-1 before:sm:pl-4 before:sm:scale-y-[1] before:sm:scale-x-[1.01] before:md:text-[6rem] before:md:-mt-0 before:md:pl-5 before:md:scale-y-[1] before:md:scale-x-[1.01] before:lg:text-[6rem] before:lg:-mt-0 before:lg:pl-6 before:lg:scale-y-[1.1] before:lg:scale-x-[1.01] before:leading-none"
+  >
+    HACK
+  </h1>
+</div>
+
   </div>
 </div>
 
