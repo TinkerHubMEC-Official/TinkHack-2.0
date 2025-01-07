@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 import SIB from '@/assets/sib.svg';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
 
 const Prizes = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,12 +14,6 @@ const Prizes = () => {
 
     handleResize();
     window.addEventListener('resize', handleResize);
-
-    // Initialize AOS
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: false,    // Repeat animations when scrolling back
-    });
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -96,7 +88,7 @@ const Prizes = () => {
             <div className="flex flex-wrap justify-center gap-8">
               <div
                 className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[300px] sm:w-[250px] lg:w-[250px] h-[120px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
-                data-aos="fade-up"
+                data-aos="fade-right"
               >
                 <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">2nd Prize</h3>
                 <p className="text-4xl font-bold text-center">₹20,000</p>
@@ -105,7 +97,7 @@ const Prizes = () => {
 
             <div
               className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[250px] h-[140px] -mt-2 transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
-              data-aos="fade-up"
+              data-aos="zoom-in"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-4 text-center" style={{ fontSize: '150%' }}>
                 1st Prize
@@ -117,7 +109,7 @@ const Prizes = () => {
 
             <div
               className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[120px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
-              data-aos="fade-up"
+              data-aos="fade-left"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">3rd Prize</h3>
               <p className="text-4xl font-bold text-center">₹10,000</p>
@@ -127,7 +119,7 @@ const Prizes = () => {
           {/* Second Row */}
           <div
             className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center mt-4">₹20,000</p>

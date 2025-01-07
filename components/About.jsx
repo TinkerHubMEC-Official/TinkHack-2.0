@@ -1,8 +1,6 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import TinkerHubLogo from '@/assets/TinkerHubLogo.svg';
 import TinkHackLogo from '@/assets/TinkHackLogoMain.svg';
 import BubbleImage from '@/assets/Bubble.svg';
@@ -13,38 +11,24 @@ const About = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 100,
-      easing: 'ease-in-out',
-      once: false, // Ensures the animations can trigger multiple times
-    });
-
     setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 600);
     };
 
-    // Scroll event listener to refresh AOS on scroll
-    const handleScroll = () => {
-      AOS.refresh(); // Refresh AOS to trigger animations every time the section comes into view
-    };
-
     handleResize();
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll); // Add scroll event listener for both directions
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll); // Clean up the event listener
     };
   }, []);
 
   return (
     <section
       id="about"
-      className="min-h-screen bg-custom-dark text-white flex items-center justify-center relative p-8 font-satoshi -mt-0 sm: -mt-48 px-10 -mb-20 md:-mt-0 lg:-mt-0"
+      className="min-h-screen bg-custom-dark text-white flex items-center justify-center relative p-8 font-satoshi -mt-40 sm:-mt-48 px-10 -mb-20 md:-mt-0 lg:-mt-0"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -66,12 +50,14 @@ const About = () => {
       >
         {/* Title */}
         <div className={isMobile ? "w-full text-center" : "col-span-1"}>
-          <h2 className="text-5xl font-bold relative z-10 text-center
+          <h2
+            className="text-5xl font-bold relative z-10 text-center
             bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
             after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white 
             after:left-1/2 after:transform after:-translate-x-1/2 after:bottom-[-10px]
             after:right-0 after:translate-x-0 after:w-[67px]"
-            data-aos="zoom-in-up">
+            data-aos="zoom-in-up"
+          >
             About
           </h2>
         </div>
@@ -85,7 +71,10 @@ const About = () => {
 
         {/* TinkHack Logo */}
         {!isMobile && (
-          <div className="col-span-1 flex items-center justify-center transform -rotate-6 " data-aos="fade-up">
+          <div
+            className="col-span-1 flex items-center justify-center transform -rotate-6"
+            data-aos="fade-up"
+          >
             <Image
               src={TinkHackLogo}
               alt="TinkHack Logo"
@@ -105,10 +94,15 @@ const About = () => {
 
       {/* Bubble Image */}
       {!isMobile && (
-        <div className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1 " data-aos="fade-up">
+        <div
+          className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1"
+          data-aos="fade-up"
+        >
           <Image
-            className={`brightness-125 transition-transform duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-90  lg:h-[350px] ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`} 
-            src={BubbleImage} 
+            className={`brightness-125 transition-transform duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-90  lg:h-[350px] ${
+              isLoaded ? 'translate-x-0' : '-translate-x-[100%]'
+            }`}
+            src={BubbleImage}
             alt="Bubble Image"
           />
         </div>
@@ -116,7 +110,10 @@ const About = () => {
 
       {/* TinkerHub Logo */}
       {!isMobile && (
-        <div className="absolute -bottom-4 right-24 transform -rotate-6 hidden sm:block" data-aos="zoom-in">
+        <div
+          className="absolute -bottom-4 right-24 transform -rotate-6 hidden sm:block"
+          data-aos="zoom-in"
+        >
           <Image
             src={TinkerHubLogo}
             alt="TinkerHub Logo"
@@ -125,7 +122,6 @@ const About = () => {
           />
         </div>
       )}
-
     </section>
   );
 };

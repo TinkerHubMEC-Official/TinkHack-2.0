@@ -1,8 +1,6 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
@@ -11,14 +9,7 @@ const Tracks = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 100,
-      easing: 'ease-in-out',
-      once: false, // Allow animations to trigger multiple times
-    });
-
-    setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+    setTimeout(() => setIsLoaded(true), 1000); // Simulate loading effect
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 818);
@@ -27,16 +18,8 @@ const Tracks = () => {
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Scroll event listener to refresh AOS on scroll
-    const handleScroll = () => {
-      AOS.refresh(); // Refresh AOS to trigger animations every time the section comes into view
-    };
-
-    window.addEventListener('scroll', handleScroll); // Add scroll event listener
-
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll); // Clean up the event listener
     };
   }, []);
 
@@ -129,7 +112,7 @@ const Tracks = () => {
               {tracks.slice(0, 3).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transformhover:shadow-sm hover:scale-[1.02] p-2"
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
                   data-aos="fade-right"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
@@ -143,7 +126,7 @@ const Tracks = () => {
               {tracks.slice(3, 6).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transformhover:shadow-sm hover:scale-[1.02] p-2"
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
                   data-aos="fade-left"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">

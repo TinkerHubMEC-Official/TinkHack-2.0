@@ -8,7 +8,8 @@ import {
   Prizes,
   Timeline,
   Tracks,
-  Footer
+  Footer,
+  Partners
 } from "../components";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Timeline />
       <Prizes />
       <Sponsors />
+      <Partners />
       <Faq />
       <Contact />
       <Footer />

@@ -86,7 +86,7 @@ const Timeline = () => {
 
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-6
         after:content-[''] after:absolute after:h-[5px] after:w-[80px] after:bg-white after:left-2/3 after:ml-2 after:transform after:-translate-x-1/2 after:bottom-[-10px]"
-      >
+        data-aos="fade-up">
         Timeline
       </h2>
 
@@ -114,6 +114,7 @@ const Timeline = () => {
           className={`relative flex items-center w-full mb-6 ${
             index % 2 === 0 ? 'justify-start' : 'justify-end'
           }`}
+          
         >
           {/* Date Position */}
           <p
@@ -166,7 +167,7 @@ const Timeline = () => {
           <div
             className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
             style={{
-            left: '2rem', 
+            left: '1.95rem', 
             top: '68px',
             bottom: '50px',
             height: 'calc(90% - 100px)', 
