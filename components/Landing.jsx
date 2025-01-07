@@ -14,8 +14,6 @@ import img from '@/assets/2.0.svg';
 import i from '@/assets/i_kuthu.png';
 
 import Link from 'next/link'; 
-import { FaKorvue } from 'react-icons/fa';
-
 const Landing = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -194,20 +192,20 @@ const Landing = () => {
  */}
 
 
-    </h1>
-    {/* HACK */}
-    <div className="relative">
-  <h1
-    className="relative text-[2.7rem] filter blur-[0.6px] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text
-      before:content-['HACK'] before:absolute before:top-0 before:left-0 before:-z-10 before:bg-gradient-to-br before:from-[#f3f302] before:via-[#e23be6] before:to-[#0000ff] before:bg-clip-text before:text-transparent before:blur-md
-      before:text-[2.5rem] before:-mt-1 before:pl-3 before:scale-y-[1] before:scale-x-[1.1] before:sm:text-[4rem] before:sm:-mt-1 before:sm:pl-4 before:sm:scale-y-[1] before:sm:scale-x-[1.01] before:md:text-[6rem] before:md:-mt-0 before:md:pl-5 before:md:scale-y-[1] before:md:scale-x-[1.01] before:lg:text-[6rem] before:lg:-mt-0 before:lg:pl-6 before:lg:scale-y-[1.1] before:lg:scale-x-[1.01] before:leading-none"
-  >
-    HACK
-  </h1>
-</div>
+                  </h1>
+                  {/* HACK */}
+                  <div className="relative">
+                <h1
+                  className="relative text-[2.7rem] filter blur-[0.4px] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text
+                    before:content-['HACK'] before:absolute before:top-0 before:left-0 before:-z-10 before:bg-gradient-to-br before:from-[#f3f302] before:via-[#e23be6] before:to-[#0000ff] before:bg-clip-text before:text-transparent before:blur-md
+                    before:text-[2.5rem] before:-mt-1 before:pl-3 before:scale-y-[1] before:scale-x-[1.1] before:sm:text-[4rem] before:sm:-mt-1 before:sm:pl-4 before:sm:scale-y-[1] before:sm:scale-x-[1.01] before:md:text-[6rem] before:md:-mt-0 before:md:pl-5 before:md:scale-y-[1] before:md:scale-x-[1.01] before:lg:text-[6rem] before:lg:-mt-0 before:lg:pl-6 before:lg:scale-y-[1.1] before:lg:scale-x-[1.01] before:leading-none"
+                >
+                  HACK
+                </h1>
+              </div>
 
-  </div>
-</div>
+                </div>
+              </div>
 
 
         {/* Register Now Button */}

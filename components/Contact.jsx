@@ -3,10 +3,6 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-// Import AOS and styles
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 import phoneIcon from '@/assets/phone.svg';
 import linkedinIcon from '@/assets/linkedin.svg';
 import emailIcon from '@/assets/email.svg';
@@ -83,13 +79,6 @@ const Contact = () => {
       phone: 'tel:+917306961522' 
     },
   ];
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
-  }, []);
 
   const settings = {
     dots: true,

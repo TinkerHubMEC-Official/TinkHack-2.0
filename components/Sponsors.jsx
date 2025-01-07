@@ -3,18 +3,9 @@ import React, { useEffect } from 'react';
 import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
 import Replit from '@/assets/replit.svg';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
 
 const Sponsors = () => {
-  useEffect(() => {
-    // Initialize AOS
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: false,    // Animation happens only once
-    });
-  }, []);
-
+  
   return (
     <section
       id="sponsors"

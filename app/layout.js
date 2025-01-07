@@ -1,5 +1,8 @@
 import localFont from 'next/font/local';
 import './globals.css';
+import AOSInit from '@/utils/AOSInit';
+import 'aos/dist/aos.css';
+
 
 // const satoshi = localFont({
 //   src: [
@@ -62,6 +65,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${satoshi.variable} ${khuja.variable} ${productsansregular.variable} ${productsansbold.variable}
     ${latohairline.variable} ${latolight.variable} ${latothin.variable} ${candycolouredclown.variable} `}>
+     <AOSInit/>
       <body>{children}</body>
     </html>
   );

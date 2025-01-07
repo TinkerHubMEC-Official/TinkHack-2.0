@@ -5,18 +5,12 @@ import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_3.svg';
 import ArrowDown1 from '@/assets/arrow_down_1.svg';
 import ArrowDown2 from '@/assets/arrow_down_2.svg';
-import 'aos/dist/aos.css';  // AOS Styles
-import AOS from 'aos';  // AOS Library
 
 const Faq = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
   }, []);
 
   const [openIndexes, setOpenIndexes] = useState([]);
