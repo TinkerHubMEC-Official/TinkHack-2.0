@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
+import BubbleImage from '@/assets/Bubble.svg';
+
 import SIB from '@/assets/sib.svg';
 
 const Prizes = () => {
@@ -125,7 +127,29 @@ const Prizes = () => {
             <p className="text-4xl font-bold text-center mt-4">₹20,000</p>
             <Image src={SIB} width={500} alt="SIB" />
           </div>
+
+
+          <div
+          className="absolute z-10 w-[150px] h-[300px] -bottom-[220px] -left-72"
+          // data-aos="fade-up"
+        >
+          <Image
+            className={`brightness-125 transition-transform bottom-0 duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-100 lg:ml-30  lg:h-[350px] lg:pb-10
+              w-[250px] h-[250px] mb-[-3px]
+                    sm:w-[300px] sm:mb-[-350px] 
+                    md:w-[350px] md:mb-[-400px] 
+                    lg:w-[350px] lg:mb-[-450px] }`}
+            src={BubbleImage}
+            alt="Bubble Image"
+          />
         </div>
+
+
+        </div>
+
+
+
+
       )}
     </section>
   );

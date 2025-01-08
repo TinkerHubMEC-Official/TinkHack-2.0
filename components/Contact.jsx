@@ -51,7 +51,7 @@ const Contact = () => {
       role: 'TinkTank Lead', 
       photo: midhun, 
       linkedin: 'https://www.linkedin.com/in/midhun-unni/', 
-      email: 'mailto:aaronkurianabraham@gmail.com', 
+      email: 'mailto:midhununni457@gmail.com', 
       phone: 'tel:+918848253367' 
     },
     { 

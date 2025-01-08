@@ -99,14 +99,14 @@ const Landing = () => {
 <div className={`z-10 flex items-center justify-center h-screen w-full transition-all duration-100 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}`}>
   <div className="flex flex-col items-center justify-center gap-0 w-full relative">
     {/* Tink */}
-    <h1 className="text-[4rem] filter blur-[1.02px] font-productsansbold font-bold text-center -mt-40 sm:text-[6rem] sm:pt-6 md:text-[8.5rem] lg:text-[9rem] lg:-mt-14 relative">
+    <h1 className="text-[4rem] filter blur-[0.5px] font-productsansbold font-bold text-center -mt-40 sm:text-[6rem] sm:pt-6 md:text-[8.5rem] lg:text-[9rem] lg:-mt-14 relative">
       T<span className="relative inline-block">
         i
         {/* 'i' Dot */}
         <Image
           src={i}
           alt="Dot Image"
-          className="absolute top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] lg:top-[2.65rem] lg:left-5rem] lg:w-[38px] lg:h-[40px] lg:pl-0.5 rounded-3xl"
+          className="absolute filter -blur-[8px] top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] lg:top-[2.65rem] lg:left-5rem] lg:w-[38px] lg:h-[40px] lg:pl-0.5 rounded-3xl"
         />
       </span>
       nk
@@ -116,7 +116,7 @@ const Landing = () => {
       <Image
         src={img}
         alt="2.0 Image"
-        className="absolute top-[0.2rem] left-[40%] w-[3rem] h-[3rem] sm:top-[2.1rem] sm:left-[42%] sm:w-[4rem] sm:h-[4rem] md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
+        className="absolute filter -blur-[8px] top-[0.2rem] left-[40%] w-[3rem] h-[3rem] sm:top-[2.1rem] sm:left-[42%] sm:w-[4rem] sm:h-[4rem] md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
       />
 
 
@@ -197,7 +197,7 @@ const Landing = () => {
                   <div className="relative">
                 <h1
                   className="relative text-[2.7rem] filter blur-[0.4px] font-khuja font-medium text-center -mt-5 pl-2 sm:text-[4rem] sm:-mt-8 sm:pl-3 md:text-[6rem] md:-mt-11 md:pl-4 lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text
-                    before:content-['HACK'] before:absolute before:top-0 before:left-0 before:-z-10 before:bg-gradient-to-br before:from-[#f3f302] before:via-[#e23be6] before:to-[#0000ff] before:bg-clip-text before:text-transparent before:blur-md
+                    before:content-['HACK'] before:absolute before:top-0 before:left-0 before:-z-10 before:bg-gradient-to-br before:from-[#f3f302] before:via-[#e23be6] before:to-[#0000ff] before:bg-clip-text before:text-transparent before:blur-[4px]
                     before:text-[2.5rem] before:-mt-1 before:pl-3 before:scale-y-[1] before:scale-x-[1.1] before:sm:text-[4rem] before:sm:-mt-1 before:sm:pl-4 before:sm:scale-y-[1] before:sm:scale-x-[1.01] before:md:text-[6rem] before:md:-mt-0 before:md:pl-5 before:md:scale-y-[1] before:md:scale-x-[1.01] before:lg:text-[6rem] before:lg:-mt-0 before:lg:pl-6 before:lg:scale-y-[1.1] before:lg:scale-x-[1.01] before:leading-none"
                 >
                   HACK
@@ -211,7 +211,7 @@ const Landing = () => {
         {/* Register Now Button */}
         <Link href="https://mec.tinkerhub.org" target="_blank" rel="noopener noreferrer">
         <button
-          className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 py-1.5 text-xl pr-2 pl-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 
+          className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 
           z-10 mb-[210px] sm:mb-[40px] md:mb-[-10px]
           sm:px-9 
           md:px-11
