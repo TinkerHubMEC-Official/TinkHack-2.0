@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
 import Replit from '@/assets/replit.svg';
+import LandingPageImage3 from '@/assets/landing_page_3.svg';
+
 
 const Sponsors = () => {
   
@@ -95,6 +97,20 @@ const Sponsors = () => {
             ))}
           </div>
         </div>
+
+
+         <div className="container flex w-full">
+                <Image
+                  className={`brightness-125 absolute bottom-0 right-0 z-10 rotate-45 transform transition-transform duration-1000 w-[250px] h-[250px] mb-[-340px] mr-[-78px] 
+                    sm:w-[300px] sm:h-[300px] sm:mb-[-350px] sm:-mr-[90px]
+                    md:w-[350px] md:h-[400px] md:mb-[-400px] md:-mr-[128px]
+                    lg:w-[350px] lg:h-[250px] lg:mb-[-380px] lg:-mr-[127px]`}
+                  src={LandingPageImage3}
+                  alt="Landing Page Corner Image"
+                  layout="intrinsic"
+                />
+
+                </div>
       </div>
     </section>
   );
