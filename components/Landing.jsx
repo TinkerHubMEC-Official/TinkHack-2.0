@@ -161,7 +161,7 @@ const Landing = () => {
                   ease: "easeInOut",
                 }}
               >
-               <h1 className="relative blur-[0.4px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
+               <h1 className="relative z-10 blur-[0.3px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
                sm:text-[4rem] sm:-mt-8 sm:pl-3 
                md:text-[6rem] md:-mt-11 md:pl-4 
                lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
@@ -171,7 +171,7 @@ const Landing = () => {
                   text-[2.7rem] top-0 left-0
                   sm:text-[4rem] 
                   md:text-[6rem] 
-                  lg:text-[6.1rem] lg:-left-1 blur-[4px] lg:-top-0.5" 
+                  lg:text-[6.1rem] lg:-left-1 blur-[2.5px] sm:blur-[4px] lg:-top-0.5" 
                   style={{
                     transform: 'translateX(1px) translateY(1px) scale(1.01)',
                   }}>
