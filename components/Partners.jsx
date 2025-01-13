@@ -20,7 +20,7 @@ const Partners = () => {
   return (
     <section
       id="sponsors"
-      className="min-h-screen bg-custom-dark w-screen text-white flex flex-col items-center justify-center relative font-satoshi -mt-40 -mb-80 md:-mb-60 lg:-mb-40"
+      className="min-h-screen bg-custom-dark w-screen text-white flex flex-col items-center justify-center relative font-satoshi -mt-40 -mb-60 sm:-mt-40 sm:-mb-80 md:-mb-80 md:-mt-40 lg:-mb-10 lg:-mt-60"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -35,12 +35,18 @@ const Partners = () => {
 
       <div className="relative z-10 w-full flex flex-col items-center" data-aos="fade-up"
       >
-        <h2 className=" text-3xl sm:text-5xl px-10 font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 relative">
-          Community Partners
-          <span className="block absolute sm:h-[5px] bg-white left-1/3 transform -translate-x-1/2 bottom-[-10px] w-[200px] sm:left-1/3 sm:-translate-x-1/2 sm:w-[280px] md:left-1/3 md:-translate-x-1/2 md:w-[270px] lg:left-1/3 lg:-translate-x-1/2 lg:w-[290px] " 
-          >
-          </span>
-        </h2>
+        <h2 className="text-3xl sm:text-5xl px-20 font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 relative">
+  Community Partners
+  <span
+    className="absolute left-1/2 transform -translate-x-2/2 bottom-[-4px] sm:bottom-[-12px] w-[60px] sm:w-[280px] sm:left-1/2 sm:-translate-x-1/2 md:w-[270px] md:left-1/2 md:-translate-x-1/2
+    lg:left-1/2 lg:-translate-x-1/2 lg:w-[240px] sm:h-[5px] h-[4px] bg-white"
+  ></span>
+  <span
+    className=" block sm:hidden absolute left-1/3 transform -translate-x-1/2 bottom-[40px] ml-12 w-[120px] h-[4px] bg-white"
+  ></span>
+</h2>
+
+
 
 
 
@@ -94,7 +100,8 @@ const Partners = () => {
      {/*GREY BOXES*/}
 
         {/* Marquee Effect */}
-        <Marquee gradient={false} speed={100} className="w-full py-8 overflow-hidden" data-aos="fade-up">
+        <Marquee gradient={false} speed={100} className="w-full py-8 overflow-hidden
+        lg:-mb-64" data-aos="fade-up">
   <div className="flex gap-8 ml-8">
     {partners.map((partner, index) => (
       <div
@@ -103,7 +110,7 @@ const Partners = () => {
         style={{
           borderRadius: '16px',
           overflow: 'hidden',
-          background: 'linear-gradient(155deg, #454449, #201e23)',
+          background: 'linear-gradient(155deg, #3e1b2e, #433419)',
         }}
       >
         {/* Wrapper with dynamic width and height */}
