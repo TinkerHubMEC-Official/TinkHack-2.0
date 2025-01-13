@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 // import { ClipLoader } from "react-spinners"; // Import ClipLoader from react-spinners
-import { grid } from "ldrs"; // Import the grid loader from ldrs
+// import { grid } from "ldrs"; // Import the grid loader from ldrs
 
-// Register the grid loader
-grid.register();
+// // Register the grid loader
+// grid.register();
 
 
 import BackgroundImage from "@/assets/background.svg";
@@ -25,9 +25,17 @@ const Landing = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    const image = new window.Image();
-    image.src = img.src;
-    image.onload = () => setImageLoaded(true);
+    // Dynamically import the grid loader inside useEffect
+    const loadGrid = async () => {
+      const { grid } = await import("ldrs");
+      grid.register();
+
+      const image = new window.Image();
+      image.src = img.src;
+      image.onload = () => setImageLoaded(true);
+    };
+
+    loadGrid();
 
     const blurTimeout = setTimeout(() => {
       setShowLogo(true);
