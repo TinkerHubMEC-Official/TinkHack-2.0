@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ClipLoader } from "react-spinners"; // Import ClipLoader from react-spinners
+// import { ClipLoader } from "react-spinners"; // Import ClipLoader from react-spinners
 import { grid } from "ldrs"; // Import the grid loader from ldrs
 
 // Register the grid loader
@@ -284,7 +284,7 @@ const Landing = () => {
               className="brightness-125 absolute top-0 max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              transition={{ duration: 1.3 }}
+              transition={{ duration: 2 }}
             >
               <Image
                 src={LandingPageImage2}
@@ -297,7 +297,7 @@ const Landing = () => {
               className="brightness-125 absolute bottom-0 right-0 z-10"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              transition={{ duration: 1.6 }}
+              transition={{ duration: 4 }}
             >
               <Image
                 src={LandingPageImage3}
@@ -315,7 +315,7 @@ const Landing = () => {
               className="brightness-125 absolute bottom-0 z-50"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              transition={{ duration: 1.9 }}
+              transition={{ duration: 5 }}
             >
               <Image
                 src={BrokenGlassImage1}
@@ -332,7 +332,7 @@ const Landing = () => {
               className="brightness-125 absolute bottom-0 z-50"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              transition={{ duration: 1.9 }}
+              transition={{ duration: 5 }}
             >
               <Image
                 src={BrokenGlassImage2}

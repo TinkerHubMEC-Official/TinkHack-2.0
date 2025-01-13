@@ -39,10 +39,10 @@ const Partners = () => {
   Community Partners
   <span
     className="absolute left-1/2 transform -translate-x-2/2 bottom-[-4px] sm:bottom-[-12px] w-[60px] sm:w-[280px] sm:left-1/2 sm:-translate-x-1/2 md:w-[270px] md:left-1/2 md:-translate-x-1/2
-    lg:left-1/2 lg:-translate-x-1/2 lg:w-[240px] h-[5px] bg-white"
+    lg:left-1/2 lg:-translate-x-1/2 lg:w-[240px] sm:h-[5px] h-[4px] bg-white"
   ></span>
   <span
-    className=" block sm:hidden absolute left-1/3 transform -translate-x-1/2 bottom-[40px] ml-12 w-[120px] h-[5px] bg-white"
+    className=" block sm:hidden absolute left-1/3 transform -translate-x-1/2 bottom-[40px] ml-12 w-[120px] h-[4px] bg-white"
   ></span>
 </h2>
 
@@ -110,7 +110,7 @@ const Partners = () => {
         style={{
           borderRadius: '16px',
           overflow: 'hidden',
-          background: 'linear-gradient(155deg, #454449, #201e23)',
+          background: 'linear-gradient(155deg, #3e1b2e, #433419)',
         }}
       >
         {/* Wrapper with dynamic width and height */}
