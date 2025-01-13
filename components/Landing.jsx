@@ -113,7 +113,7 @@ const Landing = () => {
                   <Image
                     src={i}
                     alt="Dot Image"
-                    className="absolute filter -blur-[8px] top-[1.3rem] left-[0.05rem] w-[1rem] h-[1rem] 
+                    className="absolute filter -blur-[8px] top-[1.3rem] left-[0.01rem] w-[1rem] h-[1rem] 
                     sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] 
                     md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] 
                     lg:top-[2.65rem] lg:left-5rem] lg:w-[38px] lg:h-[40px] lg:pl-0.5 
@@ -123,7 +123,7 @@ const Landing = () => {
                 nk
                 {/* 2.0 Image animation */}
                 <motion.div
-                  className="absolute filter -blur-[8px] top-[0.2rem] left-[40%] w-[3rem] h-[3rem] sm:top-[2.1rem] 
+                  className="absolute filter -blur-[8px] top-[0.2rem] left-[42%] w-[2.5rem] h-[3rem] sm:top-[2.1rem] 
                   sm:left-[42%] sm:w-[4rem] sm:h-[4rem] 
                   md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] 
                   lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
@@ -161,7 +161,7 @@ const Landing = () => {
                   ease: "easeInOut",
                 }}
               >
-               <h1 className="relative z-10 blur-[0.3px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
+               <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.3px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
                sm:text-[4rem] sm:-mt-8 sm:pl-3 
                md:text-[6rem] md:-mt-11 md:pl-4 
                lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
@@ -171,7 +171,7 @@ const Landing = () => {
                   text-[2.7rem] top-0 left-0
                   sm:text-[4rem] 
                   md:text-[6rem] 
-                  lg:text-[6.1rem] lg:-left-1 blur-[2.5px] sm:blur-[4px] lg:-top-0.5" 
+                  lg:text-[6.1rem] lg:-left-1 blur-[0.6px] md:blur-[4px] lg:-top-0.5" 
                   style={{
                     transform: 'translateX(1px) translateY(1px) scale(1.01)',
                   }}>
