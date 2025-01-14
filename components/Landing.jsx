@@ -53,7 +53,7 @@ const Landing = () => {
 
   if (!imageLoaded) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen bg-[#1a181c]">
       <l-grid
         size="90" // Size of the grid
         speed="1.5" // Speed of animation
@@ -126,7 +126,7 @@ const Landing = () => {
                   className="absolute filter -blur-[8px] top-[0.2rem] left-[42%] w-[2.5rem] h-[3rem] sm:top-[2.1rem] 
                   sm:left-[42%] sm:w-[4rem] sm:h-[4rem] 
                   md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] 
-                  lg:w-[6rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
+                  lg:w-[5.7rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
                   initial={{ scale: 1.3, opacity: 0 }}
                   animate={imageLoaded ? {
                     scale: [0, 1.3, 0.95, 1.2, 1],

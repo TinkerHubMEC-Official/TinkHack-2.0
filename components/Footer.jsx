@@ -1,10 +1,28 @@
+"use client"
 import React from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import BackgroundImage from "@/assets/background.svg";
 
 const Footer = () => {
+
+
+  
+    const [strokeWidth, setStrokeWidth] = useState("7px");
+  
+    useEffect(() => {
+      const updateStrokeWidth = () => {
+        setStrokeWidth(window.innerWidth < 640 ? "5px" : "7px");
+      };
+  
+      updateStrokeWidth(); // Initial check
+      window.addEventListener("resize", updateStrokeWidth);
+  
+      return () => window.removeEventListener("resize", updateStrokeWidth);
+    }, []);
+  
   return (
     <section
     id="footer"
@@ -89,9 +107,9 @@ const Footer = () => {
   
       {/* TINKHACK */}
       <h2
-        className="relative z-10 font-khuja font-bold w-full text-center opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C]"
+        className="relative z-10 font-khuja font-bold w-full text-center opacity-40 sm:opacity-60 text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C]"
         style={{
-          WebkitTextStrokeWidth: "7px",
+          WebkitTextStrokeWidth: strokeWidth,        
           WebkitTextFillColor: "#241F23",
           fontSize: "clamp(0.5rem, 15vw, 280px)",
         }}
