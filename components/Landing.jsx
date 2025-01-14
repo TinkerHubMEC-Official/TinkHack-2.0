@@ -16,7 +16,7 @@ import LandingPageImage3 from "@/assets/landing_page_3.svg";
 import BrokenGlassImage1 from "@/assets/Broken_glass_1.svg";
 import BrokenGlassImage2 from "@/assets/Broken_glass_2.svg";
 import img from "@/assets/2.0.svg";
-import i from "@/assets/i_kuthu.png";
+import i from "@/assets/original i's kuthu.png";
 import Link from "next/link";
 
 const Landing = () => {
@@ -113,10 +113,10 @@ const Landing = () => {
                   <Image
                     src={i}
                     alt="Dot Image"
-                    className="absolute filter -blur-[8px] top-[1.3rem] left-[0.01rem] w-[1rem] h-[1rem] 
-                    sm:top-[1.8rem] sm:left-[0.05rem] sm:w-[2rem] sm:h-[1.8rem] 
-                    md:w-[9rem] md:h-[3rem] md:top-[2.3rem] md:left-[0.0rem] 
-                    lg:top-[2.65rem] lg:left-5rem] lg:w-[38px] lg:h-[40px] lg:pl-0.5 
+                    className="absolute filter -blur-[8px] top-[18px] left-[0.1vw] w-[1rem] h-[18px] 
+                    sm:top-[1.8rem] sm:left-[0.2px] sm:w-[2rem] sm:h-[1.8rem] 
+                    md:w-[9rem] md:h-[3rem] md:top-[2.1rem] md:left-[0.0rem] 
+                    lg:top-[2.65rem] lg:left-[0.5px] lg:w-[38px] lg:h-[42px] lg:pl-0.5 
                     rounded-3xl"
                   />
                 </span>
