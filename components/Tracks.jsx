@@ -25,34 +25,28 @@ const Tracks = () => {
 
   const tracks = [
     {
+      title: 'Developer Tools',
+      description:'Harness the power of generative AI to create and enhance advanced tools for developers. Focus on automating coding tasks and refining the code, debugging and fixing errors, improving performance, and streamlining the overall software development lifecycle.',
+    },
+    {
       title: 'Fintech',
-      description:
-        'Unlock the potential for financial innovation in the Fintech track. Develop AI solutions that address real-world financial challenges, push technology boundaries, and display your creativity and problem-solving skills in the financial sector.',
+      description:'Revolutionize the financial sector with AI-powered solutions. Address real-world financial problems, challenge the boundaries of technology, and utilise your reserves of creativity and innovation in tackling pressing issues in the financial sector of the tech industry.',
     },
     {
-      title: 'Healthcare',
-      description:
-        'Transform the healthcare industry with innovative tech solutions. Develop AI-powered tools that enhance patient care, streamline operations, and tackle challenges in health management.',
+      title: 'Productivity and Automation',
+      description:'Develop AI-based solutions to enhance productive collaboration across industries. Automate tasks, optimize workflows, make breakthroughs in communication, simplify data access, and develop on productivity through cutting-edge automation tools.',
     },
     {
-      title: 'EdTech',
-      description:
-        'Revolutionize education with advanced tech in the EdTech track. Develop solutions that enhance learning experiences, improve accessibility, and address challenges faced by modern educational systems.',
+      title: 'Creativity Tools',
+      description:'Design AI solutions for creative professionals, including artists, designers, photographers, and musicians. Bring a boost on artistic expression, demystifying intricate processes, and nurturing innovation in creative fields.',
     },
     {
-      title: 'E-commerce',
-      description:
-        'Take the e-commerce industry to the next level with innovative solutions. Work on AI-driven tools for improving online shopping experiences, inventory management, and customer personalization.',
+      title: 'Smart Cities and Urban Innovation',
+      description:'Innovate for smarter, more sustainable cities with AI-driven solutions. Trivialise urban challenges, rethink city planning, and contribute to the advancement of efficient, future-ready urban environments incorporating sustainable practices.',
     },
     {
-      title: 'Gaming',
-      description:
-        'Push the boundaries of gaming with cutting-edge tech. Develop AI-driven game mechanics, improve player engagement, and explore the latest trends in game development.',
-    },
-    {
-      title: 'Sustainability',
-      description:
-        'Create tech solutions that address environmental challenges. Develop AI-powered systems that help reduce waste, conserve resources, and promote sustainable practices in various industries.',
+      title: 'Open Innovation',
+      description:'Revolutionise the core ideology of engineering in this open-ended track, left free for your perusal. Use AI to find solutions for real-world problems, push technological boundaries, and demonstrate your originality and problem-solving chops through the practical solutions you come up with.',
     },
   ];
 
@@ -126,7 +120,7 @@ const Tracks = () => {
               {tracks.slice(3, 6).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
+                  className="p-6 max-w-[400px] min-w-[300px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
                   data-aos="fade-left"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
@@ -136,6 +130,7 @@ const Tracks = () => {
                 </div>
               ))}
             </div>
+            
           </>
         )}
       </div>
