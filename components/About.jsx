@@ -87,7 +87,7 @@ const About = () => {
         {/* Paragraph 2 */}
         <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
           <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-xl">
-          Tinkerhub MEC, the Model Engineering College chapter of Tinkerhub, is a dynamic community fostering innovation and tech upskilling. The chapter hosts interactive sessions, hackathons, and workshops like Tinktank, and GetSetWeb, spilling the latest tea in technological innovation to equip students with hands-on skills and industry insights. With initiatives like TinkHerHack, a women-exclusive hackathon, Tinkerhub MEC champions inclusivity and collaborative learning, inspiring students to explore and elevate their careers. 
+          Tinkerhub MEC, the Model Engineering College chapter of Tinkerhub, is a dynamic community fostering innovation and tech upskilling. The chapter hosts interactive sessions, hackathons, and workshops like Tinktank, GetSetWeb, and TinkHerHack to equip students with hands-on skills and industry insights. With our initiatives, we champion inclusivity and collaborative learning, inspiring students to explore and elevate their careers.          
           </p>
         </div>
       </div>

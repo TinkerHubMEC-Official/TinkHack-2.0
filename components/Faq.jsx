@@ -17,23 +17,35 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: 'When and where is the hackathon taking place?',
-      answer: 'The hackathon will take place on 11th and 12th of November in Model Engineering College, Thrikkakara.',
+      question: "Who can participate in TinkHack?",
+      answer: "Anyone! TinkHack is open to anyone with a passion for tech. Innovation knows no age! ",
     },
     {
-      question: 'Do I need to have a team to participate?',
-      answer: 'Yes, teams are required to participate. You can form a team before or during the event.',
+      question: "Will there be any registration fees for participation?",
+      answer: "No, there is no registration fee. It is completely free.",
     },
     {
-      question: 'Is there any registration fee?',
-      answer: 'No, there is no registration fee. It is completely free.',
+      question: "Why should I participate in TinkHack?",
+      answer: "TinkHack, Kerala's first GenAI event, unites some of the brightest minds from  across the country. By participating, you'll have the opportunity to network with some  incredible people, work on innovative and exciting projects, and gain valuable insights from our mentors to sharpen your skills.",
     },
     {
-      question: 'Can I work on a project that I\'ve already started?',
-      answer: 'Yes, you can continue working on an existing project, provided you declare it during registration.',
+      question: "Can a team have members from different colleges or institutions?",
+      answer: "Absolutely! Your team can consist of people from any institution or background. We encourage diverse collaborations, as we believe there's something valuable to learn from everyone.",
+    },
+    {
+      question: "What is the team size limit?",
+      answer: "A team can have a maximum of 4 members.",
+    },
+    {
+      question: "Where will the event be held?",
+      answer: "The event will be held at Govt. Model Engineering College, Thrikkakara.",
+    },
+    {
+      question: "Can I work on my project before the hackathon?",
+      answer: "You are not allowed to work on your project prior to the hackathon, but you are welcome to brainstorm ideas and fine-tune your plan in preparation.",
     },
   ];
-
+  
   const toggleFAQ = (index) => {
     setOpenIndexes((prev) =>
       prev.includes(index)
