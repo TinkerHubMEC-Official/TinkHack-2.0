@@ -86,8 +86,8 @@ const About = () => {
 
         {/* Paragraph 2 */}
         <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
-          <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-2xl">
-            TinkerHub MEC Chapter is a branch of a non-profit organization that has the aim to learn, interact, and innovate. We provide students with opportunities to enhance their skills through hands-on experience and community learning culture.
+          <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-xl">
+          Tinkerhub MEC, the Model Engineering College chapter of Tinkerhub, is a dynamic community fostering innovation and tech upskilling. The chapter hosts interactive sessions, hackathons, and workshops like Tinktank, GetSetWeb, and TinkHerHack to equip students with hands-on skills and industry insights. With our initiatives, we champion inclusivity and collaborative learning, inspiring students to explore and elevate their careers.          
           </p>
         </div>
       </div>
