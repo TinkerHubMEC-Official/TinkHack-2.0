@@ -15,7 +15,7 @@ import LandingPageImage2 from "@/assets/landing_page_2.svg";
 import LandingPageImage3 from "@/assets/landing_page_3.svg";
 import BrokenGlassImage1 from "@/assets/Broken_glass_1.svg";
 import BrokenGlassImage2 from "@/assets/Broken_glass_2.svg";
-import img from "@/assets/2.0.svg";
+import img from "@/assets/2.0.png";
 import i from "@/assets/original i's kuthu.png";
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ const Landing = () => {
 
     const componentsTimeout = setTimeout(() => {
       setShowComponents(true);
-    }, 3000);
+    }, 1000);
 
     return () => {
       clearTimeout(blurTimeout);
@@ -123,10 +123,10 @@ const Landing = () => {
                 nk
                 {/* 2.0 Image animation */}
                 <motion.div
-                  className="absolute filter -blur-[8px] top-[0.2rem] left-[42%] w-[2.5rem] h-[3rem] sm:top-[2.1rem] 
-                  sm:left-[42%] sm:w-[4rem] sm:h-[4rem] 
-                  md:top-[1.3rem] md:left-[41%] md:w-[6rem] md:h-[7rem] 
-                  lg:w-[5.7rem] lg:h-[6rem] lg:top-[2.4rem] lg:left-[43%]"
+                  className="absolute filter -blur-[8px] -top-[0.4rem] left-[35%] w-[3.8rem] h-[4rem] 
+                  sm:top-[0.7rem] sm:left-[34%] sm:w-[6rem] sm:h-[6.5rem] 
+                  md:top-[0.5rem] md:left-[34%] md:w-[8.5rem] md:h-[9rem] 
+                  lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.5rem] lg:left-[34%]"
                   initial={{ scale: 1.3, opacity: 0 }}
                   animate={imageLoaded ? {
                     scale: [0, 1.3, 0.95, 1.2, 1],
@@ -140,7 +140,7 @@ const Landing = () => {
                   <Image 
                     src={img} 
                     alt="2.0 Image" 
-                    className="w-full h-full" 
+                    className="w-full h-full brightness-150" 
                     priority
                   />
                 </motion.div>
@@ -171,7 +171,7 @@ const Landing = () => {
                   text-[2.7rem] top-0 left-0
                   sm:text-[4rem] 
                   md:text-[6rem] 
-                  lg:text-[6.1rem] lg:-left-1 blur-[0.6px] md:blur-[4px] lg:-top-0.5" 
+                  lg:text-[6.1rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 
                   style={{
                     transform: 'translateX(1px) translateY(1px) scale(1.01)',
                   }}>
@@ -330,7 +330,7 @@ const Landing = () => {
                 alt="Broken Glass Image"
                 layout="intrinsic"
                 className="w-[190px] h-[250px] mb-[-20px] ml-[10px] 
-                sm:w-[240px] sm:h-[300px] sm:mb-[10px] sm:ml-[-60px] 
+                sm:w-[210px] sm:h-[250px] sm:mb-[24px] sm:ml-[-30px] 
                 md:w-[280px] md:h-[400px] md:mb-[-50px] md:ml-[-20px] 
                 lg:w-[320px] lg:h-[500px] lg:mb-[-100px] lg:ml-[60px]"
               />

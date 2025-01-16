@@ -153,20 +153,19 @@ const Prizes = () => {
           </div>
 
 
-          <div
-          className="absolute z-10 w-[150px] h-[300px] -bottom-[220px] -left-72"
-          // data-aos="fade-up"
-        >
-          <Image
-            className={`brightness-125 transition-transform bottom-0 duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-100 lg:ml-30  lg:h-[350px] lg:pb-10
-              w-[250px] h-[250px] mb-[-3px]
-                    sm:w-[300px] sm:mb-[-350px] 
-                    md:w-[350px] md:mb-[-400px] 
-                    lg:w-[350px] lg:mb-[-450px] }`}
-            src={BubbleImage}
-            alt="Bubble Image"
-          />
-        </div>
+          <div className=" flex w-full left-0 overflow-hidden">
+  <Image
+    className={`brightness-125 absolute transition-transform bottom-0 duration-1000 z-10
+        w-[250px] h-[250px] -mb-20
+        sm:w-[300px] sm:h-[200px] sm:-mb-[150px] sm:ml-[20-px]
+        md:w-[350px] md:h-[250px] md:-mb-[200px] md:-ml-[190px]
+        lg:w-[300px] lg:h-[300px] lg:-mb-[150px] lg:-ml-[270px]
+        xl:-ml-[400px] 2xl:-ml-[480px]`}
+    src={BubbleImage}
+    alt="Bubble Image"
+  />
+</div>
+
 
 
         </div>
