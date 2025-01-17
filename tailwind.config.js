@@ -69,6 +69,10 @@ module.exports = {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      screens: {
+        '3xl': '1800px', // Custom breakpoint for extra-large screens
+        '4xl': '2000px', // Another custom breakpoint
+      },
     },
   },
   plugins: [],

@@ -15,6 +15,18 @@ const Partners = () => {
     { name: 'WeCode', image: WeCode },
     { name: 'WeCode2', image: WeCode2 },
     { name: 'Replit', image: Replit },
+    { name: 'WeCode', image: WeCode },
+    { name: 'WeCode2', image: WeCode2 },
+    { name: 'Replit', image: Replit },
+    { name: 'WeCode', image: WeCode },
+    { name: 'WeCode2', image: WeCode2 },
+    { name: 'Replit', image: Replit },
+    { name: 'WeCode', image: WeCode },
+    { name: 'WeCode2', image: WeCode2 },
+    { name: 'Replit', image: Replit },
+    { name: 'WeCode', image: WeCode },
+    { name: 'Replit', image: Replit },
+
   ];
 
   return (

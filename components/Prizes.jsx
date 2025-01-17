@@ -85,7 +85,7 @@ const Prizes = () => {
           <div
             className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[180px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
             style={{
-              background: 'linear-gradient(-45deg, #998547, #b53272, #f848c6)',
+              background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}
             data-aos="fade-up"
           >
@@ -143,7 +143,7 @@ const Prizes = () => {
           <div
             className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
             style={{
-              background: 'linear-gradient(-45deg, #998547, #b53272, #f848c6)',
+              background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}
             data-aos="fade-up"
           >
@@ -160,7 +160,7 @@ const Prizes = () => {
         sm:w-[300px] sm:h-[200px] sm:-mb-[150px] sm:ml-[20-px]
         md:w-[350px] md:h-[250px] md:-mb-[200px] md:-ml-[190px]
         lg:w-[300px] lg:h-[300px] lg:-mb-[150px] lg:-ml-[270px]
-        xl:-ml-[400px] 2xl:-ml-[480px]`}
+        xl:-ml-[400px] 2xl:-ml-[550px] 3xl:-ml-[640px] 4xl:-ml-[760px]`}
     src={BubbleImage}
     alt="Bubble Image"
   />

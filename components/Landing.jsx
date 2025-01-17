@@ -126,7 +126,7 @@ const Landing = () => {
                   className="absolute filter -blur-[8px] -top-[0.4rem] left-[35%] w-[3.8rem] h-[4rem] 
                   sm:top-[0.7rem] sm:left-[34%] sm:w-[6rem] sm:h-[6.5rem] 
                   md:top-[0.5rem] md:left-[34%] md:w-[8.5rem] md:h-[9rem] 
-                  lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.5rem] lg:left-[34%]"
+                  lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.3rem] lg:left-[34%]"
                   initial={{ scale: 1.3, opacity: 0 }}
                   animate={imageLoaded ? {
                     scale: [0, 1.3, 0.95, 1.2, 1],
@@ -161,9 +161,9 @@ const Landing = () => {
                   ease: "easeInOut",
                 }}
               >
-               <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.3px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
+               <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
                sm:text-[4rem] sm:-mt-8 sm:pl-3 
-               md:text-[6rem] md:-mt-11 md:pl-4 
+               md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-85
                lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
                bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text">
                 <span className="relative inline-block">
@@ -171,9 +171,9 @@ const Landing = () => {
                   text-[2.7rem] top-0 left-0
                   sm:text-[4rem] 
                   md:text-[6rem] 
-                  lg:text-[6.1rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 
+                  lg:text-[6.05rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 
                   style={{
-                    transform: 'translateX(1px) translateY(1px) scale(1.01)',
+                    transform: 'translateX(3px) translateY(1px) scale(0.999)',
                   }}>
                     HACK
                   </span>
