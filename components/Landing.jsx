@@ -163,7 +163,7 @@ const Landing = () => {
               >
                <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
                sm:text-[4rem] sm:-mt-8 sm:pl-3 
-               md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-85
+               md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-90
                lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
                bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text">
                 <span className="relative inline-block">
