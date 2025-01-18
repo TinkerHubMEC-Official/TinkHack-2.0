@@ -14,6 +14,25 @@ const SplashScreen = ({ onFinish }) => {
   const [currentFont, setCurrentFont] = useState(fonts[0]);
   const [currentSize, setCurrentSize] = useState(4);
   const [fadeOut, setFadeOut] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Function to determine responsive font size based on window width
+  const getResponsiveFontSize = () => {
+    if (windowWidth >= 1200) {
+      return `${currentSize}em`; // Desktop size
+    } else if (windowWidth >= 768) {
+      return `${currentSize * 0.7}em`; // Tablet size
+    } else {
+      return `${currentSize * 0.4}em`; // Mobile size
+    }
+  };
 
   useEffect(() => {
     const fontChangeInterval = setInterval(() => {
@@ -53,17 +72,17 @@ const SplashScreen = ({ onFinish }) => {
     >
       <div className="text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent ">
         <h1
-          className={`font-bold ${currentFont}`}
+          className={`font-bold ${currentFont} text-4xl`}
           style={{
             animation: "pulse 1.5s infinite",
-            fontSize: `${currentSize}em`,
+            fontSize: getResponsiveFontSize(),
           }}
         >
           TinkerHub MEC
         </h1>
         <h2
           className="
-          mt-4 font-semibold text-xl italic sm:text-2xl bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent absolute top-[75%] left-[50%] transform -translate-x-1/2 -translate-y-1.5
+            mt-4 font-semibold text-xl italic sm:text-3xl bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent absolute top-[75%] left-[50%] transform -translate-x-1/2 -translate-y-1.5
           "
           style={{
             opacity: fadeOut ? 0 : 1,
