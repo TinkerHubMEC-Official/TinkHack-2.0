@@ -112,16 +112,16 @@ const Faq = () => {
 
             {/* Smooth Transition for Answer Section */}
             <div
-              className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                openIndexes.includes(index) ? 'max-h-[500px] ease-in-out' : 'max-h-0 ease-in-out'
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openIndexes.includes(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
               }`}
               style={{
-                transitionDelay: openIndexes.includes(index) ? '100ms ease-in-out' : '1000ms ease-in-out', // Add delay when closing
+                transitionProperty: 'max-height, opacity',
+                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                transitionDuration: openIndexes.includes(index) ? '500ms' : '250ms',
               }}
             >
-              {openIndexes.includes(index) && (
-                <p className="mt-2 text-sm text-gray-300 ease-in-out">{faq.answer}</p>
-              )}
+              <p className="mt-2 text-sm text-gray-300">{faq.answer}</p>
             </div>
           </div>
         ))}
