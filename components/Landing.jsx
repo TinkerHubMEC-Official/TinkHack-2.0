@@ -27,8 +27,8 @@ const Landing = () => {
   useEffect(() => {
     // Dynamically import the grid loader inside useEffect
     const loadGrid = async () => {
-      const { grid } = await import("ldrs");
-      grid.register();
+      const { quantum } = await import("ldrs");
+      quantum.register();
 
       const image = new window.Image();
       image.src = img.src;
@@ -54,9 +54,9 @@ const Landing = () => {
   if (!imageLoaded) {
     return (
       <div className="flex items-center justify-center h-screen bg-[#1a181c]">
-      <l-grid
+      <l-quantum
         size="90" // Size of the grid
-        speed="1.5" // Speed of animation
+        speed="1.75" // Speed of animation
         color="pink" // Color of the grid loader
       />
 

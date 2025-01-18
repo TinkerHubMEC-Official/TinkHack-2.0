@@ -46,6 +46,14 @@ const Contact = () => {
       email: 'mailto:eshaanmanath@gmail.com', 
       phone: 'tel:+918590691991' 
     },
+    { 
+      name: 'Pranav', 
+      role: 'Tech Lead', 
+      photo: pranav, 
+      linkedin: 'https://www.linkedin.com/in/pranav072/', 
+      email: 'mailto:pranavm265@gmail.com', 
+      phone: 'tel:+919567858032' 
+    }, 
     {
       name: 'Midhun', 
       role: 'TinkTank Lead', 
@@ -61,14 +69,6 @@ const Contact = () => {
       linkedin: 'https://www.linkedin.com/in/theertha-avinash/', 
       email: 'mailto:theerthaavnsh@gmail.com', 
       phone: 'tel:+919400882017' 
-    },
-    { 
-      name: 'Pranav', 
-      role: 'Tech Lead', 
-      photo: pranav, 
-      linkedin: 'https://www.linkedin.com/in/pranav072/', 
-      email: 'mailto:pranavm265@gmail.com', 
-      phone: 'tel:+919567858032' 
     },
     { 
       name: 'Anjali', 
