@@ -85,7 +85,7 @@ const Prizes = () => {
           <div
             className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[180px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
             style={{
-              background: 'linear-gradient(-45deg, #998547, #b53272, #f848c6)',
+              background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}
             data-aos="fade-up"
           >
@@ -143,7 +143,7 @@ const Prizes = () => {
           <div
             className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
             style={{
-              background: 'linear-gradient(-45deg, #998547, #b53272, #f848c6)',
+              background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}
             data-aos="fade-up"
           >
@@ -153,20 +153,19 @@ const Prizes = () => {
           </div>
 
 
-          <div
-          className="absolute z-10 w-[150px] h-[300px] -bottom-[220px] -left-72"
-          // data-aos="fade-up"
-        >
-          <Image
-            className={`brightness-125 transition-transform bottom-0 duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-100 lg:ml-30  lg:h-[350px] lg:pb-10
-              w-[250px] h-[250px] mb-[-3px]
-                    sm:w-[300px] sm:mb-[-350px] 
-                    md:w-[350px] md:mb-[-400px] 
-                    lg:w-[350px] lg:mb-[-450px] }`}
-            src={BubbleImage}
-            alt="Bubble Image"
-          />
-        </div>
+          <div className=" flex w-full left-0 overflow-hidden">
+  <Image
+    className={`brightness-125 absolute transition-transform bottom-0 duration-1000 z-10
+        w-[250px] h-[250px] -mb-20
+        sm:w-[300px] sm:h-[200px] sm:-mb-[150px] sm:ml-[20-px]
+        md:w-[350px] md:h-[250px] md:-mb-[200px] md:-ml-[190px]
+        lg:w-[300px] lg:h-[300px] lg:-mb-[150px] lg:-ml-[270px]
+        xl:-ml-[400px] 2xl:-ml-[550px] 3xl:-ml-[640px] 4xl:-ml-[760px]`}
+    src={BubbleImage}
+    alt="Bubble Image"
+  />
+</div>
+
 
 
         </div>
