@@ -9,9 +9,11 @@ import Timeline from "./Timeline";
 import Tracks from "./Tracks";
 import Footer from "./Footer";
 import Partners from "./Partners";
+import SplashScreen from "./Splash";
 
 
 export {
+  SplashScreen,
   Navbar,
   Landing,
   About,
