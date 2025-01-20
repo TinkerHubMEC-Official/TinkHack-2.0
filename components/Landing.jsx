@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 // import { ClipLoader } from "react-spinners"; // Import ClipLoader from react-spinners
@@ -20,56 +20,6 @@ import i from "@/assets/original i's kuthu.png";
 import Link from "next/link";
 
 const Landing = () => {
-  const [showLogo, setShowLogo] = useState(false);
-  const [showComponents, setShowComponents] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    // Dynamically import the grid loader inside useEffect
-    const loadGrid = async () => {
-      const { quantum } = await import("ldrs");
-      quantum.register();
-
-      const image = new window.Image();
-      image.src = img.src;
-      image.onload = () => setImageLoaded(true);
-    };
-
-    loadGrid();
-
-    const blurTimeout = setTimeout(() => {
-      setShowLogo(true);
-    }, 100);
-
-    const componentsTimeout = setTimeout(() => {
-      setShowComponents(true);
-    }, 1000);
-
-    return () => {
-      clearTimeout(blurTimeout);
-      clearTimeout(componentsTimeout);
-    };
-  }, []);
-
-  if (!imageLoaded) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-[#1a181c]">
-      <l-quantum
-        size="90" // Size of the grid
-        speed="1.75" // Speed of animation
-        color="pink" // Color of the grid loader
-      />
-
-          {/* <InfinitySpin
-  visible={true}
-  width="200"
-  color="#E283BD"
-  ariaLabel="infinity-spin-loading"
-  /> */}
-      </div>
-    );
-  }
-
   return (
     <section
       id="hero"
@@ -82,125 +32,123 @@ const Landing = () => {
           alt="Background Image"
           layout="fill"
           objectFit="cover"
+          priority
         />
       </div>
       <div className="flex w-full">
-        {showLogo && (
-          <div className="z-10 flex items-center justify-center h-screen w-full">
-            <div className="flex flex-col items-center justify-center gap-0 w-full relative">
-              {/* Tink */}
-              <motion.h1
-                className="text-[4rem] filter blur-[0.5px] font-productsansbold font-bold text-center -mt-40 
-                sm:text-[6rem] sm:pt-6 
-                md:text-[8.5rem] 
-                lg:text-[9rem] lg:-mt-14 
-                relative"
-                initial={{ scale: 1.3, y: 50, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
-                style={{ textShadow: '0 -2px 2px rgba(255, 105, 180, 0.4)' }}
-              >
-                T
-                <span className="relative inline-block">
-                  i
-                  <Image
-                    src={i}
-                    alt="Dot Image"
-                    className="absolute filter -blur-[8px] top-[18px] left-[0.1vw] w-[1rem] h-[18px] 
-                    sm:top-[1.8rem] sm:left-[0.2px] sm:w-[2rem] sm:h-[1.8rem] 
-                    md:w-[9rem] md:h-[3rem] md:top-[2.1rem] md:left-[0.0rem] 
-                    lg:top-[2.65rem] lg:left-[0.5px] lg:w-[38px] lg:h-[42px] lg:pl-0.5 
-                    rounded-3xl"
-                  />
-                </span>
-                nk
-                {/* 2.0 Image animation */}
-                <motion.div
-                  className="absolute filter -blur-[8px] -top-[0.4rem] left-[35%] w-[3.8rem] h-[4rem] 
-                  sm:top-[0.7rem] sm:left-[34%] sm:w-[6rem] sm:h-[6.5rem] 
-                  md:top-[0.5rem] md:left-[34%] md:w-[8.5rem] md:h-[9rem] 
-                  lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.3rem] lg:left-[34%]"
-                  initial={{ scale: 1.3, opacity: 0 }}
-                  animate={imageLoaded ? {
-                    scale: [0, 1.3, 0.95, 1.2, 1],
-                    opacity: [0, 1]
-                  } : { scale: 0, opacity: 0 }}
-                  transition={{
-                    duration: 1,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Image 
-                    src={img} 
-                    alt="2.0 Image" 
-                    className="w-full h-full brightness-150" 
-                    priority
-                  />
-                </motion.div>
-              </motion.h1>
-
-              {/* HACK */}
-              <motion.div
-                className="relative"
+        <div className="z-10 flex items-center justify-center h-screen w-full">
+          <div className="flex flex-col items-center justify-center gap-0 w-full relative">
+            {/* Tink */}
+            <motion.h1
+              className="text-[4rem] filter blur-[0.5px] font-productsansbold font-bold text-center -mt-40 
+              sm:text-[6rem] sm:pt-6 
+              md:text-[8.5rem] 
+              lg:text-[9rem] lg:-mt-14 
+              relative"
+              initial={{ scale: 1.3, y: 50, opacity: 0 }}
+              animate={{
+                y: 0,
+                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+              style={{ textShadow: '0 -2px 2px rgba(255, 105, 180, 0.4)' }}
+            >
+              T
+              <span className="relative inline-block">
                 i
-                initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                <Image
+                  src={i}
+                  alt="Dot Image"
+                  className="absolute filter -blur-[8px] top-[18px] left-[0.1vw] w-[1rem] h-[18px] 
+                  sm:top-[1.8rem] sm:left-[0.2px] sm:w-[2rem] sm:h-[1.8rem] 
+                  md:w-[9rem] md:h-[3rem] md:top-[2.1rem] md:left-[0.0rem] 
+                  lg:top-[2.65rem] lg:left-[0.5px] lg:w-[38px] lg:h-[42px] lg:pl-0.5 
+                  rounded-3xl"
+                />
+              </span>
+              nk
+              {/* 2.0 Image animation */}
+              <motion.div
+                className="absolute filter -blur-[8px] -top-[0.4rem] left-[35%] w-[3.8rem] h-[4rem] 
+                sm:top-[0.7rem] sm:left-[34%] sm:w-[6rem] sm:h-[6.5rem] 
+                md:top-[0.5rem] md:left-[34%] md:w-[8.5rem] md:h-[9rem] 
+                lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.3rem] lg:left-[34%]"
+                initial={{ scale: 1.3, opacity: 0 }}
                 animate={{
-                  y: 0,
-                  scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
-                  opacity: 1,
+                  scale: [0, 1.3, 0.95, 1.2, 1],
+                  opacity: [0, 1]
                 }}
                 transition={{
                   duration: 1,
                   ease: "easeInOut",
                 }}
               >
-               <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
-               sm:text-[4rem] sm:-mt-8 sm:pl-3 
-               md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-90
-               lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
-               bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text">
-                <span className="relative inline-block">
-                  <span className="absolute -z-10 text-transparent bg-clip-text bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] 
-                  text-[2.7rem] top-0 left-0
-                  sm:text-[4rem] 
-                  md:text-[6rem] 
-                  lg:text-[6.05rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 
-                  style={{
-                    transform: 'translateX(3px) translateY(1px) scale(0.999)',
-                  }}>
-                    HACK
-                  </span>
-                  <span className="relative">HACK</span>
-                </span>
-              </h1>
-
-
+                <Image 
+                  src={img} 
+                  alt="2.0 Image" 
+                  className="w-full h-full brightness-150" 
+                  priority
+                />
               </motion.div>
+            </motion.h1>
+
+            {/* HACK */}
+            <motion.div
+              className="relative"
+              initial={{ scale: 1.3, y: 50, opacity: 0 }}
+              animate={{
+                y: 0,
+                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+             <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
+             sm:text-[4rem] sm:-mt-8 sm:pl-3 
+             md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-90
+             lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
+             bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text">
+              <span className="relative inline-block">
+                <span className="absolute -z-10 text-transparent bg-clip-text bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] 
+                text-[2.7rem] top-0 left-0
+                sm:text-[4rem] 
+                md:text-[6rem] 
+                lg:text-[6.05rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 
+                style={{
+                  transform: 'translateX(3px) translateY(1px) scale(0.999)',
+                }}>
+                  HACK
+                </span>
+                <span className="relative">HACK</span>
+              </span>
+            </h1>
+
+            </motion.div>
 
 
 
 
 
-             {/* Main Logo Image */}
-        {/* <Image
-          className={`brightness-125 w-auto h-[610px] relative flex z-10 mx-auto transition-all duration-700 mb-[170px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}
-            sm:mb-[60px] 
-            md:mb-[20px] 
-            lg:mb-[-80px]`}
-          src={TinkHackLogoMain}
-          alt="Tink Hack Logo"
-          layout="intrinsic"
-        /> */}
+           {/* Main Logo Image */}
+      {/* <Image
+        className={`brightness-125 w-auto h-[610px] relative flex z-10 mx-auto transition-all duration-700 mb-[170px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}
+          sm:mb-[60px] 
+          md:mb-[20px] 
+          lg:mb-[-80px]`}
+        src={TinkHackLogoMain}
+        alt="Tink Hack Logo"
+        layout="intrinsic"
+      /> */}
 
 
-        
+      
 {/* 
                                         <h1
                                           className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
@@ -269,116 +217,122 @@ const Landing = () => {
                                         </h1>
 
  */}  
-            </div>
           </div>
-        )}
+        </div>
 
-        {showComponents && (
-          <>
-            <motion.div
-              className="brightness-125 absolute top-0 left-0 z-10 w-[400px] h-[150px]"
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <Image
-                src={LandingPageImage1}
-                alt="Landing Page Corner Image"
-                layout="intrinsic"
-              />
-            </motion.div>
+        {/* Removed showComponents conditional and rendering all components directly */}
+        
+          <motion.div
+            className="brightness-125 absolute top-0 left-0 z-10 w-[400px] h-[150px]"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              src={LandingPageImage1}
+              alt="Landing Page Corner Image"
+              layout="intrinsic"
+              priority
+            />
+          </motion.div>
 
-            <motion.div
-              className="brightness-125 absolute top-0 max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: 2 }}
-            >
-              <Image
-                src={LandingPageImage2}
-                alt="Landing Page Corner Image"
-                layout="intrinsic"
-              />
-            </motion.div>
+          <motion.div
+            className="brightness-125 absolute top-0 max-lg:hidden right-0 z-10 w-[450px] h-[380px]"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 2 }}
+          >
+            <Image
+              src={LandingPageImage2}
+              alt="Landing Page Corner Image"
+              layout="intrinsic"
+              priority
+            />
+          </motion.div>
 
-            <motion.div
-              className="brightness-125 absolute bottom-0 right-0 z-10"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: 4 }}
-            >
-              <Image
-                src={LandingPageImage3}
-                alt="Landing Page Corner Image"
-                layout="intrinsic"
-                className="w-[250px] h-[250px] mb-[-120px] mr-[-10px] 
-                sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
-                md:w-[350px] md:h-[400px] md:mb-[-300px] 
-                lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
-              />
-            </motion.div>
+          <motion.div
+            className="brightness-125 absolute bottom-0 right-0 z-10"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+              duration: 1.5,
+              delay: 0.4
+            }}
+          >
+            <Image
+              src={LandingPageImage3}
+              alt="Landing Page Corner Image"
+              layout="intrinsic"
+              className="w-[250px] h-[250px] mb-[-120px] mr-[-10px] 
+              sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
+              md:w-[350px] md:h-[400px] md:mb-[-300px] 
+              lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
+              priority
+            />
+          </motion.div>
 
-            {/* Broken Glass Images */}
-            <motion.div
-              className="brightness-125 absolute bottom-0 z-50"
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: 5 }}
-            >
-              <Image
-                src={BrokenGlassImage1}
-                alt="Broken Glass Image"
-                layout="intrinsic"
-                className="w-[190px] h-[250px] mb-[-20px] ml-[10px] 
-                sm:w-[210px] sm:h-[250px] sm:mb-[24px] sm:ml-[-30px] 
-                md:w-[280px] md:h-[400px] md:mb-[-50px] md:ml-[-20px] 
-                lg:w-[320px] lg:h-[500px] lg:mb-[-100px] lg:ml-[60px]"
-              />
-            </motion.div>
+          {/* Broken Glass Images */}
+          <motion.div
+            className="brightness-125 absolute bottom-0 z-50"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 5 }}
+          >
+            <Image
+              src={BrokenGlassImage1}
+              alt="Broken Glass Image"
+              layout="intrinsic"
+              className="w-[190px] h-[250px] mb-[-20px] ml-[10px] 
+              sm:w-[210px] sm:h-[250px] sm:mb-[24px] sm:ml-[-30px] 
+              md:w-[280px] md:h-[400px] md:mb-[-50px] md:ml-[-20px] 
+              lg:w-[320px] lg:h-[500px] lg:mb-[-100px] lg:ml-[60px]"
+              priority
+            />
+          </motion.div>
 
-            <motion.div
-              className="brightness-125 absolute bottom-0 z-50"
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              transition={{ duration: 5 }}
+          <motion.div
+            className="brightness-125 absolute bottom-0 z-50"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 5 }}
+          >
+            <Image
+              src={BrokenGlassImage2}
+              alt="Broken Glass Image"
+              layout="intrinsic"
+              className="w-[80px] h-[250px] mb-[45px] ml-[80px] 
+              sm:w-[80px] sm:h-[300px] sm:mb-[95px] sm:ml-[40px] 
+              md:w-[100px] md:h-[400px] md:mb-[40px] md:ml-[90px] 
+              lg:w-[150px] lg:h-[150px] lg:mb-[-10px] lg:ml-[160px]"
+              priority
+            />
+          </motion.div>
+          <motion.div
+            className="absolute flex justify-center items-center w-full bottom-[10%] z-10 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+          >
+            <Link
+              href="https://mec.tinkerhub.org"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image
-                src={BrokenGlassImage2}
-                alt="Broken Glass Image"
-                layout="intrinsic"
-                className="w-[80px] h-[250px] mb-[45px] ml-[80px] 
-                sm:w-[80px] sm:h-[300px] sm:mb-[95px] sm:ml-[40px] 
-                md:w-[100px] md:h-[400px] md:mb-[40px] md:ml-[90px] 
-                lg:w-[150px] lg:h-[150px] lg:mb-[-10px] lg:ml-[160px]"
-              />
-            </motion.div>
-            <motion.div
-              className="absolute flex justify-center items-center w-full bottom-[10%] z-10 mb-[210px] 
-              sm:mb-[40px] sm:-mx-12 
-              md:mb-[-10px] md:-mx-8 
-              lg:mx-2"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-              }}
-            >
-              <Link
-                href="https://mec.tinkerhub.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105">
-                  Register Now
-                </button>
-              </Link>
-            </motion.div>
-          </>
-        )}
+              <button className="py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105">
+                Register Now
+              </button>
+            </Link>
+          </motion.div>
+        
       </div>
     </section>
   );

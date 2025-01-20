@@ -56,7 +56,7 @@ const Tracks = () => {
       className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 sm:p-8 pb-20 lg:p-8 font-satoshi"
     >
       <h2
-        className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent pb-12 sm:text-center md:text-center lg:text-left lg:ml-[10%] 
+        className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent py-12 sm:text-center md:text-center lg:text-left lg:ml-[10%] 
         after:content-[''] after:absolute after:h-[5px] after:w-[95px] after:bg-white after:left-0 lg:after:left-0 after:bottom-[40px]"
         data-aos="fade-up"
       >
