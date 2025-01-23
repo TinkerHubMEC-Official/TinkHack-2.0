@@ -71,6 +71,8 @@ const Faq = () => {
 
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent -mb-4
         after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-0 after:right-0 after:bottom-[-10px]"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         FAQ
       </h2>
@@ -78,7 +80,7 @@ const Faq = () => {
       {/* Broken Glass Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         <Image
-          className={`brightness-125 absolute z-0 scale-[0.9] top-[130px] left-[50px] md:top-[160px] md:left-[70px] lg:top-[180px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
+          className={`brightness-125 absolute z-0 scale-[0.9] top-[300px] left-[50px] md:top-[240px] md:left-[70px] lg:top-[280px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
           src={BrokenGlassImage}
           alt="Broken Glass Image"
           width={270}

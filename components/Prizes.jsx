@@ -36,6 +36,8 @@ const Prizes = () => {
       </div>
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 sm:text-center md:text-center lg:text-left lg:mr-[65%]
         after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white  after:transform after:-translate-x-1/2 after:bottom-[-10px] after:left-0 after:translate-x-0 after:w-[85px] sm:after:left-0 sm:after:translate-x-0 sm:after:w-[85px] md:after:left-0 md:after:translate-x-0 md:after:w-[85px] lg:after:left-0 lg:after:translate-x-0 lg:after:w-[85px]"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         Prizes
       </h2>

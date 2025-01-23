@@ -109,6 +109,8 @@ const Contact = () => {
       after:left-0 after:translate-x-0 after:w-[85px]
       md:after:left-0 md:after:translate-x-0 md:after:w-[85px]
       lg:after:left-0 lg:after:translate-x-0 lg:after:w-[85px]"
+      data-aos="fade-up"
+      data-aos-delay="100"
       >
         Contact Us
       </h2>

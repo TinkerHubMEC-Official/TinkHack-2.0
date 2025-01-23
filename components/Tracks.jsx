@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
-import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
+// import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
 const Tracks = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -59,6 +59,7 @@ const Tracks = () => {
         className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent py-12 sm:text-center md:text-center lg:text-left lg:ml-[10%] 
         after:content-[''] after:absolute after:h-[5px] after:w-[95px] after:bg-white after:left-0 lg:after:left-0 after:bottom-[40px]"
         data-aos="fade-up"
+        data-aos-delay="100"
       >
         Tracks
       </h2>
@@ -73,14 +74,14 @@ const Tracks = () => {
         />
       </div>
 
-      <Image
+      {/* <Image
         className={`brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px] transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
         src={BrokenGlassImage}
         alt="Broken Glass Image"
         width={300}
         height={600}
         data-aos="zoom-in"
-      />
+      /> */}
 
       <div className="relative z-10 flex flex-col gap-8 p-4">
         {isMobile ? (
