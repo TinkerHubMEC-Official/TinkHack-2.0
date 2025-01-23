@@ -4,6 +4,8 @@ import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
 import Replit from '@/assets/replit.svg';
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
+import SIB from '@/assets/SIB_New.png';
+
 
 
 const Sponsors = () => {
@@ -27,6 +29,8 @@ const Sponsors = () => {
         <h2
           className="text-5xl font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 relative
         after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-2/3 after:ml-1.55 after:transform after:-translate-x-1/2 after:bottom-[-10px] after:w-[100px]"
+        data-aos="fade-up"
+        data-aos-delay="100"
         >
           Sponsors
         </h2>
@@ -81,9 +85,9 @@ const Sponsors = () => {
 
           {/* Silver Sponsors */}
           <div className="flex gap-8 flex-wrap justify-center">
-            {[1, 2].map((item) => (
+            {/* {[1, 2].map((item) => ( */}
               <div
-                key={item}
+                // key={item}
                 className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
                 style={{
                   background: 'linear-gradient(155deg, #454449, #201e23)',
@@ -91,10 +95,10 @@ const Sponsors = () => {
                 data-aos="fade-up"
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
-                <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
-                <p className=" text-sm text-center">Replit</p>
+                <Image src={SIB} width={105} height={100} alt="sib" className="mb-2" />
+                <p className=" text-sm text-center ">South Indian Bank</p>
               </div>
-            ))}
+            {/* ))} */}
           </div>
         </div>
 

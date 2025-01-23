@@ -47,15 +47,20 @@ const Partners = () => {
 
       <div className="relative z-10 w-full flex flex-col items-center" data-aos="fade-up"
       >
-        <h2 className="text-3xl sm:text-5xl px-20 font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 relative">
-  Community Partners
+        <h2 className="text-5xl sm:text-5xl px-20 font-bold text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 relative"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        >
+  Partners
   <span
-    className="absolute left-1/2 transform -translate-x-2/2 bottom-[-4px] sm:bottom-[-12px] w-[60px] sm:w-[280px] sm:left-1/2 sm:-translate-x-1/2 md:w-[270px] md:left-1/2 md:-translate-x-1/2
-    lg:left-1/2 lg:-translate-x-1/2 lg:w-[240px] sm:h-[5px] h-[4px] bg-white"
+    className="absolute left-1/3 transform -translate-x-1/3 bottom-[-4px] w-[92px] h-[5px]
+    sm:w-[280px] sm:left-1/3 sm:-translate-x-1/3 sm:bottom-[-12px]
+    md:w-[110px] md:left-1/3 md:-translate-x-1/3
+    lg:left-1/3 lg:-translate-x-1/3 lg:w-[100px]  bg-white"
   ></span>
-  <span
+  {/* <span
     className=" block sm:hidden absolute left-1/3 transform -translate-x-1/2 bottom-[40px] ml-12 w-[120px] h-[4px] bg-white"
-  ></span>
+  ></span> */}
 </h2>
 
 
