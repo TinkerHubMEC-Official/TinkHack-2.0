@@ -3,13 +3,22 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 import BubbleImage from '@/assets/Bubble.svg';
-
 import SIB from '@/assets/sib.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Prizes = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true
+    });
+
+    // Handle mobile check
     const handleResize = () => {
       setIsMobile(window.innerWidth < 816);
     };
@@ -48,7 +57,7 @@ const Prizes = () => {
           {/* First Row */}
           <div className="flex justify-center gap-8">
             <div
-              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
               style={{
                 background: 'linear-gradient(-45deg, #7f6b14, #a4944b, #7f6b14)',
               }}
@@ -62,7 +71,7 @@ const Prizes = () => {
           {/* Second Row */}
           <div className="flex flex-wrap justify-center gap-8">
             <div
-              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
               style={{
                   background: 'linear-gradient(-45deg, #444144, #7f7d7f, #444144)',
                 }}
@@ -72,7 +81,7 @@ const Prizes = () => {
               <p className="text-4xl font-bold text-center">₹20,000</p>
             </div>
             <div
-              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+              className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
               style={{
                 background: 'linear-gradient(-45deg, #4f432c, #896a24, #4f432c)',
               }}
@@ -85,7 +94,7 @@ const Prizes = () => {
 
           {/* Third Row */}
           <div
-            className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[180px] lg:w-[300px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+            className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[180px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
             style={{
               background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}
@@ -103,7 +112,7 @@ const Prizes = () => {
           <div className="flex flex-wrap justify-center gap-10">
             <div className="flex flex-wrap justify-center gap-8">
               <div
-                className="p-8 rounded-2xl text-white w-[300px] sm:w-[250px] lg:w-[250px] h-[120px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+                className="p-8 rounded-2xl text-white w-[300px] sm:w-[250px] lg:w-[250px] h-[120px] hover:shadow-sm hover:scale-[1.02]"
                 style={{
                   background: 'linear-gradient(-45deg, #444144, #7f7d7f, #444144)',
                 }}
@@ -115,7 +124,7 @@ const Prizes = () => {
             </div>
 
             <div
-              className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[250px] h-[140px] -mt-2 transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+              className="p-8 rounded-2xl text-white bg-gradient-to-br from-[#956a7b] to-[#8f8064] w-[200px] sm:w-[250px] lg:w-[250px] h-[140px] -mt-2  hover:shadow-sm hover:scale-[1.02]"
               style={{
                 background: 'linear-gradient(-45deg, #7f6b14, #a4944b, #7f6b14)',
               }}
@@ -130,7 +139,7 @@ const Prizes = () => {
             </div>
 
             <div
-              className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[120px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+              className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[120px]  hover:shadow-sm hover:scale-[1.02]"
               style={{
                 background: 'linear-gradient(-45deg, #4f432c, #896a24, #4f432c)',
               }}
@@ -143,7 +152,7 @@ const Prizes = () => {
 
           {/* Second Row */}
           <div
-            className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px] transform transition-transform duration-300 ease-in-out hover:shadow-sm hover:scale-[1.02]"
+            className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px]  hover:shadow-sm hover:scale-[1.02]"
             style={{
               background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
             }}

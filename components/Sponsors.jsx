@@ -95,8 +95,23 @@ const Sponsors = () => {
                 data-aos="fade-up"
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
-                <Image src={SIB} width={105} height={100} alt="sib" className="mb-2" />
-                <p className=" text-sm text-center ">South Indian Bank</p>
+                <a 
+                  href="https://www.southindianbank.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="South Indian Bank"
+                  aria-label="South Indian Bank Website"
+                  className="hover:scale-105 transition-transform duration-300"
+                >
+                  <Image 
+                    src={SIB} 
+                    width={105} 
+                    height={100} 
+                    alt="South Indian Bank Logo" 
+                    className="mb-2" 
+                  />
+                  <p className="text-sm text-center">South Indian Bank</p>
+                </a>
               </div>
             {/* ))} */}
           </div>

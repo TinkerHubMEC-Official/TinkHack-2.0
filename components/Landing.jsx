@@ -16,7 +16,7 @@ import LandingPageImage3 from "@/assets/landing_page_3.svg";
 import BrokenGlassImage1 from "@/assets/Broken_glass_1.svg";
 import BrokenGlassImage2 from "@/assets/Broken_glass_2.svg";
 import img from "@/assets/2.0.png";
-import i from "@/assets/original i's kuthu.png";
+import i from "@/assets/original_i_kuthu.png";
 import Link from "next/link";
 
 const Landing = () => {
@@ -40,7 +40,8 @@ const Landing = () => {
           <div className="flex flex-col items-center justify-center gap-0 w-full relative">
             {/* Tink */}
             <motion.h1
-              className="text-[4rem] filter blur-[0.5px] font-productsansbold font-bold text-center -mt-40 
+              className="filter blur-[0.5px] font-productsansbold font-bold text-center 
+              text-[5rem] -mt-40 
               sm:text-[6rem] sm:pt-6 
               md:text-[8.5rem] 
               lg:text-[9rem] lg:-mt-14 
@@ -63,7 +64,8 @@ const Landing = () => {
                 <Image
                   src={i}
                   alt="Dot Image"
-                  className="absolute filter -blur-[8px] top-[18px] left-[0.1vw] w-[1rem] h-[18px] 
+                  className="absolute filter -blur-[8px] 
+                  top-[27px] left-[0.7vw] w-[1rem] h-[18px] 
                   sm:top-[1.8rem] sm:left-[0.2px] sm:w-[2rem] sm:h-[1.8rem] 
                   md:w-[9rem] md:h-[3rem] md:top-[2.1rem] md:left-[0.0rem] 
                   lg:top-[2.65rem] lg:left-[0.5px] lg:w-[38px] lg:h-[42px] lg:pl-0.5 
@@ -73,7 +75,8 @@ const Landing = () => {
               nk
               {/* 2.0 Image animation */}
               <motion.div
-                className="absolute filter -blur-[8px] -top-[0.4rem] left-[35%] w-[3.8rem] h-[4rem] 
+                className="absolute filter -blur-[8px] 
+                -top-[0.4rem] left-[35%] w-[4.5rem] h-[5rem] 
                 sm:top-[0.7rem] sm:left-[34%] sm:w-[6rem] sm:h-[6.5rem] 
                 md:top-[0.5rem] md:left-[34%] md:w-[8.5rem] md:h-[9rem] 
                 lg:w-[9rem] lg:h-[9.7rem] lg:top-[0.3rem] lg:left-[34%]"
@@ -110,14 +113,15 @@ const Landing = () => {
                 ease: "easeInOut",
               }}
             >
-             <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] text-[2.7rem] font-khuja  font-medium text-center -mt-5 pl-2 
+             <h1 className="relative z-10 blur-[0.1px] sm:blur-[0.2px] font-khuja  font-medium text-center 
+             text-[3.2rem] -mt-5 pl-1 
              sm:text-[4rem] sm:-mt-8 sm:pl-3 
              md:text-[6rem] md:-mt-11 md:pl-4 md:opacity-90
              lg:text-[6rem] leading-none scale-y-[1.2] lg:-mt-12 lg:pl-6 
              bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] text-transparent bg-clip-text">
               <span className="relative inline-block">
                 <span className="absolute -z-10 text-transparent bg-clip-text bg-gradient-to-br from-[#f3f302] via-[#e23be6] to-[#0000ff] 
-                text-[2.7rem] top-0 left-0
+                text-[3.2rem] top-0 left-0
                 sm:text-[4rem] 
                 md:text-[6rem] 
                 lg:text-[6.05rem] lg:-left-1 blur-[0.6px] md:blur-[1px] lg:-top-0.5" 

@@ -68,8 +68,10 @@
                       <head>
                         <link rel="icon" href="/TinkHackLogo.png" type="image/svg+xml" style={{ width: '300px', height: '300px', margin: '-50px' }} />
                       </head>
-                    <AOSInit/>
-                      <body>{children}</body>
+                      <body>
+                        <AOSInit />
+                        {children}
+                      </body>
                     </html>
                   );
                 }

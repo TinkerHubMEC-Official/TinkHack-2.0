@@ -163,8 +163,8 @@ const Timeline = () => {
                   <p
                     className={`text-sm absolute ${
                       index % 2 === 0
-                        ? 'right-[calc(50%-160px)] xl:right-[calc(50%-120px)] lg:right-[calc(50%-100px)]'
-                        : 'left-[calc(50%-160px)] xl:left-[calc(50%-120px)] lg:left-[calc(50%-100px)]'
+                        ? 'right-[calc(50%-160px)] xl:right-[calc(50%-120px)] lg:right-[calc(50%-100px)] text-right'
+                        : 'left-[calc(50%-160px)] xl:left-[calc(50%-120px)] lg:left-[calc(50%_100px)] text-left'
                     }`}
                     style={{ color }}
                   >
