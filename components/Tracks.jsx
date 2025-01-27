@@ -5,11 +5,9 @@ import BackgroundImage from '@/assets/background.svg';
 // import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
 const Tracks = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 1000); // Simulate loading effect
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 818);
@@ -90,7 +88,7 @@ const Tracks = () => {
             {tracks.map((track, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2 w-[90%] sm:w-[80%] lg:w-[60%]"
+                className="p-6 rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)]  hover:shadow-sm hover:scale-[1.02] p-2 w-[90%] sm:w-[80%] lg:w-[60%]"
                 data-aos="fade-up"
               >
                 <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
@@ -107,7 +105,7 @@ const Tracks = () => {
               {tracks.slice(0, 3).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
+                  className="p-6 max-w-[400px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)]  hover:shadow-sm hover:scale-[1.02] p-2"
                   data-aos="fade-right"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
@@ -121,7 +119,7 @@ const Tracks = () => {
               {tracks.slice(3, 6).map((track, index) => (
                 <div
                   key={index}
-                  className="p-6 max-w-[400px] min-w-[300px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)] transition-all duration-300 transform hover:shadow-sm hover:scale-[1.02] p-2"
+                  className="p-6 max-w-[400px] min-w-[300px] rounded-xl bg-gradient-to-b from-[#323035] to-[#252327] text-white shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_4px_3px_rgba(0,0,0,0.2)]  hover:shadow-sm hover:scale-[1.02] p-2"
                   data-aos="fade-left"
                 >
                   <h3 className="text-lg font-semibold mb-2 text-white bg-clip-text text-transparent">
