@@ -61,7 +61,7 @@ const Prizes = () => {
               style={{
                 background: 'linear-gradient(-45deg, #7f6b14, #a4944b, #7f6b14)',
               }}
-              data-aos="fade-up"
+              data-aos="zoom-in"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-1 text-center">1st Prize</h3>
               <p className="text-4xl font-bold text-center">₹50,000</p>
