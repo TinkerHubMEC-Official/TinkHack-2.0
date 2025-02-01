@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lmao": "npm run build && npm start",
     "start": "next start",
     "lint": "next lint"
   },
