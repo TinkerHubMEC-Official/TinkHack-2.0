@@ -40,7 +40,7 @@ const Sponsors = () => {
           {/* Title Sponsor */}
           <div
             className="p-4 rounded-2xl bg-gradient-to-br from-[#814769] to-[#9e7a4a] text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
-            data-aos="fade-up"
+            data-aos="zoom-out"
           >
             <h3 className="text-2xl font-semibold text-base mb-2 text-center">Title Sponsor</h3>
             <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
@@ -56,7 +56,7 @@ const Sponsors = () => {
                 style={{
                   background: 'linear-gradient(-45deg, #3d3b40, #67666b, #3d3b40)',
                 }}
-                data-aos="fade-up"
+                data-aos={item === 1 ? "fade-right":"fade-left"}
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Platinum Sponsor</h3>
                 <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
@@ -74,7 +74,7 @@ const Sponsors = () => {
                 style={{
                   background: 'linear-gradient(155deg, #675736, #201e23)',
                 }}
-                data-aos="fade-up"
+                data-aos={item === 1 ? "fade-right": item === 2 ? "zoom-in" : "fade-left"}
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Gold Sponsor</h3>
                 <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
