@@ -6,26 +6,29 @@ import Image from 'next/image';
 import WeCode from '@/assets/wecode.jpeg';
 import WeCode2 from '@/assets/WeCode2.png';
 import Replit from '@/assets/replit.svg';
+import InterviewBuddy1 from '@/assets/InterviewBuddy1.png';
+// import InterviewBuddy2 from '@/assets/InterviewBuddy2.png';
+// import InterviewBuddy3 from '@/assets/InterviewBuddy3.png';
 
 const Partners = () => {
   const partners = [
     { name: 'WeCode', image: WeCode },
     { name: 'WeCode2', image: WeCode2 },
+    { name: 'InterviewBuddy1', image: InterviewBuddy1},
     { name: 'Replit', image: Replit },
     { name: 'WeCode', image: WeCode },
     { name: 'WeCode2', image: WeCode2 },
+    { name: 'InterviewBuddy1', image: InterviewBuddy1},
     { name: 'Replit', image: Replit },
     { name: 'WeCode', image: WeCode },
     { name: 'WeCode2', image: WeCode2 },
+    { name: 'InterviewBuddy1', image: InterviewBuddy1},
     { name: 'Replit', image: Replit },
     { name: 'WeCode', image: WeCode },
     { name: 'WeCode2', image: WeCode2 },
+    { name: 'InterviewBuddy1', image: InterviewBuddy1},
     { name: 'Replit', image: Replit },
-    { name: 'WeCode', image: WeCode },
-    { name: 'WeCode2', image: WeCode2 },
-    { name: 'Replit', image: Replit },
-    { name: 'WeCode', image: WeCode },
-    { name: 'Replit', image: Replit },
+    
 
   ];
 
