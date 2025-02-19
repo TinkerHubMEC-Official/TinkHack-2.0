@@ -7,14 +7,14 @@ export const NavItems = [
       title: "Tracks",
       link: "/#tracks",
     },
-    {
-      title: "Timeline",
-      link: "/#timeline",
-    },
-    {
-        title: "Prizes",
-        link: "/#prizes"
-    },
+    // {
+    //   title: "Timeline",
+    //   link: "/#timeline",
+    // },
+    // {
+    //     title: "Prizes",
+    //     link: "/#prizes"
+    // },
     {
         title: "Sponsors",
         link: "/#sponsors"
