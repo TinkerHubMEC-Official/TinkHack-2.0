@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
-import Replit from '@/assets/replit.svg';
+import dbiz from '@/assets/dbiz.png';
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import SIB from '@/assets/SIB_New.png';
 
@@ -43,8 +43,8 @@ const Sponsors = () => {
             data-aos="zoom-out"
           >
             <h3 className="text-2xl font-semibold text-base mb-2 text-center">Title Sponsor</h3>
-            <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
-            <p className=" text-sm text-center">Replit</p>
+            <Image src={dbiz} width={80} height={80} alt="dbiz.ai" className="mb-2" />
+            <p className=" text-sm text-center">dbiz.ai</p>
           </div>
 
           {/* Platinum Sponsors */}
@@ -59,8 +59,8 @@ const Sponsors = () => {
                 data-aos={item === 1 ? "fade-right":"fade-left"}
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Platinum Sponsor</h3>
-                <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
-                <p className="text-sm text-center">Replit</p>
+                <Image src={dbiz.ai} width={80} height={80} alt="dbiz.ai" className="mb-2" />
+                <p className="text-sm text-center">dbiz.ai</p>
               </div>
             ))}
           </div> */}
@@ -77,8 +77,8 @@ const Sponsors = () => {
                 data-aos={item === 1 ? "fade-right": item === 2 ? "zoom-in" : "fade-left"}
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Gold Sponsor</h3>
-                <Image src={Replit} width={80} height={80} alt="replit" className="mb-2" />
-                <p className=" text-sm text-center">Replit</p>
+                <Image src={dbiz.ai} width={80} height={80} alt="dbiz.ai" className="mb-2" />
+                <p className=" text-sm text-center">dbiz.ai</p>
               </div>
             ))}
           </div> */}
