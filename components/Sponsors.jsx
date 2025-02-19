@@ -85,9 +85,9 @@ const Sponsors = () => {
 
           {/* Silver Sponsors */}
           <div className="flex gap-8 flex-wrap justify-center">
-            {/* {[1, 2].map((item) => ( */}
+            {[1, 2, 3].map((item) => (
               <div
-                // key={item}
+                key={item}
                 className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
                 style={{
                   background: 'linear-gradient(155deg, #454449, #201e23)',
@@ -113,7 +113,7 @@ const Sponsors = () => {
                   <p className="text-sm text-center">South Indian Bank</p>
                 </a>
               </div>
-            {/* ))} */}
+             ))} 
           </div>
         </div>
 
