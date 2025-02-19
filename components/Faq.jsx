@@ -62,22 +62,22 @@ const Faq = () => {
   return (
     <section
       id="faq"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-4 font-satoshi py-28"
+      className="min-h-screen bg-custom-dark text-white bg-pattern flex flex-col items-center justify-center relative p-4 font-satoshi py-28"
     >
       {/* Background Image */}
-      <div>
+      {/* <div>
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
-      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent -mb-4
+      <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent sm:-mb-4 mb-6
         after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-0 after:right-0 after:bottom-[-10px]"
-        data-aos="fade-up"
-        data-aos-delay="100"
+        // data-aos="fade-up"
+        // data-aos-delay="100"
       >
         FAQ
       </h2>

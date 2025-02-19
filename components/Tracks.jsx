@@ -51,7 +51,7 @@ const Tracks = () => {
   return (
     <section
       id="tracks"
-      className="min-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 sm:p-8 pb-20 lg:p-8 font-satoshi"
+      className="min-h-screen bg-custom-dark bg-pattern  text-white flex flex-col items-center justify-center relative p-8 sm:p-8 pb-20 lg:p-8 font-satoshi"
     >
       <h2
         className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent py-12 sm:text-center md:text-center lg:text-left lg:ml-[10%] 
@@ -63,14 +63,14 @@ const Tracks = () => {
       </h2>
 
       {/* Background Image */}
-      <div>
+      {/* <div>
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
       {/* <Image
         className={`brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px] transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}

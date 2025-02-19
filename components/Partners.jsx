@@ -3,31 +3,33 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
-import WeCode from '@/assets/wecode.jpeg';
-import WeCode2 from '@/assets/WeCode2.png';
-import Replit from '@/assets/replit.svg';
-import InterviewBuddy1 from '@/assets/InterviewBuddy1.png';
+// import WeCode from '@/assets/wecode.jpeg';
+import WeCode from '@/assets/WeCode2.png';
+import Mukti from '@/assets/Mukti.png';
+import InterviewBuddy from '@/assets/InterviewBuddy1.png';
 // import InterviewBuddy2 from '@/assets/InterviewBuddy2.png';
 // import InterviewBuddy3 from '@/assets/InterviewBuddy3.png';
 
 const Partners = () => {
   const partners = [
     { name: 'WeCode', image: WeCode },
-    { name: 'WeCode2', image: WeCode2 },
-    { name: 'InterviewBuddy1', image: InterviewBuddy1},
-    { name: 'Replit', image: Replit },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },
     { name: 'WeCode', image: WeCode },
-    { name: 'WeCode2', image: WeCode2 },
-    { name: 'InterviewBuddy1', image: InterviewBuddy1},
-    { name: 'Replit', image: Replit },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },
     { name: 'WeCode', image: WeCode },
-    { name: 'WeCode2', image: WeCode2 },
-    { name: 'InterviewBuddy1', image: InterviewBuddy1},
-    { name: 'Replit', image: Replit },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },
     { name: 'WeCode', image: WeCode },
-    { name: 'WeCode2', image: WeCode2 },
-    { name: 'InterviewBuddy1', image: InterviewBuddy1},
-    { name: 'Replit', image: Replit },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },
+    { name: 'WeCode', image: WeCode },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },    
+    { name: 'WeCode', image: WeCode },
+    { name: 'InterviewBuddy', image: InterviewBuddy},
+    { name: 'Mukti', image: Mukti },
     
 
   ];
@@ -35,10 +37,10 @@ const Partners = () => {
   return (
     <section
       id="sponsors"
-      className="min-h-screen bg-custom-dark w-screen text-white flex flex-col items-center justify-center relative font-satoshi -mt-40 -mb-60 sm:-mt-40 sm:-mb-80 md:-mb-80 md:-mt-40 lg:-mb-10 lg:-mt-60"
+      className="min-h-screen bg-custom-dark bg-pattern w-screen text-white flex flex-col items-center justify-center relative font-satoshi -mt-40 -mb-60 sm:-mt-40 sm:-mb-80 md:-mb-80 md:-mt-40 lg:-mb-10 lg:-mt-60"
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <Image
           src={BackgroundImage}
           alt="Background Image"
@@ -46,7 +48,7 @@ const Partners = () => {
           objectFit="cover"
           priority
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 w-full flex flex-col items-center" data-aos="fade-up"
       >

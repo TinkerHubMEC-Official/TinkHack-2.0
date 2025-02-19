@@ -33,8 +33,8 @@ export default function Home() {
           <Landing />
           <About />
           <Tracks />
-          <Timeline />
-          <Prizes />
+          {/* <Timeline /> */}
+          {/* <Prizes /> */}
           <Sponsors />
           <Partners />
           <Faq />

@@ -32,17 +32,17 @@ const Prizes = () => {
   return (
     <section
       id="prizes"
-      className="h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative pt-14 font-satoshi pb-20 lg:-mt-12"
+      className="h-screen bg-custom-dark bg-pattern  text-white flex flex-col items-center justify-center relative pt-14 font-satoshi pb-20 lg:-mt-12"
     >
       {/* Background Image */}
-      <div >
+      {/* <div >
         <Image
           src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-14 sm:text-center md:text-center lg:text-left lg:mr-[65%]
         after:content-[''] after:absolute after:h-[5px] after:w-[100px] after:bg-white  after:transform after:-translate-x-1/2 after:bottom-[-10px] after:left-0 after:translate-x-0 after:w-[85px] sm:after:left-0 sm:after:translate-x-0 sm:after:w-[85px] md:after:left-0 md:after:translate-x-0 md:after:w-[85px] lg:after:left-0 lg:after:translate-x-0 lg:after:w-[85px]"
         data-aos="fade-up"
@@ -93,7 +93,7 @@ const Prizes = () => {
           </div>
 
           {/* Third Row */}
-          <div
+          {/* <div
             className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[180px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
             style={{
               background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
@@ -103,7 +103,7 @@ const Prizes = () => {
             <h3 className="text-lg font-semibold mb-2 -mt-1 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center">₹20,000</p>
             <Image src={SIB} width={500} alt="SIB" />
-          </div>
+          </div> */}
         </div>
       ) : (
         // Desktop View
@@ -151,7 +151,7 @@ const Prizes = () => {
           </div>
 
           {/* Second Row */}
-          <div
+          {/* <div
             className="p-8 rounded-2xl text-white bg-gradient-to-b from-[#5e5c5f] to-[#3e3c40] w-[200px] sm:w-[250px] lg:w-[250px] h-[170px]  hover:shadow-sm hover:scale-[1.02]"
             style={{
               background: 'linear-gradient(135deg, #be9b6a, #c36da2, #c268a0)',
@@ -161,7 +161,7 @@ const Prizes = () => {
             <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">Best Fintech Project</h3>
             <p className="text-4xl font-bold text-center mt-4">₹20,000</p>
             <Image src={SIB} width={500} alt="SIB" />
-          </div>
+          </div> */}
 
 
           <div className=" flex w-full left-0 overflow-hidden">

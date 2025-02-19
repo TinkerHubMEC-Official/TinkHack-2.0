@@ -28,17 +28,17 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-custom-dark text-white flex items-center justify-center relative p-8 font-satoshi -mt-40 sm:-mt-48 px-10 -mb-20 md:-mt-0 lg:-mt-0"
+      className="min-h-screen bg-custom-dark text-white flex items-center justify-center relative p-8 bg-pattern font-satoshi -mt-40 sm:-mt-48 px-10 -mb-20 md:-mt-0 lg:-mt-0"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
       {/* Content Section */}
       <div

@@ -68,7 +68,7 @@
                       <head>
                         <link rel="icon" href="/TinkHackLogo.png" type="image/svg+xml" style={{ width: '300px', height: '300px', margin: '-50px' }} />
                       </head>
-                      <body>
+                      <body className=''>
                         <AOSInit />
                         {children}
                       </body>
