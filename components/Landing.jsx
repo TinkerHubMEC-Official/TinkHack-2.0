@@ -7,15 +7,17 @@ import { motion } from "framer-motion";
 
 // // Register the grid loader
 // grid.register();
+import TinkHackLogoMain from "../app/TinkHackLogo.png"
 
 
-import BackgroundImage from "@/assets/background.svg";
+import BackgroundImage from "@/assets/bckg 2.png";
 import LandingPageImage1 from "@/assets/landing_page_1.svg";
 import LandingPageImage2 from "@/assets/landing_page_2.svg";
 import LandingPageImage3 from "@/assets/landing_page_3.svg";
 import BrokenGlassImage1 from "@/assets/Broken_glass_1.svg";
 import BrokenGlassImage2 from "@/assets/Broken_glass_2.svg";
-import img from "@/assets/2.0.png";
+import img1 from "@/assets/2.0.png";
+import img from "@/assets/2.0.1.png";
 import i from "@/assets/original_i_kuthu.png";
 import Link from "next/link";
 
@@ -23,23 +25,24 @@ const Landing = () => {
   return (
     <section
       id="hero"
-      className={`font-satoshi min-h-screen bg-custom-dark relative flex items-center justify-center
+      className={`font-satoshi min-h-screen bg-custom-dark relative flex items-center justify-center bg-pattern 
          `}
     >
-      <div>
+      {/* <div className="h-[100vh]">
         <Image
           src={BackgroundImage}
           alt="Background Image"
+          
           layout="fill"
           objectFit="cover"
           priority
         />
-      </div>
+      </div> */}
       <div className="flex w-full">
         <div className="z-10 flex items-center justify-center h-screen w-full">
           <div className="flex flex-col items-center justify-center gap-0 w-full relative">
             {/* Tink */}
-            <motion.h1
+            {/* <motion.h1
               className="filter blur-[0.5px] font-productsansbold font-bold text-center 
               text-[5rem] -mt-40 
               sm:text-[6rem] sm:pt-6 
@@ -73,7 +76,7 @@ const Landing = () => {
                 />
               </span>
               nk
-              {/* 2.0 Image animation */}
+              2.0 Image animation 
               <motion.div
                 className="absolute filter -blur-[8px] 
                 -top-[0.4rem] left-[35%] w-[4.5rem] h-[5rem] 
@@ -90,16 +93,16 @@ const Landing = () => {
                   ease: "easeInOut",
                 }}
               >
-                <Image 
+                {/* <Image 
                   src={img} 
                   alt="2.0 Image" 
                   className="w-full h-full brightness-150" 
                   priority
-                />
+                /> 
               </motion.div>
             </motion.h1>
 
-            {/* HACK */}
+             HACK 
             <motion.div
               className="relative"
               initial={{ scale: 1.3, y: 50, opacity: 0 }}
@@ -134,30 +137,53 @@ const Landing = () => {
               </span>
             </h1>
 
-            </motion.div>
+            </motion.div> */}
 
 
 
 
 
            {/* Main Logo Image */}
-      {/* <Image
-        className={`brightness-125 w-auto h-[610px] relative flex z-10 mx-auto transition-all duration-700 mb-[170px] ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-[100px] opacity-0'}
-          sm:mb-[60px] 
-          md:mb-[20px] 
-          lg:mb-[-80px]`}
-        src={TinkHackLogoMain}
-        alt="Tink Hack Logo"
-        layout="intrinsic"
-      /> */}
-
+           <motion.div
+              className="relative"
+              initial={{ scale: 1.3, y: 50, opacity: 0 }}
+              animate={{
+                y: 0,
+                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+            <Image
+              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mb-[170px] 
+                sm:mb-[60px] 
+                md:mb-[20px] 
+                lg:mb-[-80px]`}
+              src={TinkHackLogoMain}
+              alt="Tink Hack Logo"
+              layout="intrinsic"
+             
+  priority
+  {...(typeof window !== "undefined" && window.innerWidth < 640
+    ? { height: 250, width: 170 }
+    : window.innerWidth < 768
+    ? { height: 300, width: 300 }
+    : window.innerWidth < 1024
+    ? { height: 350, width: 250 }
+    : { height: 100, width: 300 })}
+ />
+          
+          </motion.div>
 
       
-{/* 
-                                        <h1
+
+                                        {/* <h1
                                           className="absolute top-[0.2rem] left-[40%] sm:top-[2.1rem] sm:left-[42%] md:top-[1.3rem] md:left-[41%] lg:top-[1.4rem] lg:left-[45%] 
                                                     text-[#172ee7] lg:pl-[0.2rem] lg:pt-[0.8rem]
-                                                    font-semibold text-7xl font-candycolouredclown" 
+                                                    font-semibold text-7xl font-candycolouredclown blurred-text" 
                                         
                                         >
                                           2
@@ -218,13 +244,12 @@ const Landing = () => {
                                                                     // }}
                                         >
                                           2.0
-                                        </h1>
+                                        </h1> */}
 
- */}  
+ 
           </div>
         </div>
 
-        {/* Removed showComponents conditional and rendering all components directly */}
         
           <motion.div
             className="brightness-125 absolute top-0 left-0 z-10 w-[400px] h-[150px]"
@@ -331,9 +356,9 @@ const Landing = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105">
+              {/* <button className="py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105">
                 Register Now
-              </button>
+              </button> */}
             </Link>
           </motion.div>
         

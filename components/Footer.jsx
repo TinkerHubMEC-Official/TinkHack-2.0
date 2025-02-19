@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <section
     id="footer"
-    className="bg-custom-dark text-white relative flex flex-col justify-between items-center -px-2 overflow-hidden font-satoshi"
+    className="bg-custom-dark text-white relative flex bg-pattern  flex-col justify-between items-center -px-2 overflow-hidden font-satoshi"
     style={{
       paddingTop: "clamp(1rem, 10vw, 5rem)",
       maxHeight: "clamp(20px, 45vh, 365px)", // Default maxHeight
@@ -35,14 +35,14 @@ const Footer = () => {
     {/* Mobile-specific maxHeight */}
     <div className="sm:max-h-[clamp(20px,45vh,130px)]  md:max-h-[clamp(20px,45vh,185px)] lg:md:max-h-[clamp(20px,45vh,300px)] xl:max-h-[clamp(20px,45vh,365px)] max-h-[clamp(20px,45vh,90px)]">
       {/* Background Image */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
+      {/* <div className="absolute top-0 left-0 w-full h-full z-0">
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
   
       <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-center px-8 mb-4 text-gray-400">
         {/* Footer Text and Social Links */}

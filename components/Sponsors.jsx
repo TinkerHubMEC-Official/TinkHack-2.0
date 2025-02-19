@@ -13,17 +13,17 @@ const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className="bg-custom-dark text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 lg:pt-0 xl:px-16 py-16 font-satoshi"
+      className="bg-custom-dark bg-pattern  text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 lg:pt-0 xl:px-16 py-16 font-satoshi"
     >
       {/* Background Image */}
-      <div>
+      {/* <div>
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 w-full flex flex-col items-center">
         <h2
@@ -48,7 +48,7 @@ const Sponsors = () => {
           </div>
 
           {/* Platinum Sponsors */}
-          <div className="flex gap-8 flex-wrap justify-center">
+          {/* <div className="flex gap-8 flex-wrap justify-center">
             {[1, 2].map((item) => (
               <div
                 key={item}
@@ -63,10 +63,10 @@ const Sponsors = () => {
                 <p className="text-sm text-center">Replit</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Gold Sponsors */}
-          <div className="flex gap-8 flex-wrap justify-center">
+          {/* <div className="flex gap-8 flex-wrap justify-center">
             {[1, 2, 3].map((item) => (
               <div
                 key={item}
@@ -81,7 +81,7 @@ const Sponsors = () => {
                 <p className=" text-sm text-center">Replit</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Silver Sponsors */}
           <div className="flex gap-8 flex-wrap justify-center">

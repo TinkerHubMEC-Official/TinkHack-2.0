@@ -66,7 +66,7 @@ const SplashScreen = ({ onFinish }) => {
 
   return (
     <div
-      className={`splash-screen fixed top-0 left-0 w-full h-full z-50 bg-[#1a181c] flex justify-center items-center transition-opacity duration-1000 ${
+      className={`splash-screen fixed top-0 left-0 w-full h-full z-50 bg-[#1a181c] bg-pattern flex justify-center items-center transition-opacity duration-1000 ${
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >

@@ -100,7 +100,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="max-h-screen bg-custom-dark text-white flex flex-col items-center justify-center relative p-8 font-satoshi -mt-14 lg:pt-16">
+    <section id="contact" className="max-h-screen bg-custom-dark text-white bg-pattern flex flex-col items-center justify-center relative p-8 font-satoshi -mt-14 lg:pt-16">
       <h2 className="text-5xl font-bold relative z-10 text-center 
       bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent 
       mb-14 sm:text-center md:text-center lg:text-left lg:mr-[65%]
@@ -115,14 +115,14 @@ const Contact = () => {
         Contact Us
       </h2>
       {/* Background Image */}
-      <div>
+      {/* <div>
         <Image
           src={BackgroundImage}
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
       <div className="w-full max-w-6xl ">
         <Slider {...settings} className="-mx-2">

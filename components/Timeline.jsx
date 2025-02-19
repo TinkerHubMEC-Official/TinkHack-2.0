@@ -84,18 +84,18 @@ const Timeline = () => {
   return (
     <section
       id="timeline"
-      className="min-h-screen text-white flex flex-col items-center justify-center relative font-satoshi pb-20 py-12"
+      className="min-h-screen bg-pattern  text-white flex flex-col items-center justify-center relative font-satoshi pb-20 py-12"
       
     >
       {/* Background Image */}
-      <div >
+      {/* <div >
         <Image
           src={BackgroundImage}  
           alt="Background Image"
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </div> */}
 
       <h2 
         className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent mb-6
