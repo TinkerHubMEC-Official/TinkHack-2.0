@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 // // Register the grid loader
 // grid.register();
 import TinkHackLogoMain from "../app/TinkHackLogo.png"
+import dbiz from '@/assets/dbiz.png';
+
 
 
 import BackgroundImage from "@/assets/bckg 2.png";
@@ -139,7 +141,50 @@ const Landing = () => {
 
             </motion.div> */}
 
+<motion.div
+              className="relative"
+              initial={{ scale: 1.3, y: 50, opacity: 0 }}
+              animate={{
+                y: 0,
+                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+                <a 
+                  href="https://dbiz.ai/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="dbiz.ai"
+                  aria-label="dbiz.ai Website"
+                  className="hover:scale-105 transition-transform duration-300"
+                >
 
+            <Image
+              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[10px] 
+                sm:mt-[30px] 
+                md:-mt-[10px] 
+                lg:mt-[-40px]`}
+              src={dbiz}
+              alt="Tink Hack Logo"
+              layout="intrinsic"
+             
+  priority
+  {...(typeof window !== "undefined" && window.innerWidth < 640
+    ? { height: 250, width: 70 }
+    : window.innerWidth < 768
+    ? { height: 300, width: 80 }
+    : window.innerWidth < 1024
+    ? { height: 350, width: 90 }
+    : { height: 100, width: 100 })}
+    />
+    </a>
+ 
+          
+          </motion.div>
 
 
 
