@@ -3,7 +3,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import BackgroundImage from '@/assets/background.svg';
 import Image from 'next/image';
-// import WeCode from '@/assets/wecode.jpeg';
+import balsamiq from '@/assets/balsamiq.png';
 import WeCode from '@/assets/WeCode2.png';
 import Mukti from '@/assets/Mukti.png';
 import InterviewBuddy from '@/assets/InterviewBuddy1.png';
@@ -15,21 +15,24 @@ const Partners = () => {
     { name: 'WeCode', image: WeCode },
     { name: 'InterviewBuddy', image: InterviewBuddy},
     { name: 'Mukti', image: Mukti },
+    { name: 'Balsamiq', image: balsamiq },
     { name: 'WeCode', image: WeCode },
     { name: 'InterviewBuddy', image: InterviewBuddy},
     { name: 'Mukti', image: Mukti },
+    { name: 'Balsamiq', image: balsamiq },
     { name: 'WeCode', image: WeCode },
     { name: 'InterviewBuddy', image: InterviewBuddy},
     { name: 'Mukti', image: Mukti },
+    { name: 'Balsamiq', image: balsamiq },
     { name: 'WeCode', image: WeCode },
     { name: 'InterviewBuddy', image: InterviewBuddy},
     { name: 'Mukti', image: Mukti },
+    { name: 'Balsamiq', image: balsamiq },
     { name: 'WeCode', image: WeCode },
     { name: 'InterviewBuddy', image: InterviewBuddy},
     { name: 'Mukti', image: Mukti },    
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },
+    { name: 'Balsamiq', image: balsamiq },
+   
     
 
   ];
