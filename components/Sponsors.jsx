@@ -43,8 +43,21 @@ const Sponsors = () => {
             data-aos="zoom-out"
           >
             <h3 className="text-2xl font-semibold text-base mb-2 text-center">Title Sponsor</h3>
-            <Image src={dbiz} width={80} height={80} alt="dbiz.ai" className="mb-2" />
+            <a 
+                  href="https://dbiz.ai/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="dbiz.ai"
+                  aria-label="dbiz.ai Website"
+                  className="hover:scale-105 transition-transform duration-300"
+                >
+            <Image src={dbiz} 
+            width={80} 
+            height={80} 
+            alt="dbiz.ai" 
+            className="mb-2" />
             <p className=" text-sm text-center">dbiz.ai</p>
+            </a>
           </div>
 
           {/* Platinum Sponsors */}

@@ -28,7 +28,7 @@ body {
 .bg-pattern {
   background-image: url('/background.png');
   background-repeat: repeat;
-  background-size: 1500px 200px;
+  background-size: 100vw 200px;
 }
 
 
@@ -44,8 +44,5 @@ body {
   position: relative;
   top: 12px; /* Move the dots downwards */
 }
-.slick-dots {
-}
-
 
 
