@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 // // Register the grid loader
 // grid.register();
 import TinkHackLogoMain from "../app/TinkHackLogo.png"
+import TinkHackLogo2 from "@/assets/logo2.png"
 import dbiz from '@/assets/dbiz.png';
 
 
@@ -164,12 +165,12 @@ const Landing = () => {
                 >
 
             <Image
-              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[10px] 
+              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[80px] 
                 sm:mt-[30px] 
                 md:-mt-[10px] 
-                lg:mt-[-40px]`}
+                lg:mt-[60px]`}
               src={dbiz}
-              alt="Tink Hack Logo"
+              alt="dbiz Logo"
               layout="intrinsic"
              
   priority
@@ -189,7 +190,7 @@ const Landing = () => {
 
 
            {/* Main Logo Image */}
-           <motion.div
+           {/* <motion.div
               className="relative"
               initial={{ scale: 1.3, y: 50, opacity: 0 }}
               animate={{
@@ -221,7 +222,46 @@ const Landing = () => {
     : { height: 100, width: 300 })}
  />
           
-          </motion.div>
+          </motion.div> */}
+
+
+
+
+
+                                    <motion.div
+                                                  className="relative"
+                                                  initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                                                  animate={{
+                                                    y: 0,
+                                                    scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                                                    opacity: 1,
+                                                  }}
+                                                  transition={{
+                                                    duration: 1,
+                                                    ease: "easeInOut",
+                                                  }}
+                                                >
+                                                <Image
+                                                  className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 -mb-[10px] -mt-20
+
+                                                    sm:mb-[60px] sm:-mt-28 
+                                                    md:mb-[20px] 
+                                                    lg:mb-[20px]`}
+                                                  src={TinkHackLogo2}
+                                                  alt="Tink Hack Logo"
+                                                  layout="intrinsic"
+                                                
+                                      priority
+                                      {...(typeof window !== "undefined" && window.innerWidth < 640
+                                        ? { height: 450, width: 230 }
+                                        : window.innerWidth < 768
+                                        ? { height: 300, width: 300 }
+                                        : window.innerWidth < 1024
+                                        ? { height: 350, width: 250 }
+                                        : { height: 100, width: 350 })}
+                                    />
+                                              
+                                              </motion.div>
 
       
 
