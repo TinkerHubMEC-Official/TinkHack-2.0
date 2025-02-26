@@ -5,10 +5,34 @@ import Image from 'next/image';
 import dbiz from '@/assets/dbiz.png';
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import SIB from '@/assets/SIB_New.png';
+import wizr from '@/assets/wizr0.png';
 
 
 
 const Sponsors = () => {
+
+
+  const silverSponsors = [
+    {
+      name: "wizr.ai",
+      logo: wizr,
+      website: "https://wizr.ai/",
+      alt: "Wizr Logo"
+    },
+    {
+      name: "South Indian Bank",
+      logo: SIB,
+      website: "https://www.southindianbank.com",
+      alt: "South Indian Bank Logo"
+    },
+    {
+      name: "South Indian Bank",
+      logo: SIB,
+      website: "https://www.southindianbank.com",
+      alt: "South Indian Bank Logo"
+    }
+  ];
+  
   
   return (
     <section
@@ -98,9 +122,9 @@ const Sponsors = () => {
 
           {/* Silver Sponsors */}
           <div className="flex gap-8 flex-wrap justify-center">
-            {[1, 2, 3].map((item) => (
+            {silverSponsors.map((sponsor, index) => (
               <div
-                key={item}
+                key={index}
                 className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
                 style={{
                   background: 'linear-gradient(155deg, #454449, #201e23)',
@@ -108,26 +132,27 @@ const Sponsors = () => {
                 data-aos="fade-up"
               >
                 <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
-                <a 
-                  href="https://www.southindianbank.com" 
-                  target="_blank" 
+                <a
+                  href={sponsor.website}
+                  target="_blank"
                   rel="noopener noreferrer"
-                  title="South Indian Bank"
-                  aria-label="South Indian Bank Website"
+                  title={sponsor.name}
+                  aria-label={`${sponsor.name} Website`}
                   className="hover:scale-105 transition-transform duration-300"
                 >
-                  <Image 
-                    src={SIB} 
-                    width={105} 
-                    height={100} 
-                    alt="South Indian Bank Logo" 
-                    className="mb-2" 
+                  <Image
+                    src={sponsor.logo}
+                    width={105}
+                    height={100}
+                    alt={sponsor.alt}
+                    className="mb-2"
                   />
-                  <p className="text-sm text-center">South Indian Bank</p>
+                  <p className="text-sm text-center">{sponsor.name}</p>
                 </a>
               </div>
-             ))} 
+            ))}
           </div>
+
         </div>
 
 

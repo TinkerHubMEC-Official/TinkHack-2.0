@@ -12,29 +12,26 @@ import InterviewBuddy from '@/assets/InterviewBuddy1.png';
 
 const Partners = () => {
   const partners = [
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },
-    { name: 'Balsamiq', image: balsamiq },
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },
-    { name: 'Balsamiq', image: balsamiq },
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },
-    { name: 'Balsamiq', image: balsamiq },
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },
-    { name: 'Balsamiq', image: balsamiq },
-    { name: 'WeCode', image: WeCode },
-    { name: 'InterviewBuddy', image: InterviewBuddy},
-    { name: 'Mukti', image: Mukti },    
-    { name: 'Balsamiq', image: balsamiq },
-   
-    
-
+    { name: 'WeCode', image: WeCode, url: 'https://www.instagram.com/wecodemalayalam/' },
+    { name: 'InterviewBuddy', image: InterviewBuddy, url: 'https://interviewbuddy.net' },
+    { name: 'Mukti', image: Mukti, url: 'https://www.linkedin.com/company/mukticommunity/' },
+    { name: 'Balsamiq', image: balsamiq, url: 'https://balsamiq.com' },
+    { name: 'WeCode', image: WeCode, url: 'https://www.instagram.com/wecodemalayalam/' },
+    { name: 'InterviewBuddy', image: InterviewBuddy, url: 'https://interviewbuddy.net' },
+    { name: 'Mukti', image: Mukti, url: 'https://www.linkedin.com/company/mukticommunity/' },
+    { name: 'Balsamiq', image: balsamiq, url: 'https://balsamiq.com' },
+    { name: 'WeCode', image: WeCode, url: 'https://www.instagram.com/wecodemalayalam/' },
+    { name: 'InterviewBuddy', image: InterviewBuddy, url: 'https://interviewbuddy.net' },
+    { name: 'Mukti', image: Mukti, url: 'https://www.linkedin.com/company/mukticommunity/' },
+    { name: 'Balsamiq', image: balsamiq, url: 'https://balsamiq.com' },
+    { name: 'WeCode', image: WeCode, url: 'https://www.instagram.com/wecodemalayalam/' },
+    { name: 'InterviewBuddy', image: InterviewBuddy, url: 'https://interviewbuddy.net' },
+    { name: 'Mukti', image: Mukti, url: 'https://www.linkedin.com/company/mukticommunity/' },
+    { name: 'Balsamiq', image: balsamiq, url: 'https://balsamiq.com' },
+    { name: 'WeCode', image: WeCode, url: 'https://www.instagram.com/wecodemalayalam/' },
+    { name: 'InterviewBuddy', image: InterviewBuddy, url: 'https://interviewbuddy.net' },
+    { name: 'Mukti', image: Mukti, url: 'https://www.linkedin.com/company/mukticommunity/' },
+    { name: 'Balsamiq', image: balsamiq, url: 'https://balsamiq.com' },
   ];
 
   return (
@@ -125,38 +122,46 @@ const Partners = () => {
      {/*GREY BOXES*/}
 
         {/* Marquee Effect */}
-        <Marquee gradient={false} speed={100} className="w-full py-8 overflow-hidden
-        lg:-mb-64" data-aos="fade-up">
-  <div className="flex gap-8 ml-8">
-    {partners.map((partner, index) => (
-      <div
-        key={index}
-        className="flex flex-col items-center shadow-lg justify-center -py-4 transition-all duration-300 relative"
-        style={{
-          borderRadius: '16px',
-          overflow: 'hidden',
-          background: 'linear-gradient(155deg, #3e1b2e, #433419)',
-        }}
-      >
-        {/* Wrapper with dynamic width and height */}
-        <div className="w-[180px] h-[130px] sm:w-[220px] sm:h-[140px] flex flex-col justify-center items-center">
-          {/* Partner Image */}
-          <div className="flex items-center justify-center h-full w-full">
-            <Image
-              src={partner.image}
-              width={80}
-              height={80}
-              alt={partner.name}
-              className="object-contain rounded-md"
-            />
+        <Marquee gradient={false} speed={100} className="w-full py-8 overflow-hidden lg:-mb-64" data-aos="fade-up">
+          <div className="flex gap-8 ml-8">
+            {partners.map((partner, index) => (
+              <a
+                key={index}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Visit ${partner.name}`}
+                className="flex flex-col items-center shadow-lg justify-center -py-4 transition-all duration-300 relative cursor-pointer hover:scale-105 hover:shadow-xl"
+                style={{
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  background: 'linear-gradient(155deg, #3e1b2e, #433419)',
+                }}
+              >
+                {/* Wrapper with dynamic width and height */}
+                <div className="w-[180px] h-[130px] sm:w-[220px] sm:h-[140px] flex flex-col justify-center items-center">
+                  {/* Partner Image */}
+                  <div className="flex items-center justify-center h-full w-full">
+                    <Image
+                      src={partner.image}
+                      width={80}
+                      height={80}
+                      alt={partner.name}
+                      className="object-contain rounded-md"
+                    />
+                  </div>
+                  {/* Partner Name */}
+                  <p className="text-white text-center mb-2 font-light text-xs">{partner.name}</p>
+                  
+                  {/* URL display on hover */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs py-1 px-2 translate-y-full transition-transform duration-300 group-hover:translate-y-0 opacity-0 hover:opacity-100">
+                    {partner.url.replace('https://', '')}
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
-          {/* Partner Name */}
-          <p className="text-white text-center mb-2 font-light text-xs">{partner.name}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</Marquee>
+        </Marquee>
 
 
 

@@ -1,4 +1,4 @@
-                import localFont from 'next/font/local';
+                  import localFont from 'next/font/local';
                 import './globals.css';
                 import AOSInit from '@/utils/AOSInit';
                 import 'aos/dist/aos.css';
@@ -60,11 +60,53 @@
                   variable: "--font-candycolouredclown"
                 })
 
+                const MontserratBold = localFont({
+                  src: "./fonts/Montserrat-Bold.ttf",
+                  variable: "--font-MontserratBold"
+                })
+                
+                const MontserratLight = localFont({
+                  src: "./fonts/Montserrat-Light.ttf",
+                  variable: "--font-MontserratLight"
+                }) 
+                
+                const MontserratMedium = localFont({
+                  src: "./fonts/Montserrat-Medium.ttf",
+                  variable: "--font-MontserratMedium"
+                }) 
+                
+                const MontserratRegular = localFont({
+                  src: "./fonts/Montserrat-Regular.ttf",
+                  variable: "--font-MontserratRegular"
+                }) 
+                
+                const MontserratSemiBold = localFont({
+                  src: "./fonts/Montserrat-SemiBold.ttf",
+                  variable: "--font-MontserratSemiBold"
+                }) 
+                
+                const MontserratThin = localFont({
+                  src: "./fonts/Montserrat-Thin.ttf",
+                  variable: "--font-MontserratThin"
+                })
 
                 export default function RootLayout({ children }) {
                   return (
-                    <html lang="en" className={`${satoshi.variable} ${khuja.variable} ${productsansregular.variable} ${productsansbold.variable}
-                    ${latohairline.variable} ${latolight.variable} ${latothin.variable} ${candycolouredclown.variable} `}>
+                    <html lang="en" className={`${satoshi.variable} 
+                                                ${khuja.variable} 
+                                                ${productsansregular.variable} 
+                                                ${productsansbold.variable}
+                                                ${latohairline.variable} 
+                                                ${latolight.variable} 
+                                                ${latothin.variable} 
+                                                ${candycolouredclown.variable}
+                                                ${MontserratBold.variable} 
+                                                ${MontserratLight.variable} 
+                                                ${MontserratMedium.variable} 
+                                                ${MontserratRegular.variable} 
+                                                ${MontserratSemiBold.variable} 
+                                                ${MontserratThin.variable}  
+                                                `}>
                       <head>
                         <link rel="icon" href="/TinkHackLogo.png" type="image/svg+xml" style={{ width: '300px', height: '300px', margin: '-50px' }} />
                       </head>
