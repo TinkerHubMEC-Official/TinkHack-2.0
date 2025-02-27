@@ -5,7 +5,7 @@ import Image from 'next/image';
 import dbiz from '@/assets/dbiz.png';
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import SIB from '@/assets/SIB_New.png';
-import wizr from '@/assets/wizr0.png';
+import wizr from '@/assets/wizr1.jpg';
 
 
 
@@ -79,7 +79,7 @@ const Sponsors = () => {
             width={80} 
             height={80} 
             alt="dbiz.ai" 
-            className="mb-2" />
+            className="mb-2 rounded-md" />
             <p className=" text-sm text-center">dbiz.ai</p>
             </a>
           </div>
@@ -145,7 +145,7 @@ const Sponsors = () => {
                     width={105}
                     height={100}
                     alt={sponsor.alt}
-                    className="mb-2"
+                    className="mb-2 rounded-md"
                   />
                   <p className="text-sm text-center">{sponsor.name}</p>
                 </a>
