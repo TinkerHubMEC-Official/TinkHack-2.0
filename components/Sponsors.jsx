@@ -6,6 +6,7 @@ import dbiz from '@/assets/dbiz.png';
 import LandingPageImage3 from '@/assets/landing_page_3.svg';
 import SIB from '@/assets/SIB_New.png';
 import wizr from '@/assets/wizr1.jpg';
+import phoenix from '@/assets/Phoenix.png';
 
 
 
@@ -17,19 +18,19 @@ const Sponsors = () => {
       name: "wizr.ai",
       logo: wizr,
       website: "https://wizr.ai/",
-      alt: "Wizr Logo"
+      alt: "wizr.ai"
     },
     {
       name: "South Indian Bank",
       logo: SIB,
       website: "https://www.southindianbank.com",
-      alt: "South Indian Bank Logo"
+      alt: "South Indian Bank"
     },
     {
-      name: "South Indian Bank",
-      logo: SIB,
-      website: "https://www.southindianbank.com",
-      alt: "South Indian Bank Logo"
+      name: "Phoenix Study Abroad",
+      logo: phoenix,
+      website: "https://phoenixmigrationservices.com.au/",
+      alt: "Phoenix Study Abroad"
     }
   ];
   
