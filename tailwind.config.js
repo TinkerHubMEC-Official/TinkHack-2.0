@@ -24,6 +24,15 @@ module.exports = {
         latolight: ["var(--font-lato-light)", "lato-light"],
         latothin: ["var(--font-latothin)", "lato-thin"],
         candycolouredclown: ["var(--font-candycolouredclown)", "candycolouredclown"],
+        MontserratBold: ["var(--font-Montserrat-Bold)", "Montserrat-Bold"],
+        MontserratLight: ["var(--font-Montserrat-Light)", "Montserrat-Light"],
+        MontserratMedium: ["var(--font-Montserrat-Medium)", "Montserrat-Medium"],
+        MontserratRegular: ["var(--font-Montserrat-Regular)", "Montserrat-Regular"],
+        MontserratSemiBold: ["var(--font-Montserrat-SemiBold)", "Montserrat-SemiBold"],
+        MontserratThin: ["var(--font-Montserrat-Bold)", "Montserrat-Bold"],
+
+
+        
 
       },
       fontWeight: {

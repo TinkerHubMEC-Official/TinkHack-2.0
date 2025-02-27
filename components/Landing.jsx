@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 // // Register the grid loader
 // grid.register();
 import TinkHackLogoMain from "../app/TinkHackLogo.png"
+import TinkHackLogo2 from "@/assets/logo2.png"
 import dbiz from '@/assets/dbiz.png';
 
 
@@ -141,19 +142,25 @@ const Landing = () => {
 
             </motion.div> */}
 
-<motion.div
-              className="relative"
-              initial={{ scale: 1.3, y: 50, opacity: 0 }}
-              animate={{
-                y: 0,
-                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
-                opacity: 1,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-              }}
-            >
+
+
+
+
+
+            {/* dbiz.ai logo with animation */}
+              <motion.div
+                className="relative"
+                initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: "easeInOut",
+                }}
+              >
                 <a 
                   href="https://dbiz.ai/" 
                   target="_blank" 
@@ -162,66 +169,118 @@ const Landing = () => {
                   aria-label="dbiz.ai Website"
                   className="hover:scale-105 transition-transform duration-300"
                 >
+                  <Image
+                    className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[20px] 
+                      sm:mt-[30px] sm:mb-[20px]
+                      md:-mt-[10px] md:mb-[20px]
+                      lg:mt-[60px] lg:mb-[20px]`}
+                    src={dbiz}
+                    alt="dbiz Logo"
+                    layout="intrinsic"
+                    priority
+                    {...(typeof window !== "undefined" && window.innerWidth < 640
+                      ? { height: 250, width: 70 }
+                      : window.innerWidth < 768
+                      ? { height: 300, width: 80 }
+                      : window.innerWidth < 1024
+                      ? { height: 350, width: 90 }
+                      : { height: 100, width: 100 })}
+                  />
+                </a>
+              </motion.div>
 
-            <Image
-              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[10px] 
-                sm:mt-[30px] 
-                md:-mt-[10px] 
-                lg:mt-[-40px]`}
-              src={dbiz}
-              alt="Tink Hack Logo"
-              layout="intrinsic"
-             
-  priority
-  {...(typeof window !== "undefined" && window.innerWidth < 640
-    ? { height: 250, width: 70 }
-    : window.innerWidth < 768
-    ? { height: 300, width: 80 }
-    : window.innerWidth < 1024
-    ? { height: 350, width: 90 }
-    : { height: 100, width: 100 })}
-    />
-    </a>
- 
-          
-          </motion.div>
+              {/* "presents" text positioned between the logos */}
+              <motion.p 
+                className="font-MontserratBold text-center text-xs sm:text-base -my-2"
+                initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  scale: [1.3, 0.95, 1.2, 1], 
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: "easeInOut",
+                  delay: 0.3,
+                }}
+              >
+                presents
+              </motion.p>
+
+              {/* TinkHack logo with animation */}
+              <motion.div
+                className="relative"
+                initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: "easeInOut",
+                  delay: 0.3,
+                }}
+              >
+                <Image
+                  className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 -mt-[20px]
+                    sm:mb-[60px] sm:-mt-[60px]
+                    md:mb-[20px] 
+                    lg:mb-[20px]`}
+                  src={TinkHackLogo2}
+                  alt="Tink Hack Logo"
+                  layout="intrinsic"
+                  priority
+                  {...(typeof window !== "undefined" && window.innerWidth < 640
+                    ? { height: 450, width: 230 }
+                    : window.innerWidth < 768
+                    ? { height: 300, width: 300 }
+                    : window.innerWidth < 1024
+                    ? { height: 350, width: 250 }
+                    : { height: 100, width: 350 })}
+                />
+              </motion.div>
 
 
 
-           {/* Main Logo Image */}
-           <motion.div
-              className="relative"
-              initial={{ scale: 1.3, y: 50, opacity: 0 }}
-              animate={{
-                y: 0,
-                scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
-                opacity: 1,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-              }}
-            >
-            <Image
-              className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mb-[170px] 
-                sm:mb-[60px] 
-                md:mb-[20px] 
-                lg:mb-[-80px]`}
-              src={TinkHackLogoMain}
-              alt="Tink Hack Logo"
-              layout="intrinsic"
-             
-  priority
-  {...(typeof window !== "undefined" && window.innerWidth < 640
-    ? { height: 250, width: 170 }
-    : window.innerWidth < 768
-    ? { height: 300, width: 300 }
-    : window.innerWidth < 1024
-    ? { height: 350, width: 250 }
-    : { height: 100, width: 300 })}
- />
-          
-          </motion.div>
+
+
+                             
+                     {/* Main Logo Image */}
+                         {/* <motion.div
+                             className="relative"
+                             initial={{ scale: 1.3, y: 50, opacity: 0 }}
+                             animate={{
+                               y: 0,
+                               scale: [1.3, 0.95, 1.2, 1], // Keyframe animation for scale
+                               opacity: 1,
+                             }}
+                             transition={{
+                               duration: 1,
+                               ease: "easeInOut",
+                             }}
+                           >
+                           <Image
+                             className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mb-[170px] 
+                               sm:mb-[60px] 
+                               md:mb-[20px] 
+                               lg:mb-[-80px]`}
+                             src={TinkHackLogoMain}
+                             alt="Tink Hack Logo"
+                             layout="intrinsic"
+                           
+                 priority
+                 {...(typeof window !== "undefined" && window.innerWidth < 640
+                   ? { height: 250, width: 170 }
+                   : window.innerWidth < 768
+                   ? { height: 300, width: 300 }
+                   : window.innerWidth < 1024
+                   ? { height: 350, width: 250 }
+                   : { height: 100, width: 300 })}
+               />
+                         
+                         </motion.div> */}
+
 
       
 
