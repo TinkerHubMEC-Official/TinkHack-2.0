@@ -108,7 +108,8 @@
                                                 ${MontserratThin.variable}  
                                                 `}>
                       <head>
-                        <link rel="icon" href="/TinkHackLogo.png" type="image/svg+xml" style={{ width: '300px', height: '300px', margin: '-50px' }} />
+                        <title>TinkHack 2.0</title>
+                        <link rel="icon" href="/logo2.png" type="image/svg+xml" style={{ width: '300px', height: '300px', margin: '-50px' }} />
                       </head>
                       <body className=''>
                         <AOSInit />

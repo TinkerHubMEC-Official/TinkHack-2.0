@@ -98,7 +98,7 @@ const Faq = () => {
           <div
             key={index}
             data-aos="fade-up"
-            className="mb-4 p-6 rounded-xl bg-gradient-to-b from-[#302e33] to-[#262429] text-white shadow-lg shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_2px_2px_rgba(0,0,0,0.2)] w-full max-w-2xl mx-auto hover:scale-[1.02] hover:shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
+            className="mb-4 p-6 rounded-xl cursor-pointer bg-gradient-to-b from-[#302e33] to-[#262429] text-white shadow-lg shadow-[0_-1px_2px_rgba(255,255,255,0.2),0_2px_2px_rgba(0,0,0,0.2)] w-full max-w-2xl mx-auto hover:scale-[1.02] hover:shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
             onClick={() => toggleFAQ(index)}
           >
             <div className="flex justify-between items-center">

@@ -78,7 +78,7 @@ const Prizes = () => {
               data-aos="fade-left"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-1 text-center">2nd Prize</h3>
-              <p className="text-4xl font-bold text-center">₹20,000</p>
+              <p className="text-4xl font-bold text-center">₹30,000</p>
             </div>
             <div
               className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
@@ -88,7 +88,7 @@ const Prizes = () => {
               data-aos="fade-right"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-1 text-center">3rd Prize</h3>
-              <p className="text-4xl font-bold text-center">₹10,000</p>
+              <p className="text-4xl font-bold text-center">₹20,000</p>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ const Prizes = () => {
             data-aos="fade-up"
           >
             <h3 className="text-lg font-semibold mb-2 -mt-1 text-center">Best Fintech Project</h3>
-            <p className="text-4xl font-bold text-center">₹20,000</p>
+            <p className="text-4xl font-bold text-center">₹30,000</p>
             <Image src={SIB} width={500} alt="SIB" />
           </div> */}
         </div>
@@ -119,7 +119,7 @@ const Prizes = () => {
                 data-aos="fade-right"
               >
                 <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">2nd Prize</h3>
-                <p className="text-4xl font-bold text-center">₹20,000</p>
+                <p className="text-4xl font-bold text-center">₹30,000</p>
               </div>
             </div>
 
@@ -146,7 +146,7 @@ const Prizes = () => {
               data-aos="fade-left"
             >
               <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">3rd Prize</h3>
-              <p className="text-4xl font-bold text-center">₹10,000</p>
+              <p className="text-4xl font-bold text-center">₹20,000</p>
             </div>
           </div>
 
@@ -159,7 +159,7 @@ const Prizes = () => {
             data-aos="fade-up"
           >
             <h3 className="text-lg font-semibold mb-2 -mt-4 text-center">Best Fintech Project</h3>
-            <p className="text-4xl font-bold text-center mt-4">₹20,000</p>
+            <p className="text-4xl font-bold text-center mt-4">₹30,000</p>
             <Image src={SIB} width={500} alt="SIB" />
           </div> */}
 

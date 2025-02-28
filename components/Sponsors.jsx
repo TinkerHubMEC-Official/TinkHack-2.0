@@ -13,28 +13,7 @@ import phoenix from '@/assets/Phoenix.png';
 const Sponsors = () => {
 
 
-  const silverSponsors = [
-    {
-      name: "wizr.ai",
-      logo: wizr,
-      website: "https://wizr.ai/",
-      alt: "wizr.ai"
-    },
-    {
-      name: "South Indian Bank",
-      logo: SIB,
-      website: "https://www.southindianbank.com",
-      alt: "South Indian Bank"
-    },
-    {
-      name: "Phoenix Study Abroad",
-      logo: phoenix,
-      website: "https://phoenixmigrationservices.com.au/",
-      alt: "Phoenix Study Abroad"
-    }
-  ];
-  
-  
+   
   return (
     <section
       id="sponsors"
@@ -123,35 +102,86 @@ const Sponsors = () => {
 
           {/* Silver Sponsors */}
           <div className="flex gap-8 flex-wrap justify-center">
-            {silverSponsors.map((sponsor, index) => (
-              <div
-                key={index}
-                className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
-                style={{
-                  background: 'linear-gradient(155deg, #454449, #201e23)',
-                }}
-                data-aos="fade-up"
+            <div
+              className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
+              style={{
+                background: 'linear-gradient(155deg, #454449, #201e23)',
+              }}
+              data-aos="fade-right"
+            >
+              <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
+              <a
+                href="https://wizr.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="wizr.ai"
+                aria-label="wizr.ai Website"
+                className="hover:scale-105 transition-transform duration-300"
               >
-                <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
-                <a
-                  href={sponsor.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={sponsor.name}
-                  aria-label={`${sponsor.name} Website`}
-                  className="hover:scale-105 transition-transform duration-300"
-                >
-                  <Image
-                    src={sponsor.logo}
-                    width={105}
-                    height={100}
-                    alt={sponsor.alt}
-                    className="mb-2 rounded-md"
-                  />
-                  <p className="text-sm text-center">{sponsor.name}</p>
-                </a>
-              </div>
-            ))}
+                <Image
+                  src={wizr}
+                  width={105}
+                  height={100}
+                  alt="wizr.ai"
+                  className="mb-2 rounded-md"
+                />
+                <p className="text-sm text-center">wizr.ai</p>
+              </a>
+            </div>
+
+            <div
+              className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
+              style={{
+                background: 'linear-gradient(155deg, #454449, #201e23)',
+              }}
+              data-aos="fade-up"
+            >
+              <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
+              <a
+                href="https://www.southindianbank.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="South Indian Bank"
+                aria-label="South Indian Bank Website"
+                className="hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src={SIB}
+                  width={105}
+                  height={100}
+                  alt="South Indian Bank"
+                  className="mb-2 rounded-md"
+                />
+                <p className="text-sm text-center">South Indian Bank</p>
+              </a>
+            </div>
+
+            <div
+              className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
+              style={{
+                background: 'linear-gradient(155deg, #454449, #201e23)',
+              }}
+              data-aos="fade-left"
+            >
+              <h3 className="text-2xl text-base font-semibold mb-2 text-center">Silver Sponsor</h3>
+              <a
+                href="https://phoenixmigrationservices.com.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Phoenix Study Abroad"
+                aria-label="Phoenix Study Abroad Website"
+                className="hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src={phoenix}
+                  width={105}
+                  height={100}
+                  alt="Phoenix Study Abroad"
+                  className="mb-2 rounded-md ml-5"
+                />
+                <p className="text-sm text-center">Phoenix Study Abroad</p>
+              </a>
+            </div>
           </div>
 
         </div>

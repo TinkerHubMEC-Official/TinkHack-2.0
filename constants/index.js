@@ -11,10 +11,10 @@ export const NavItems = [
     //   title: "Timeline",
     //   link: "/#timeline",
     // },
-    // {
-    //     title: "Prizes",
-    //     link: "/#prizes"
-    // },
+    {
+        title: "Prizes",
+        link: "/#prizes"
+    },
     {
         title: "Sponsors",
         link: "/#sponsors"
