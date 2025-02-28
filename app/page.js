@@ -34,7 +34,7 @@ export default function Home() {
           <About />
           <Tracks />
           {/* <Timeline /> */}
-          {/* <Prizes /> */}
+          <Prizes />
           <Sponsors />
           <Partners />
           <Faq />
