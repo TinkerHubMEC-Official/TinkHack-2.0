@@ -25,6 +25,17 @@ import i from "@/assets/original_i_kuthu.png";
 import Link from "next/link";
 
 const Landing = () => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section
       id="hero"
@@ -455,15 +466,12 @@ const Landing = () => {
               ease: "easeInOut",
             }}
           >
-            <Link
-              href="https://mec.tinkerhub.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* <button className="py-1.5 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105">
-                Register Now
-              </button> */}
-            </Link>
+            <div 
+              className="apply-button" 
+              data-hackathon-slug="tinkhack-mec"
+              data-button-theme="dark-inverted" 
+              style={{ height: '44px', width: '312px' }}
+            ></div>
           </motion.div>
         
       </div>
