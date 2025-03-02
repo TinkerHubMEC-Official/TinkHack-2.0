@@ -9,38 +9,42 @@ import 'aos/dist/aos.css';
 const Timeline = () => {
       const [isLoaded, setIsLoaded] = useState(false);
         useEffect(() => {
-          setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+          setTimeout(() => setIsLoaded(true), 1000);
         }, []);
 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const events = [
     {
-      date: '1pm, 3rd March',
-      title: 'Registration Starts',
+      date: '5th March',
+      title: ' Registrations Open',
       description:
         'TinkHack registration opens. Students can register via Devfolio by submitting their project proposals.',
     },
     {
-      date: '7am, 3rd March',
-      title: 'Project Submission',
+      date: '16th March',
+      title: 'Registrations Close',
       description:
-        'Teams must finalize and submit their projects before the deadline.',
+        'Teams must finalize and submit their project ideas before the deadline.',
     },
     {
-      date: '9am, 3rd March',
-      title: 'Evaluation Starts',
+      date: '18th March',
+      title: 'Shortlist Announcement',
       description:
-        'Judges will begin evaluating submitted projects based on innovation, execution, and impact.',
+        'Shortlisted candidates are finalized and announced',
     },
     {
-      date: '12pm, 3rd March',
-      title: 'Closing Ceremony',
+      date: '22nd March',
+      title: 'Hackathon Kickoff',
       description:
         'Discover the champions of progress and the architects of tomorrow. The grand stage is where innovators revel in their triumphs.',
     },
-    
-    
+    {
+      date: '23rd March',
+      title: 'Hackathon Ends',
+      description:
+        'Judges will begin evaluating submitted projects based on innovation, execution, and impact.',
+    }, 
   ];
 
   const getGradientColor = (index, total) => {
@@ -124,7 +128,7 @@ const Timeline = () => {
             className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
             style={{ 
               top: '50px',
-              height: `calc(${events.length * 99}px)`, // Adjust multiplier based on your spacing
+              height: `calc(${events.length * 105}px)`, // Adjust multiplier based on your spacing
             }}
           ></div>
           {events.map((event, index) => {
@@ -195,7 +199,7 @@ const Timeline = () => {
             style={{
               left: '1.95rem',
               top: '70px',
-              height: `calc(${events.length * 125}px)`,
+              height: `calc(${events.length * 133}px)`,
             }}
           ></div>
           
