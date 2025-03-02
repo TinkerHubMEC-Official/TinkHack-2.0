@@ -7,10 +7,10 @@ export const NavItems = [
       title: "Tracks",
       link: "/#tracks",
     },
-    // {
-    //   title: "Timeline",
-    //   link: "/#timeline",
-    // },
+    {
+      title: "Timeline",
+      link: "/#timeline",
+    },
     {
         title: "Prizes",
         link: "/#prizes"
