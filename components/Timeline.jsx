@@ -16,31 +16,31 @@ const Timeline = () => {
 
   const events = [
     {
-      date: '5th March',
+      date: '6pm, 5th March',
       title: ' Registrations Open',
       description:
         'TinkHack registration opens. Students can register via Devfolio by submitting their project proposals.',
     },
     {
-      date: '16th March',
+      date: '11pm, 16th March',
       title: 'Registrations Close',
       description:
         'Teams must finalize and submit their project ideas before the deadline.',
     },
     {
-      date: '18th March',
+      date: '9pm, 18th March',
       title: 'Shortlist Announcement',
       description:
-        'Shortlisted candidates are finalized and announced',
+        'Shortlisted candidates are finalized and announced.',
     },
     {
-      date: '22nd March',
+      date: '1pm, 22nd March',
       title: 'Hackathon Kickoff',
       description:
         'Discover the champions of progress and the architects of tomorrow. The grand stage is where innovators revel in their triumphs.',
     },
     {
-      date: '23rd March',
+      date: '1pm, 23rd March',
       title: 'Hackathon Ends',
       description:
         'Judges will begin evaluating submitted projects based on innovation, execution, and impact.',
@@ -167,8 +167,8 @@ const Timeline = () => {
                   <p
                     className={`text-sm absolute ${
                       index % 2 === 0
-                        ? 'right-[calc(50%-160px)] xl:right-[calc(50%-120px)] lg:right-[calc(50%-100px)] text-right'
-                        : 'left-[calc(50%-160px)] xl:left-[calc(50%-120px)] lg:left-[calc(50%_100px)] text-left'
+                        ? 'right-[calc(50%-160px)] xl:right-[calc(50%-140px)] lg:right-[calc(50%-100px)] text-right'
+                        : 'left-[calc(50%-160px)] xl:left-[calc(50%-140px)] lg:left-[calc(50%_100px)] text-left'
                     }`}
                     style={{ color }}
                   >
