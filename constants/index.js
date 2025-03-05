@@ -3,10 +3,10 @@ export const NavItems = [
       title: "About",
       link: "/#about",
     },
-    {
-      title: "Tracks",
-      link: "/#tracks",
-    },
+    // {
+    //   title: "Tracks",
+    //   link: "/#tracks",
+    // },
     {
       title: "Timeline",
       link: "/#timeline",

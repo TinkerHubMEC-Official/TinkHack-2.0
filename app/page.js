@@ -32,7 +32,7 @@ export default function Home() {
           <Navbar className="absolute top-0 left-0 w-full z-50" />
           <Landing />
           <About />
-          <Tracks />
+          {/* <Tracks /> */}
           <Timeline />
           <Prizes />
           <Sponsors />

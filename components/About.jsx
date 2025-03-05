@@ -98,13 +98,13 @@ const About = () => {
           className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1"
           data-aos="fade-up"
         >
-          <Image
+          {/* <Image
             className={`brightness-125 transition-transform duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-90  lg:h-[350px] ${
               isLoaded ? 'translate-x-0' : '-translate-x-[100%]'
             }`}
             src={BubbleImage}
             alt="Bubble Image"
-          />
+          /> */}
         </div>
       )}
 

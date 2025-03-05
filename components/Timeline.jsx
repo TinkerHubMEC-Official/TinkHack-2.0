@@ -34,13 +34,13 @@ const Timeline = () => {
         'After careful evaluation, the top teams are selected and announced, moving one step closer to victory.',
     },
     {
-      date: '1pm, 22nd March',
+      date: '3pm, 22nd March',
       title: 'Hackathon Kickoff',
       description:
         'The hackathon officially begins as participants dive into 24 hours of innovation, collaboration, and problem-solving.',
     },
     {
-      date: '1pm, 23rd March',
+      date: '3pm, 23rd March',
       title: 'Hackathon Ends',
       description:
         'The coding marathon concludes as teams submit their final projects and prizes are given, marking the end of an intense and inspiring journey.',

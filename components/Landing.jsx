@@ -469,7 +469,7 @@ const Landing = () => {
         
       </div>
       <motion.div
-            className="brightness-125 absolute bottom-0 right-0 z-0 sm:z-10 overflow-hidden"
+            className="brightness-125 absolute bottom-0 right-0"
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
