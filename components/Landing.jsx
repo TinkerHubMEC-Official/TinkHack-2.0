@@ -181,7 +181,7 @@ const Landing = () => {
                   className="hover:scale-105 transition-transform duration-300"
                 >
                   <Image
-                    className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 mt-[10px] mb-[20px] 
+                    className={`brightness-125 relative flex z-10 mx-auto transition-all duration-700 -mt-[52px] mb-[20px] 
                       sm:mt-[30px] sm:mb-[20px]
                       md:-mt-[10px] md:mb-[20px]
                       lg:mt-[60px] lg:mb-[20px]`}
@@ -220,7 +220,7 @@ const Landing = () => {
 
               {/* TinkHack logo with animation */}
               <motion.div
-                className="relative"
+                className="relative z-10"
                 initial={{ scale: 1.3, y: 50, opacity: 0 }}
                 animate={{
                   y: 0,
@@ -361,7 +361,39 @@ const Landing = () => {
                                           2.0
                                         </h1> */}
 
- 
+<div className="absolute inset-x-0 w-full mx-auto flex justify-center z-40  pt-[35rem] sm:pt-[30rem] ">
+            <motion.div
+              className="flex flex-col justify-center items-center w-full z-20 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              {/* Apply Button */}
+              <div 
+                className="apply-button" 
+                data-hackathon-slug="tinkhack-mec"
+                data-button-theme="dark-inverted" 
+                style={{ height: '40px', width: window.innerWidth < 640 ? '180px' : '250px' }}
+              ></div>
+
+              {/* Register Now Button */}
+              <Link
+                href="https://tinkhack-mec.devfolio.co/"
+                rel="noopener noreferrer"
+              >
+                <button className="py-2 text-md sm:text-xl z-20 px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4">
+                  Register Now
+                </button>
+              </Link>
+            </motion.div>
+        </div>
+        
           </div>
         </div>
 
@@ -394,29 +426,7 @@ const Landing = () => {
             />
           </motion.div>
 
-          <motion.div
-            className="brightness-125 absolute bottom-0 right-0 z-10"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              duration: 1.5,
-              delay: 0.4
-            }}
-          >
-            <Image
-              src={LandingPageImage3}
-              alt="Landing Page Corner Image"
-              layout="intrinsic"
-              className="w-[250px] h-[250px] mb-[-120px] mr-[-10px] 
-              sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
-              md:w-[350px] md:h-[400px] md:mb-[-300px] 
-              lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
-              priority
-            />
-          </motion.div>
+         
 
           {/* Broken Glass Images */}
           <motion.div
@@ -456,29 +466,31 @@ const Landing = () => {
           </motion.div>
 
 
-          <div className="absolute inset-x-0 w-full top-[35rem] sm:top-[30rem] mx-auto flex justify-center">
-            <motion.div
-              className="flex justify-center items-center w-full z-10 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-              }}
-            >
-              <div 
-                className="apply-button" 
-                data-hackathon-slug="tinkhack-mec"
-                data-button-theme="dark-inverted" 
-                style={{ height: '40px', width: window.innerWidth < 640 ? '180px' : '250px' }}
-              ></div>
-            </motion.div>
-          </div>
         
       </div>
+      <motion.div
+            className="brightness-125 absolute bottom-0 right-0 z-0 sm:z-10 overflow-hidden"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+              duration: 1.5,
+              delay: 0.4
+            }}
+          >
+            <Image
+              src={LandingPageImage3}
+              alt="Landing Page Corner Image"
+              layout="intrinsic"
+              className="w-[250px] h-[250px] mb-[-120px] mr-[-10px] 
+              sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
+              md:w-[350px] md:h-[400px] md:mb-[-300px] 
+              lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
+              priority
+            />
+          </motion.div>
     </section>
   );
 };
