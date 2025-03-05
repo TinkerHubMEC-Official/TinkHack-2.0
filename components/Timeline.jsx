@@ -31,7 +31,7 @@ const Timeline = () => {
       date: '9pm, 18th March',
       title: 'Shortlist Announcement',
       description:
-        'After careful evaluation, the top teams are selected and announced, moving one step closer to victory. ',
+        'After careful evaluation, the top teams are selected and announced, moving one step closer to victory.',
     },
     {
       date: '1pm, 22nd March',

@@ -454,25 +454,29 @@ const Landing = () => {
               priority
             />
           </motion.div>
-          <motion.div
-            className="absolute flex justify-center items-center w-full bottom-[10%] z-10 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-            }}
-          >
-            <div 
-              className="apply-button" 
-              data-hackathon-slug="tinkhack-mec"
-              data-button-theme="dark-inverted" 
-              style={{ height: '44px', width: '312px' }}
-            ></div>
-          </motion.div>
+
+
+          <div className="absolute inset-x-0 w-full top-[35rem] sm:top-[30rem] mx-auto flex justify-center">
+            <motion.div
+              className="flex justify-center items-center w-full z-10 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <div 
+                className="apply-button" 
+                data-hackathon-slug="tinkhack-mec"
+                data-button-theme="dark-inverted" 
+                style={{ height: '40px', width: window.innerWidth < 640 ? '180px' : '250px' }}
+              ></div>
+            </motion.div>
+          </div>
         
       </div>
     </section>
