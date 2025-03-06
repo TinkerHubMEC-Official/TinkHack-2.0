@@ -109,6 +109,8 @@
                                                 `}>
                       <head>
                         <title>TinkHack 2.0</title>
+                        <meta property="og:title" content="TinkHack 2.0" />
+                        <meta property="og:image" content="/favicon.png" />
                         <link rel="icon" href="/favicon.png" type="image/png" style={{ width: '300px', height: '300px', margin: '-50px' }} />
                       </head>
                       <body className=''>
