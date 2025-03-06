@@ -361,7 +361,7 @@ const Landing = () => {
                                           2.0
                                         </h1> */}
 
-<div className="absolute inset-x-0 w-full mx-auto flex justify-center z-40  pt-[35rem] sm:pt-[30rem] ">
+<div className="absolute inset-x-0 w-full mx-auto flex justify-center z-20  pt-[35rem] sm:pt-[30rem] ">
             <motion.div
               className="flex flex-col justify-center items-center w-full z-20 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
               initial={{ opacity: 0, y: 100 }}
@@ -469,7 +469,7 @@ const Landing = () => {
         
       </div>
       <motion.div
-            className="brightness-125 absolute bottom-0 right-0"
+            className="brightness-125 absolute bottom-0 right-0 z-10 overflow-visible"
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
@@ -484,7 +484,7 @@ const Landing = () => {
               src={LandingPageImage3}
               alt="Landing Page Corner Image"
               layout="intrinsic"
-              className="w-[250px] h-[250px] mb-[-120px] mr-[-10px] 
+              className="w-[250px] h-[250px] mb-[-120px] mr-[-66px] 
               sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
               md:w-[350px] md:h-[400px] md:mb-[-300px] 
               lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
