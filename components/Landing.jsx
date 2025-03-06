@@ -16,7 +16,7 @@ import dbiz from '@/assets/dbiz.png';
 import BackgroundImage from "@/assets/bckg 2.png";
 import LandingPageImage1 from "@/assets/landing_page_1.svg";
 import LandingPageImage2 from "@/assets/landing_page_2.svg";
-import LandingPageImage3 from "@/assets/landing_page_3.svg";
+import LandingPageImage3 from "@/assets/landing_page_3.png";
 import BrokenGlassImage1 from "@/assets/Broken_glass_1.svg";
 import BrokenGlassImage2 from "@/assets/Broken_glass_2.svg";
 import img1 from "@/assets/2.0.png";
@@ -484,10 +484,10 @@ const Landing = () => {
               src={LandingPageImage3}
               alt="Landing Page Corner Image"
               layout="intrinsic"
-              className="w-[250px] h-[250px] mb-[-110px] mr-[-85px] 
+              className="w-[250px] h-[250px] mb-[-110px] mr-[-80px] 
               sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
               md:w-[350px] md:h-[400px] md:mb-[-300px] 
-              lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
+              lg:w-[450px] lg:h-[500px] lg:mb-[-450px]"
               priority
             />
           </motion.div>
