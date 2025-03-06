@@ -484,7 +484,7 @@ const Landing = () => {
               src={LandingPageImage3}
               alt="Landing Page Corner Image"
               layout="intrinsic"
-              className="w-[250px] h-[250px] mb-[-120px] mr-[-66px] 
+              className="w-[250px] h-[250px] mb-[-110px] mr-[-85px] 
               sm:w-[300px] sm:h-[300px] sm:mb-[-200px] 
               md:w-[350px] md:h-[400px] md:mb-[-300px] 
               lg:w-[450px] lg:h-[500px] lg:mb-[-620px]"
