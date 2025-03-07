@@ -375,12 +375,15 @@ const Landing = () => {
               }}
             >
               {/* Apply Button */}
+              <div className="max-sm:scale-90">
               <div 
                 className="apply-button" 
                 data-hackathon-slug="tinkhack-mec"
                 data-button-theme="dark-inverted" 
                 style={{ height: '40px', width: window.innerWidth < 640 ? '180px' : '250px' }}
               ></div>
+              </div>
+
 
               {/* Register Now Button */}
               <Link
