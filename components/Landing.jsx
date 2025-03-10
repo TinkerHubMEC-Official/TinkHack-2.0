@@ -361,7 +361,7 @@ const Landing = () => {
                                           2.0
                                         </h1> */}
 
-<div className="absolute inset-x-0 w-full mx-auto flex justify-center z-20  pt-[35rem] sm:pt-[30rem] ">
+<div className="absolute inset-x-0 w-full mx-auto flex justify-center z-50  pt-[35rem] sm:pt-[30rem] ">
             <motion.div
               className="flex flex-col justify-center items-center w-full z-20 mb-[210px] sm:mb-[40px] sm:-mx-12 md:mb-[-10px] md:-mx-8 lg:mx-2"
               initial={{ opacity: 0, y: 100 }}
@@ -387,7 +387,7 @@ const Landing = () => {
                 href="https://tinkhack-mec.devfolio.co/"
                 rel="noopener noreferrer"
               >
-                <button className="py-2 text-md sm:text-xl z-20 px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4">
+                <button className="py-2 text-md sm:text-xl z-50 px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4">
                   Register Now
                 </button>
               </Link>
