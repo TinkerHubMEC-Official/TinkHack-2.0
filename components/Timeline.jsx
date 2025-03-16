@@ -22,7 +22,7 @@ const Timeline = () => {
         'TinkHack registration opens. Students can register via Devfolio by submitting their project proposals.',
     },
     {
-      date: '11pm, 16th March',
+      date: '6pm, 17th March',
       title: 'Registrations Close',
       description:
         'Teams must finalize and submit their project ideas before the deadline.',
@@ -34,13 +34,13 @@ const Timeline = () => {
         'After careful evaluation, the top teams are selected and announced, moving one step closer to victory.',
     },
     {
-      date: '3pm, 22nd March',
+      date: '3:30pm, 22nd March',
       title: 'Hackathon Kickoff',
       description:
         'The hackathon officially begins as participants dive into 24 hours of innovation, collaboration, and problem-solving.',
     },
     {
-      date: '3pm, 23rd March',
+      date: '3:30pm, 23rd March',
       title: 'Hackathon Ends',
       description:
         'The coding marathon concludes as teams submit their final projects and prizes are given, marking the end of an intense and inspiring journey.',
@@ -165,10 +165,18 @@ const Timeline = () => {
                 >
                   {/* Date Position */}
                   <p
-                    className={`text-sm absolute ${
-                      index % 2 === 0
-                        ? 'right-[calc(50%-160px)] xl:right-[calc(50%-140px)] lg:right-[calc(50%-100px)] text-right'
-                        : 'left-[calc(50%-160px)] xl:left-[calc(50%-140px)] lg:left-[calc(50%_100px)] text-left'
+                    className={`text-sm absolute z-20 ${
+                      // Only apply predefined positioning for dates that are not the last two
+                      index < events.length - 2 ? (
+                        index % 2 === 0
+                          ? 'right-[calc(50%-160px)] xl:right-[calc(50%-140px)] lg:right-[calc(50%-100px)] text-right'
+                          : 'left-[calc(50%-160px)] xl:left-[calc(50%-140px)] lg:left-[calc(50%_100px)] text-left'
+                      ) : (
+                        // Custom positioning for last two dates
+                        index === events.length - 2 
+                          ? 'left-[calc(50%-170px)] text-right ' // Second last date
+                          : 'right-[calc(50%-165px)] text-left '   // Last date
+                      )
                     }`}
                     style={{ color }}
                   >
@@ -181,7 +189,7 @@ const Timeline = () => {
                       index % 2 === 0
                         ? 'ml-[calc(50%+80px)] lg:ml-[calc(50%-460px)] md:ml-[calc(50%+40px)] sm:ml-[calc(50%+20px)]'
                         : 'mr-[calc(50%+80px)] lg:mr-[calc(50%-460px)] md:mr-[calc(50%+40px)] sm:mr-[calc(50%+20px)]'
-                    }`}
+                 }`}
                   >
                     <h3 className="font-semibold">{event.title}</h3>
                     <p className="mt-2 text-sm">{event.description}</p>
