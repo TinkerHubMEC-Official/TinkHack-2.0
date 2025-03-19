@@ -40,10 +40,10 @@ const Faq = () => {
       question: "Where will the event be held?",
       answer: "The event will be held at Govt. Model Engineering College, Thrikkakara.",
     },
-    {
-      question: "Can I work on my project before the hackathon?",
-      answer: "You are not allowed to work on your project prior to the hackathon, but you are welcome to brainstorm ideas and fine-tune your plan in preparation.",
-    },
+    // {
+    //   question: "Can I work on my project before the hackathon?",
+    //   answer: "You are not allowed to work on your project prior to the hackathon, but you are welcome to brainstorm ideas and fine-tune your plan in preparation.",
+    // },
     {
       question: "Should the projects be made Open Source?",
       answer: "Yes. All the project repositories should be made publicly available on GitHub.",

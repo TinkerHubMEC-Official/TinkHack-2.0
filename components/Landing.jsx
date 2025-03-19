@@ -382,9 +382,12 @@ const Landing = () => {
                     className="z-[999]"
                     priority
                   >
-                    <button className="py-2 z-[999] text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border-[1px] border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4 relative">
-                      Register Now
-                    </button>
+                   <button 
+                    className="py-2 z-10 opacity-45 border-opacity-45 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4 relative"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Registration Closed
+                  </button>
                   </Link>
                 </div>
               </motion.div>
