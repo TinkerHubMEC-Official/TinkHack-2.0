@@ -377,16 +377,16 @@ const Landing = () => {
                 {/* Register Now Button */}
                 <div className="z-[999] relative">
                   <Link
-                    href="https://tinkhack-mec.devfolio.co/"
+                    href="https://countdown.tinkhack.tech"
                     rel="noopener noreferrer"
                     className="z-[999]"
                     priority
                   >
                    <button 
-                    className="py-2 z-10 opacity-45 border-opacity-45 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4 relative"
-                    onClick={(e) => e.preventDefault()}
+                    className="py-2 z-10 text-md sm:text-xl px-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-[#1E1E1E] rounded-[30px] border border-[#E283BD] hover:border-[#E2CF6C] hover:shadow-lg transition-all hover:scale-105 mt-4 relative"
+                    // onClick={(e) => e.preventDefault()}
                   >
-                    Registration Closed
+                    Check Timer
                   </button>
                   </Link>
                 </div>
