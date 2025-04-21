@@ -3,15 +3,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import TinkerHubLogo from '@/assets/TinkerHubLogo.svg';
 import TinkHackLogo from '@/assets/TinkHackLogoMain.svg';
-import BubbleImage from '@/assets/Bubble.svg';
-import BackgroundImage from '@/assets/background.svg';
 
 const About = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+    setTimeout(() => setIsLoaded(true), 1000); 
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 600);
@@ -30,7 +28,6 @@ const About = () => {
       id="about"
       className="min-h-screen bg-custom-dark z-0 text-white flex items-center justify-center relative p-8 bg-pattern font-satoshi -mt-40 sm:-mt-48 px-10 -mb-20 md:-mt-0 lg:-mt-0"
     >
-      {/* Background Image */}
       {/* <div className="absolute inset-0 z-0">
         <Image
           src={BackgroundImage}
@@ -40,7 +37,6 @@ const About = () => {
         />
       </div> */}
 
-      {/* Content Section */}
       <div
         className={
           isMobile
@@ -48,7 +44,6 @@ const About = () => {
             : "relative z-10 grid grid-cols-3 grid-rows-2 gap-8 w-full max-w-6xl px-4"
         }
       >
-        {/* Title */}
         <div className={isMobile ? "w-full text-center" : "col-span-1"}>
           <h2
             className="text-5xl font-bold relative z-10 text-center
@@ -62,14 +57,12 @@ const About = () => {
           </h2>
         </div>
 
-        {/* Paragraph 1 */}
         <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
           <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-2xl">
             TinkerHub MEC's overnight Hackathon, Kerala's inaugural AI-based event, promotes student expertise and explores Generative AI. This innovative platform unites technology and innovation, fostering diverse solutions in various fields.
           </p>
         </div>
 
-        {/* TinkHack Logo */}
         {!isMobile && (
           <div
             className="col-span-1 flex items-center justify-center transform -rotate-6"
@@ -84,7 +77,6 @@ const About = () => {
           </div>
         )}
 
-        {/* Paragraph 2 */}
         <div className={isMobile ? "w-full text-center" : "col-span-2"} data-aos="fade-left">
           <p className="text-md -m-8 mt-4 font-semibold text-start sm:text-lg md:text-xl lg:leading-relaxed lg:text-xl">
           Tinkerhub MEC, the Model Engineering College chapter of Tinkerhub, is a dynamic community fostering innovation and tech upskilling. The chapter hosts interactive sessions, hackathons, and workshops like Tinktank, GetSetWeb, and TinkHerHack to equip students with hands-on skills and industry insights. With our initiatives, we champion inclusivity and collaborative learning, inspiring students to explore and elevate their careers.          
@@ -92,23 +84,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Bubble Image */}
-      {!isMobile && (
-        <div
-          className="absolute z-10 w-[150px] h-[300px] -bottom-[120px] -left-1"
-          data-aos="fade-up"
-        >
-          {/* <Image
-            className={`brightness-125 transition-transform duration-1000 sm:h-[200px] sm:ml-70 md:h-[250px] md:ml-90  lg:h-[350px] ${
-              isLoaded ? 'translate-x-0' : '-translate-x-[100%]'
-            }`}
-            src={BubbleImage}
-            alt="Bubble Image"
-          /> */}
-        </div>
-      )}
 
-      {/* TinkerHub Logo */}
       {!isMobile && (
         <div
           className="absolute -bottom-4 right-24 transform -rotate-6 hidden sm:block"

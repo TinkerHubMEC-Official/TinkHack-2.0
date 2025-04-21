@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import BackgroundImage from '@/assets/background.svg';
 import BrokenGlassImage from '@/assets/Broken_glass_3.svg';
 import ArrowDown1 from '@/assets/arrow_down_1.svg';
 import ArrowDown2 from '@/assets/arrow_down_2.svg';
@@ -10,7 +9,7 @@ const Faq = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 1000); // Delay to simulate loading effect
+    setTimeout(() => setIsLoaded(true), 1000);
   }, []);
 
   const [openIndexes, setOpenIndexes] = useState([]);
@@ -64,7 +63,6 @@ const Faq = () => {
       id="faq"
       className="min-h-screen bg-custom-dark text-white bg-pattern flex flex-col items-center justify-center relative p-4 font-satoshi py-28"
     >
-      {/* Background Image */}
       {/* <div>
         <Image
           src={BackgroundImage}
@@ -76,13 +74,10 @@ const Faq = () => {
 
       <h2 className="text-5xl font-bold relative z-10 text-center bg-gradient-to-r from-[#E283BD] to-[#E2CF6C] bg-clip-text text-transparent sm:-mb-4 mb-6
         after:content-[''] after:absolute after:h-[5px] after:bg-white after:left-0 after:right-0 after:bottom-[-10px]"
-        // data-aos="fade-up"
-        // data-aos-delay="100"
       >
         FAQ
       </h2>
 
-      {/* Broken Glass Image */}
       <div className="relative z-10 flex items-center justify-center w-full h-full">
         <Image
           className={`brightness-125 absolute z-0 scale-[0.9] top-[300px] left-[50px] md:top-[240px] md:left-[70px] lg:top-[280px] lg:left-[90px] mobile-glass-image transition-all duration-300 transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
@@ -117,7 +112,6 @@ const Faq = () => {
               />
             </div>
 
-            {/* Smooth Transition for Answer Section */}
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 openIndexes.includes(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'

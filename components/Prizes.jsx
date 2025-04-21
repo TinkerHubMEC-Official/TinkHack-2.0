@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
 import BubbleImage from '@/assets/Bubble.svg';
-import SIB from '@/assets/sib.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,14 +10,12 @@ const Prizes = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Initialize AOS
     AOS.init({
       duration: 1000,
       once: false,
       mirror: true
     });
 
-    // Handle mobile check
     const handleResize = () => {
       setIsMobile(window.innerWidth < 816);
     };
@@ -34,7 +31,6 @@ const Prizes = () => {
       id="prizes"
       className="h-screen bg-custom-dark bg-pattern  text-white flex flex-col items-center justify-center relative pt-14 font-satoshi pb-20 lg:-mt-12"
     >
-      {/* Background Image */}
       {/* <div >
         <Image
           src={BackgroundImage}  
@@ -52,9 +48,7 @@ const Prizes = () => {
       </h2>
       
       {isMobile ? (
-        // Mobile View
         <div className="relative z-10 flex flex-col items-center gap-8">
-          {/* First Row */}
           <div className="flex justify-center gap-8">
             <div
               className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
@@ -68,7 +62,6 @@ const Prizes = () => {
             </div>
           </div>
 
-          {/* Second Row */}
           <div className="flex flex-wrap justify-center gap-8">
             <div
               className="p-6 rounded-xl text-white w-[220px] sm:w-[200px] h-[120px] lg:w-[300px]  hover:shadow-sm hover:scale-[1.02]"
@@ -106,9 +99,7 @@ const Prizes = () => {
           </div> */}
         </div>
       ) : (
-        // Desktop View
         <div className="relative z-10 flex flex-col items-center gap-8">
-          {/* First Row */}
           <div className="flex flex-wrap justify-center gap-10">
             <div className="flex flex-wrap justify-center gap-8">
               <div
@@ -165,25 +156,18 @@ const Prizes = () => {
 
 
           <div className=" flex w-full left-0 overflow-hidden">
-  <Image
-    className={`brightness-125 absolute transition-transform bottom-0 duration-1000 z-10
-        w-[250px] h-[250px] -mb-20
-        sm:w-[300px] sm:h-[200px] sm:-mb-[150px] sm:ml-[20-px]
-        md:w-[350px] md:h-[250px] md:-mb-[200px] md:-ml-[190px]
-        lg:w-[300px] lg:h-[300px] lg:-mb-[150px] lg:-ml-[270px]
-        xl:-ml-[400px] 2xl:-ml-[550px] 3xl:-ml-[640px] 4xl:-ml-[760px]`}
-    src={BubbleImage}
-    alt="Bubble Image"
-  />
-</div>
-
-
-
+          <Image
+            className={`brightness-125 absolute transition-transform bottom-0 duration-1000 z-10
+                w-[250px] h-[250px] -mb-20
+                sm:w-[300px] sm:h-[200px] sm:-mb-[150px] sm:ml-[20-px]
+                md:w-[350px] md:h-[250px] md:-mb-[200px] md:-ml-[190px]
+                lg:w-[300px] lg:h-[300px] lg:-mb-[150px] lg:-ml-[270px]
+                xl:-ml-[400px] 2xl:-ml-[550px] 3xl:-ml-[640px] 4xl:-ml-[760px]`}
+            src={BubbleImage}
+            alt="Bubble Image"
+          />
         </div>
-
-
-
-
+       </div>
       )}
     </section>
   );

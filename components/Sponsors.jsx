@@ -13,14 +13,11 @@ import devfolio from '@/assets/devfolio.png';
 
 const Sponsors = () => {
 
-
-   
   return (
     <section
       id="sponsors"
       className="bg-custom-dark bg-pattern  text-white flex flex-col items-center justify-center relative px-8 sm:px-8 md:px-16 lg:px-16 lg:pt-0 xl:px-16 py-16 font-satoshi"
     >
-      {/* Background Image */}
       {/* <div>
         <Image
           src={BackgroundImage}
@@ -40,9 +37,7 @@ const Sponsors = () => {
           Sponsors
         </h2>
 
-        {/* Sponsor Rows */}
         <div className="relative z-10 flex flex-col gap-10 items-center">
-          {/* Title Sponsor */}
           <div
             className="p-4 rounded-2xl bg-gradient-to-br from-[#814769] to-[#9e7a4a] text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300"
             data-aos="zoom-out"
@@ -101,9 +96,7 @@ const Sponsors = () => {
             ))}
           </div> */}
 
-          {/* Silver Sponsors */}
           <div className="flex flex-col gap-8">
-            {/* First Row with 3 Boxes */}
             <div className="flex gap-8 flex-wrap justify-center">
               <div
                 className="p-3 rounded-2xl text-white shadow-lg w-[240px] h-[180px] flex flex-col items-center justify-center hover:shadow-sm hover:scale-[1.02] transition-all duration-300 cursor-pointer"
@@ -188,7 +181,6 @@ const Sponsors = () => {
               </div>
             </div>
 
-            {/* Second Row with 2 Boxes */}
             <div className="flex gap-8 flex-wrap justify-center">
 
             <div
@@ -246,13 +238,7 @@ const Sponsors = () => {
               </div>
             </div>
           </div>
-
-
-
-
         </div>
-
-
          <div className="container flex w-full">
                 <Image
                   className={`brightness-125 absolute bottom-0 right-0 z-10 rotate-45 transform transition-transform duration-1000 w-[250px] h-[250px] mb-[-340px] mr-[-78px] 
@@ -263,8 +249,7 @@ const Sponsors = () => {
                   alt="Landing Page Corner Image"
                   layout="intrinsic"
                 />
-
-                </div>
+          </div>
       </div>
     </section>
   );

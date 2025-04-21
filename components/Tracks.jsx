@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import BackgroundImage from '@/assets/background.svg';
-// import BrokenGlassImage from '@/assets/Broken_glass_1.svg';
 
 const Tracks = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -62,7 +61,6 @@ const Tracks = () => {
         Tracks
       </h2>
 
-      {/* Background Image */}
       {/* <div>
         <Image
           src={BackgroundImage}
@@ -72,18 +70,8 @@ const Tracks = () => {
         />
       </div> */}
 
-      {/* <Image
-        className={`brightness-125 absolute left-0 z-10 rotate-90 opacity-60 w-[300px] h-[600px] mb-[150px] left-9 mt-[-30px] bottom-[-170px] transform transition-transform duration-1000 ${isLoaded ? 'translate-x-0' : '-translate-x-[100%]'}`}
-        src={BrokenGlassImage}
-        alt="Broken Glass Image"
-        width={300}
-        height={600}
-        data-aos="zoom-in"
-      /> */}
-
       <div className="relative z-10 flex flex-col gap-8 p-4">
         {isMobile ? (
-          // Mobile View: Display all boxes vertically
           <div className="flex flex-col items-center gap-8">
             {tracks.map((track, index) => (
               <div
@@ -99,7 +87,6 @@ const Tracks = () => {
             ))}
           </div>
         ) : (
-          // Desktop View: Display boxes in two rows
           <>
             <div className="flex justify-end gap-10 pl-24">
               {tracks.slice(0, 3).map((track, index) => (

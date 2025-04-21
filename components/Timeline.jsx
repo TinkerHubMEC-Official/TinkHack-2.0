@@ -76,7 +76,6 @@ const Timeline = () => {
     };
   }, []);
 
-  // Add AOS initialization
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -91,7 +90,6 @@ const Timeline = () => {
       className="min-h-screen bg-pattern  text-white flex flex-col items-center justify-center relative font-satoshi pb-20 py-12"
       
     >
-      {/* Background Image */}
       {/* <div >
         <Image
           src={BackgroundImage}  
@@ -120,27 +118,24 @@ const Timeline = () => {
         data-aos-delay="400"
       />
 
-      {/* Conditional Rendering for Timeline Container */}
       {isLargeScreen ? (
         <div className="container relative flex flex-col items-center z-10 mt-10">
-          {/* Updated gradient line for large screens */}
           <div
             className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
             style={{ 
               top: '50px',
-              height: `calc(${events.length * 105}px)`, // Adjust multiplier based on your spacing
+              height: `calc(${events.length * 105}px)`,
             }}
           ></div>
           {events.map((event, index) => {
             const color = getGradientColor(index, events.length);
             return (
               <React.Fragment key={index}>
-                {/* Circle aligned with date */}
                 <div
                   className="absolute w-2 h-2 rounded-full"
                   style={{
                     left: '50%',
-                    top: `${index * 130 + 50}px`, // Adjusted to match date position
+                    top: `${index * 130 + 50}px`, 
                     transform: 'translateX(-50%)',
                     backgroundColor: color,
                   }}
@@ -149,13 +144,11 @@ const Timeline = () => {
                   className="absolute w-4 h-4 rounded-full opacity-25"
                   style={{
                     left: '50%',
-                    top: `${index * 130 + 46}px`, // Adjusted to match date position
+                    top: `${index * 130 + 46}px`, 
                     transform: 'translateX(-50%)',
                     backgroundColor: color,
                   }}
                 ></div>
-
-                {/* Content with AOS */}
                 <div
                   className={`relative flex items-center w-full mb-6 ${
                     index % 2 === 0 ? 'justify-start' : 'justify-end'
@@ -163,27 +156,22 @@ const Timeline = () => {
                   data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                   data-aos-delay={200 + index * 100}
                 >
-                  {/* Date Position */}
                   <p
                     className={`text-sm absolute z-20 ${
-                      // Only apply predefined positioning for dates that are not the last two
                       index < events.length - 2 ? (
                         index % 2 === 0
                           ? 'right-[calc(50%-160px)] xl:right-[calc(50%-140px)] lg:right-[calc(50%-100px)] text-right'
                           : 'left-[calc(50%-160px)] xl:left-[calc(50%-140px)] lg:left-[calc(50%_100px)] text-left'
                       ) : (
-                        // Custom positioning for last two dates
                         index === events.length - 2 
-                          ? 'left-[calc(50%-170px)] text-right ' // Second last date
-                          : 'right-[calc(50%-165px)] text-left '   // Last date
+                          ? 'left-[calc(50%-170px)] text-right ' 
+                          : 'right-[calc(50%-165px)] text-left '   
                       )
                     }`}
                     style={{ color }}
                   >
                     {event.date}
                   </p>
-
-                  {/* Event Box */}
                   <div
                     className={`relative max-w-[400px] p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-[1.02] transition-all duration-300 text-white ${
                       index % 2 === 0
@@ -201,7 +189,6 @@ const Timeline = () => {
         </div>
       ) : (
         <div className="container relative flex flex-col items-start z-10 mt-10 w-full max-w-4xl pr-4">
-          {/* Gradient line */}
           <div
             className="w-0.5 bg-gradient-to-b from-[#E283BD] to-[#E2CF6C] absolute"
             style={{
@@ -215,7 +202,6 @@ const Timeline = () => {
             const color = getGradientColor(index, events.length);
             return (
               <React.Fragment key={index}>
-                {/* Circles with correct AOS attribute */}
                 <div
                   className="absolute w-2 h-2 z-10 rounded-full"
                   style={{
@@ -229,20 +215,17 @@ const Timeline = () => {
                   className="absolute w-4 h-4 -z-10 rounded-full opacity-25"
                   style={{
                     left: '2rem',
-                    top: `${index * 165 + 66}px`, // Adjusted to match content position
+                    top: `${index * 165 + 66}px`, 
                     
                     transform: 'translateX(-50%)',
                     backgroundColor: color,
                   }}
                 ></div>
-
-                {/* Content with AOS */}
                 <div 
                   className="relative flex items-center w-full mb-6"
                   data-aos="fade-left"
                   data-aos-delay={200 + index * 100}
                 >
-                  {/* Event content */}
                   <div
                     className="relative p-4 rounded-2xl bg-gradient-to-b from-[#353438] to-[#28262b] shadow-lg hover:shadow-sm hover:scale-[1.02] transition-all duration-300 ease-in-out text-white w-full md:w-[60%] sm:w-[80%] xs:w-[90%] pr-8"
                     style={{

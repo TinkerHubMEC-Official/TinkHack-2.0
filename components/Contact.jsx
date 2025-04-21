@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 
@@ -13,8 +12,6 @@ import eshaan from '@/assets/eshaan.png';
 import midhun from '@/assets/midhun.png';
 import theertha from '@/assets/theertha.png';
 import pranav from '@/assets/pranav.jpg';
-
-import BackgroundImage from '@/assets/background.svg';
 
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
@@ -114,7 +111,6 @@ const Contact = () => {
       >
         Contact Us
       </h2>
-      {/* Background Image */}
       {/* <div>
         <Image
           src={BackgroundImage}
